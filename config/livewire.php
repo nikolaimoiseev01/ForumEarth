@@ -145,6 +145,8 @@ return [
 
     'inject_morph_markers' => true,
 
+    'hotwire' => true,
+
     /*
     |---------------------------------------------------------------------------
     | Pagination Theme

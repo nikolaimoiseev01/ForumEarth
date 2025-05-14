@@ -1,3 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    @apply text-dark-500 bg-bright-500 md:text-sm;
+}
+
+h1 {
+    @apply font-semibold text-[80px] md:text-6xl;
+}
+
+h2 {
+    @apply font-medium text-7xl md:text-6xl sm:!text-5xl;
+}
+
+
+h3 {
+    font-family: 'Manrope', sans-serif;
+    @apply text-[40px] leading-normal font-semibold md:text-3xl;
+}
+
+h4 {
+    @apply font-medium text-[56px] leading-normal md:text-4xl;
+}
+
+p {
+    @apply text-lg md:text-base;
+}
+
+
+/*h2 {*/
+/*    @apply font-medium tracking-[-0.02em] leading-[100%] mb-4;*/
+/*}*/
+
+/*h3 {*/
+/*    @apply font-medium leading-[95%] mb-4 text-6xl md:text-3xl;*/
+/*}*/
+
+a {
+    @apply text-dark-500 hover:text-green-500 transition cursor-pointer;
+}
+
+.content {
+    @apply max-w-[1412px] mx-auto w-[90%];
+}
+
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+    @apply border-0 border-b border-dark-500 text-2xl md:text-xl sm:text-lg p-2 font-light focus:outline-none focus:border-green-500 focus:ring-0 transition;
+}
