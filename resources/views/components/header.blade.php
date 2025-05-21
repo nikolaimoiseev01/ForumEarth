@@ -63,6 +63,9 @@
                             <li>
                                 <a wire:navigate href="" class="block px-4 py-2 text-gray-800 ">Аккредитация для СМИ</a>
                             </li>
+                            <li>
+                                <a wire:navigate href="" class="block px-4 py-2 text-gray-800 ">Анкета участников</a>
+                            </li>
                         </ul>
                     </div>
                 </div>

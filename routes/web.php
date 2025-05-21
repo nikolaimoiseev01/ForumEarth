@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Livewire\Pages\Portal\ParticipationFormPage;
 use App\Livewire\Pages\Account\SettingsPage;
 use App\Livewire\Pages\Auth\ConfirmPasswordPage;
 use App\Livewire\Pages\Auth\ForgotPasswordPage;
@@ -50,6 +51,7 @@ Route::middleware('auth')->group(function () {
 
 
 Route::get('/', IndexPage::class)->name('portal.index');
+Route::get('/participation-form', ParticipationFormPage::class)->name('portal.participation-form');
 
 Route::middleware('auth')->prefix('account')->group(function () {
     Route::get('settings', SettingsPage::class)->middleware(['auth', 'verified'])->name('account.settings');
