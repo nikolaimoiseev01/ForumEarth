@@ -3,13 +3,16 @@
     <input required wire:model="email" type="email" placeholder="Email">
     <input required wire:model="telephone" class="mobile_input" type="text" placeholder="Телефон">
     <input required wire:model="region" type="text" placeholder="Регион">
-    <select required wire:model="status">
-        <option disabled selected>Статус</option>
-        <option value="Студент">Студент</option>
-        <option value="Аспирант">Аспирант</option>
-        <option value="Преподаватель">Преподаватель</option>
-        <option value="Сотрудник">Сотрудник</option>
-    </select>
+    <div class="flex text-gray-600 flex-col gap-4">
+        <p>Статус</p>
+        <select required wire:model="status">
+            <option value="Студент">Студент</option>
+            <option value="Аспирант">Аспирант</option>
+            <option value="Преподаватель">Преподаватель</option>
+            <option value="Сотрудник">Сотрудник</option>
+        </select>
+    </div>
+
     <input x-show="['Студент', 'Аспирант'].includes(showByStatus)"  wire:model="study_place" type="text" placeholder="Место учебы">
     <input x-show="['Студент', 'Аспирант'].includes(showByStatus)" wire:model="study_level" type="text" placeholder="Курс обучения">
     <input x-show="['Преподаватель', 'Сотрудник'].includes(showByStatus)" wire:model="workplace" type="text" placeholder="Место работы">
