@@ -47,7 +47,7 @@ class ParticipationForm extends Component
         $this->dispatch('swal:modal',
             title: 'Успешно',
             type: 'success',
-            text: "Анкета отпарвлена!",
+            text: "Анкета отправлена!",
         );
     }
 }
