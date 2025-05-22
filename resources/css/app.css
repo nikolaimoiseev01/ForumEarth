@@ -52,7 +52,7 @@ a {
 
 
 input[type="text"], input[type="email"], input[type="password"], textarea, select {
-    @apply border-0 border-b border-dark-500 text-xl md:!text-lg sm:!text-base p-2 font-light focus:outline-none focus:border-green-500 focus:ring-0 transition;
+    @apply border-0 border-b border-dark-500 text-xl md:text-lg sm:text-base p-2 font-light focus:outline-none focus:border-green-500 focus:ring-0 transition;
 }
 select {
     @apply text-lg
