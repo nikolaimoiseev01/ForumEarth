@@ -1,8 +1,27 @@
-<form x-data="{ showByStatus: @entangle('status') }" wire:submit="register" class="flex bg-bright-500 flex-col gap-12 rounded-3xl p-16 w-full max-w-5xl mx-auto relative">
-    <input required wire:model="fio" type="text" placeholder="ФИО полностью. Пример: Иванов Иван Иванович">
-    <input required wire:model="email" type="email" placeholder="Email. Пример: example@email.com">
-    <input required wire:model="telephone" class="mobile_input" type="text" placeholder="Телефон. Пример: +7 (912) 345 67 89">
-    <input required wire:model="region" type="text" placeholder="Регион. Пример: Республика Татарстан, г. Казань">
+<form x-data="{ showByStatus: @entangle('status') }" wire:submit="register"
+      class="flex bg-bright-500 flex-col gap-12 rounded-3xl p-16 w-full max-w-5xl mx-auto relative">
+
+
+    <div class="flex  flex-col gap-4">
+        <p class="text-gray-500">ФИО полностью. <span class="text-gray-400 italic">Пример: Иванов Иван Иванович</span></p>
+        <input required wire:model="fio" type="text">
+    </div>
+
+    <div class="flex  flex-col gap-4">
+        <p class="text-gray-500">Email. <span class="text-gray-400 italic">Пример: example@email.com</span></p>
+        <input required wire:model="email" type="email">
+    </div>
+
+    <div class="flex  flex-col gap-4">
+        <p class="text-gray-500">Телефон. <span class="text-gray-400 italic">Пример: +7 (912) 345 67 89</span></p>
+        <input required wire:model="telephone" class="mobile_input" type="text">
+    </div>
+
+    <div class="flex  flex-col gap-4">
+        <p class="text-gray-500">Регион. <span class="text-gray-400 italic">Пример: Республика Татарстан, г. Казань</span></p>
+        <input required wire:model="region" type="text">
+    </div>
+
     <div class="flex text-gray-600 flex-col gap-4">
         <p>Статус</p>
         <select required wire:model="status">
@@ -14,24 +33,48 @@
     </div>
 
     <template x-if="['Студент', 'Аспирант'].includes(showByStatus)">
-        <input required wire:model="study_place" type="text" placeholder="Место учебы. Полное название учебного заведения">
+        <div class="flex  flex-col gap-4">
+            <p class="text-gray-500">Место учебы.  <span class="text-gray-400 italic">Полное название учебного заведения</span></p>
+            <input required wire:model="study_place" type="text">
+        </div>
     </template>
     <template x-if="['Студент', 'Аспирант'].includes(showByStatus)">
-        <input required wire:model="study_level" type="text" placeholder="Курс обучения. Пример: 3 курс бакалавриата">
+        <div class="flex  flex-col gap-4">
+            <p class="text-gray-500">Курс обучения. <span class="text-gray-400 italic">Пример: 3 курс бакалавриата</span></p>
+            <input required wire:model="study_level" type="text">
+        </div>
     </template>
     <template x-if="['Преподаватель', 'Сотрудник'].includes(showByStatus)">
-        <input required wire:model="workplace" type="text" placeholder="Место работы.  Полное название учебного организации">
+        <div class="flex  flex-col gap-4">
+            <p class="text-gray-500">Место работы. <span class="text-gray-400 italic">Полное название учебного организации</span></p>
+            <input required wire:model="workplace" type="text">
+        </div>
     </template>
 
 
+    <div class="flex  flex-col gap-4">
+        <p class="text-gray-500">Специальность. <span class="text-gray-400 italic">Пример: Экология и природопользование, Химия, Геодезия и картография</span></p>
+        <input required wire:model="specialization" type="text">
+        <div class="flex  flex-col gap-4">
+            <p class="text-gray-500">Команда (необязательно). <span class="text-gray-400 italic">Пример: команда «ЭкоАрт» / «Команда формируется»</span></p>
+            <input wire:model="team" type="text">
+        </div>
 
+        <div class="flex  flex-col gap-4">
+            <p class="text-gray-500">Профессиональные интересы. <span class="text-gray-400 italic">Пример: урбанистика, экология, проектное управление и т.д.</span></p>
+            <textarea required wire:model="interests"></textarea>
+        </div>
 
-    <input required wire:model="specialization" type="text" placeholder="Специальность. Пример: Экология и природопользование, Химия, Геодезия и картография">
-    <input wire:model="team" type="text" placeholder="Команда (необязательно). Пример: команда «ЭкоАрт» / «Команда формируется»">
+        <div class="flex  flex-col gap-4">
+            <p class="text-gray-500">В чем я эксперт? <span class="text-gray-400 italic">(ТОП-3 моих суперзнаний и навыков)</span></p>
+            <textarea required wire:model="expertise"></textarea>
+        </div>
 
-    <textarea required wire:model="interests"  placeholder="Профессиональные интересы. Пример: урбанистика, экология, проектное управление и т.д."></textarea>
-    <textarea required wire:model="expertise" placeholder="В чем я эксперт? (ТОП-3 моих суперзнаний и навыков)"></textarea>
-    <textarea required wire:model="interest_fact" placeholder="Интересный факт обо мне. Поделитесь яркой, необычной или вдохновляющей историей — это поможет собрать сильные и сбалансированные команды!"></textarea>
-    <button type="submit" class="w-full py-6 text-center bg-green-500 text-bright-500 rounded-xl text-xl">Отправить</button>
+        <div class="flex  flex-col gap-4">
+            <p class="text-gray-500">Интересный факт обо мне. <span class="text-gray-400 italic">Поделитесь яркой, необычной или вдохновляющей историей — это поможет собрать сильные и сбалансированные команды!</span></p>
+            <textarea required wire:model="interest_fact"></textarea>
+        </div>
+        <button type="submit" class="w-full py-6 text-center bg-green-500 text-bright-500 rounded-xl text-xl">Отправить
+        </button>
 
 </form>
