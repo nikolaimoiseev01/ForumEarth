@@ -42,6 +42,35 @@ class ParticipantResource extends Resource
                         ->email()
                         ->required()
                         ->maxLength(255),
+
+                    Forms\Components\DatePicker::make('birth_dt')
+                        ->label('Дата рождения')
+                        ->required(),
+                    Forms\Components\TextInput::make('birth_place')
+                        ->label('Место рождения')
+                        ->required(),
+                    Forms\Components\TextInput::make('gender')
+                        ->label('Пол')
+                        ->required(),
+                    Forms\Components\TextInput::make('citizenship')
+                        ->label('Гражданство')
+                        ->required(),
+                    Forms\Components\TextInput::make('passport_number')
+                        ->label('Номер паспорта')
+                        ->required(),
+                    Forms\Components\DatePicker::make('passport_issued_date')
+                        ->label('Дата выдачи')
+                        ->required(),
+                    Forms\Components\TextInput::make('passport_issued_by')
+                        ->label('Кем выдан')
+                        ->required(),
+                    Forms\Components\TextInput::make('passport_code')
+                        ->label('Код подразделения')
+                        ->required(),
+                    Forms\Components\TextInput::make('address')
+                        ->label('Адрес')
+                        ->required(),
+
                     Forms\Components\TextInput::make('region')
                         ->label('Регион')
                         ->required()
