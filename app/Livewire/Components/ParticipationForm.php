@@ -19,6 +19,7 @@ class ParticipationForm extends Component
     public $interests;
     public $expertise;
     public $interest_fact;
+    public $study_place;
 
 
     public $birth_dt;
@@ -47,6 +48,7 @@ class ParticipationForm extends Component
             'region' => $this->region,
             'workplace' => $this->workplace,
             'status' => $this->status,
+            'study_place' => $this->study_place,
             'study_level' => $this->study_level,
             'specialization' => $this->specialization,
             'team' => $this->team,
