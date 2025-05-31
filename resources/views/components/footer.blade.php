@@ -1,5 +1,5 @@
 <footer class="bg-green-500 rounded-t-3xl w-full py-16 text-bright-500 mt-32" id="footer">
-    <div class="flex justify-between content mb-16 md:flex-col md:text-center md:items-center gap-4">
+    <div class="flex flex-col justify-between content mb-16 md:flex-col md:text-center md:items-center gap-4">
         <h1>Напишите нам!</h1>
         <livewire:components.contact-formt/>
 
