@@ -20,7 +20,7 @@ class ContactFormt extends Component
 
     public function send() {
 
-        $email = 'tomas232@mail.ru';
+        $email = 'a.klimov@imars.ru';
         Mail::to($email)->send(new \App\Mail\ContactForm($this->name, $this->email, $this->message));
         $this->sent = True;
     }
