@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Exports\ParticipantExporter;
 use App\Filament\Resources\ParticipantResource\Pages;
 use App\Filament\Resources\ParticipantResource\RelationManagers;
 use App\Models\Participant;
@@ -9,6 +10,8 @@ use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Actions\ExportAction;
+use Filament\Tables\Actions\ExportBulkAction;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -107,8 +110,8 @@ class ParticipantResource extends Resource
                         ->required()
                         ->columnSpanFull(),
                 ])
-                ->columns(2)
-             ]);
+                    ->columns(2)
+            ]);
     }
 
     public static function table(Table $table): Table
@@ -154,13 +157,15 @@ class ParticipantResource extends Resource
             ->filters([
                 //
             ])
+            ->headerActions([
+                ExportAction::make()
+                    ->exporter(ParticipantExporter::class)
+                    ->label('Экспорт')
+            ])
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
             ]);
     }
 
