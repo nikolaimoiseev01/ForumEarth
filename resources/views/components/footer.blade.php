@@ -1,6 +1,8 @@
 <footer class="bg-green-500 rounded-t-3xl w-full py-16 text-bright-500 mt-32" id="footer">
     <div class="flex justify-between content mb-16 md:flex-col md:text-center md:items-center gap-4">
         <h1>Напишите нам!</h1>
+        <livewire:components.contact-formt/>
+
 {{--        <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">--}}
 {{--            <mask id="mask0_19_129" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="49"--}}
 {{--                  height="49">--}}
@@ -19,7 +21,8 @@
         <div class="flex flex-col md:items-center">
             <p class="text-2xl">Время и место проведения</p>
             <h4>22 - 29 июня 2025</h4>
-            <h4 class="text-3xl">г. Архангельск</h4>
+            <h4 class="text-3xl mb-16">г. Архангельск</h4>
+            <a href="/fixed/personal-policy.docx" class="text-white hover:!text-white">Политика конфиденциальности</a>
         </div>
 {{--        <div class="flex flex-col md:items-center">--}}
 {{--            <p class="text-2xl">Контакты</p>--}}

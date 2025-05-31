@@ -4,10 +4,14 @@ namespace App\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\View\Component;
 
 class Footer extends Component
 {
+
+
+
     /**
      * Create a new component instance.
      */
@@ -23,4 +27,5 @@ class Footer extends Component
     {
         return view('components.footer');
     }
+
 }
