@@ -146,7 +146,6 @@
              согласие  на обработку персональных данных
         </a>
         </span>
-
         <input id="agreement" type="checkbox" required>
     </div>
 

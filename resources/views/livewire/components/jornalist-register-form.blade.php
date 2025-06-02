@@ -5,5 +5,13 @@
     <input required wire:model="telephone" type="text" placeholder="Телефон">
     <textarea required wire:model="devices" placeholder="Перечень ввозимого оборудования"></textarea>
     <textarea required wire:model="comment" placeholder="Комментарий"></textarea>
+    <div class="flex text-gray-600 gap-4 items-center">
+        <span>
+             Даю свое <a class="text-green-500" href="/fixed/personal-agreement.doc">
+             согласие  на обработку персональных данных
+        </a>
+        </span>
+        <input id="agreement" type="checkbox" required>
+    </div>
     <button type="submit" class="w-full py-6 text-center bg-green-500 text-bright-500 rounded-xl text-xl">Отправить</button>
 </form>
