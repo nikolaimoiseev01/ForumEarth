@@ -2,10 +2,9 @@
     <div class="content flex items-center">
         <x-application-logo class="w-20 mr-10"/>
         <div class="flex gap-4 text-lg md:hidden">
-            <a wire:navigate href="/#about">О форуме</a>
-            <a wire:navigate href="">Участники</a>
-            <a wire:navigate href="#footer">Контакты</a>
-            <a wire:navigate href="/#journalist-form">Аккредитация для СМИ</a>
+            <a href="/#about">О форуме</a>
+            <a href="#footer">Контакты</a>
+            <a href="/#journalist-form">Аккредитация для СМИ</a>
             <a wire:navigate href="{{route('portal.participation-form')}}">Анкета участников</a>
         </div>
 {{--        <svg class="ml-auto md:hidden" width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">--}}

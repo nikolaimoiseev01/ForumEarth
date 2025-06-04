@@ -38,7 +38,8 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <p class="">Архангельская область</p>
+                    <p class="">Архангельская область, г. Архангельск<br>
+                        22 — 29 июня</p>
                 </div>
                 <h1 class="relative">Земляне</h1>
                 <h3 class="relative">Международный начно-практический<br> экологический форум</h3>
@@ -108,7 +109,7 @@
         </div>
     </section>
 
-    <section class="bg-bright-500 py-20 rounded-t-[30px] -mt-10 relative" id="journalist-form">
+    <section  class="bg-bright-500 py-20 rounded-t-[30px] -mt-10 relative" id="journalist-form">
         <svg class="absolute w-full opacity-60" width="1241" height="1274" viewBox="0 0 1241 1274" fill="none"
              xmlns="http://www.w3.org/2000/svg">
             <path
@@ -124,7 +125,7 @@
             <div class="flex gap-5 md:flex-col">
                 <div class="flex flex-col p-6 bg-green-500 shadow justify-center rounded-3xl pr-20 relative flex-1 w-1/2 md:w-full text-bright-500">
                     <h2 class="text-[56px]">22 - 29 июня<br> 2025 г.</h2>
-                    <p class="font-medium text-3xl">Архангельск</p>
+                    <p class="font-medium text-3xl">Россия, Архангельская область, г. Архангельск, ул. пос. Беломорье, 11 (Санаторий Беломорье)</p>
                 </div>
                 <img src="/fixed/forum-meeting-people-2.jpg" class="h-80 object-cover rounded-3xl w-1/2 md:w-full" alt="">
             </div>
