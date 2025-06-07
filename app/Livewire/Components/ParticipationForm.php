@@ -32,6 +32,8 @@ class ParticipationForm extends Component
     public $passport_code;
     public $address;
 
+    public $topic;
+
     public function render()
     {
         return view('livewire.components.participation-form');
@@ -63,6 +65,7 @@ class ParticipationForm extends Component
             'passport_issued_date' => $this->passport_issued_date,
             'passport_issued_by' => $this->passport_issued_by,
             'passport_code' => $this->passport_code,
+            'topic' => $this->topic,
             'address' => $this->address
         ]);
 

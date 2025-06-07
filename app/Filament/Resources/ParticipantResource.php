@@ -78,6 +78,9 @@ class ParticipantResource extends Resource
                         ->label('Регион')
                         ->required()
                         ->maxLength(255),
+                    Forms\Components\TextInput::make('topic')
+                        ->label('Тема интереса')
+                        ->maxLength(255),
                     Forms\Components\TextInput::make('status')
                         ->label('Статус')
                         ->required()
