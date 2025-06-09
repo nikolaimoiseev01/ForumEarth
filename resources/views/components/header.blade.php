@@ -15,7 +15,7 @@
                 <img src="/fixed/telegram-logo.svg" class="w-full" alt="">
             </a>
             <a href="https://t.me/forumzemlyane" target="_blank" class="flex items-center justify-center bg-blue-500 w-12 h-12 p-2 rounded cursor-pointer">
-                <img src="/fixed/telegram-logo.svg" class="w-full" alt="">
+                <img src="/fixed/zen-logo.svg" class="w-full" alt="">
             </a>
         </div>
 
