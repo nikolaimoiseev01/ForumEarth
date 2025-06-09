@@ -1,6 +1,26 @@
 import './bootstrap';
 import $ from 'jquery'
 import 'jquery-mask-plugin'
+import { gsap } from "gsap";
+// import Swiper JS
+import Swiper from 'swiper';
+
+import { Navigation, Pagination } from 'swiper/modules';
+// import Swiper and modules styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+// Регистрация Swiper модулей
+Swiper.use([Navigation, Pagination]);
+// Сделать доступным глобально
+window.gsap = gsap;
+window.ScrollTrigger = ScrollTrigger;
+window.Swiper = Swiper;
 
 //region -- Плавная прокрутка
 // Select all links with hashes
@@ -45,7 +65,7 @@ $('a[href*="#"]')
 
 
 function mobileInputCreate() {
-    $('.mobile_input').mask('+0 (000) 000 00-00');
+    $('.mobile_input').mask('+0 (000) 000 00-000');
 }
 $(document).ready(function () {
     mobileInputCreate()
@@ -53,7 +73,7 @@ $(document).ready(function () {
 
 document.addEventListener('DOMContentLoaded', function () {
     window.mobileInputCreate = function () {
-        $('.mobile_input').mask('+0 (000) 000 00-00');
+        $('.mobile_input').mask('+0 (000) 000 00-000');
     }
 })
 

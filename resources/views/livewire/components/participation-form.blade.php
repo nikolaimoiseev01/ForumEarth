@@ -1,5 +1,5 @@
 <form x-data="{ showByStatus: @entangle('status') }" wire:submit="register"
-      class="flex bg-bright-500 flex-col gap-12 rounded-3xl p-16 w-full max-w-5xl mx-auto relative">
+      class="flex bg-bright-500 flex-col gap-12 rounded-3xl p-16 md:p-0 w-full max-w-5xl mx-auto relative">
 
 
     <div class="flex  flex-col gap-4">
@@ -155,14 +155,14 @@
 
     <div class="flex text-gray-600 gap-4 items-center">
         <span>
-             Даю свое <a class="text-green-500" href="/fixed/personal-agreement.doc">
+             Даю свое <a class="text-blue-500" href="/fixed/personal-agreement.doc">
              согласие  на обработку персональных данных
         </a>
         </span>
         <input id="agreement" type="checkbox" required>
     </div>
 
-    <button type="submit" class="w-full py-6 text-center bg-green-500 text-bright-500 rounded-xl text-xl">Отправить
+    <button type="submit" class="w-full py-6 text-center bg-blue-500 text-bright-500 rounded-xl text-xl">Отправить
     </button>
 
 </form>

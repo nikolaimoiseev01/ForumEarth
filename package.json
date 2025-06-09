@@ -17,8 +17,10 @@
         "vite": "^6.2.4"
     },
     "dependencies": {
+        "gsap": "^3.13.0",
         "jquery": "^3.7.1",
         "jquery-mask-plugin": "^1.14.16",
+        "swiper": "^11.2.8",
         "tailwind-hamburgers": "^1.3.5"
     }
 }

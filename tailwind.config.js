@@ -16,13 +16,15 @@ export default {
             },
             colors: {
                 bright: {
-                    500: '#FFFFFF'
+                    500: '#FFFFFF',
+                    600: '#c6c6c6',
+                    700: '#637381'
                 },
                 dark: {
                     500: '#272C2B'
                 },
-                green: {
-                    500: '#70AB34'
+                blue: {
+                    500: '#036896'
                 }
             },
             screens: {

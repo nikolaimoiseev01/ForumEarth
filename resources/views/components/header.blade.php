@@ -7,26 +7,18 @@
             <a href="/#journalist-form">Аккредитация для СМИ</a>
             <a wire:navigate href="{{route('portal.participation-form')}}">Анкета участников</a>
         </div>
-{{--        <svg class="ml-auto md:hidden" width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">--}}
-{{--            <g clip-path="url(#clip0_0_144)">--}}
-{{--                <mask id="mask0_0_144" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="49"--}}
-{{--                      height="49">--}}
-{{--                    <path--}}
-{{--                        d="M42.367 0.0228386H6.35769C3.04313 0.0228386 0.35614 2.70902 0.35614 6.02259V42.0211C0.35614 45.3347 3.04313 48.0209 6.35769 48.0209H42.367C45.6816 48.0209 48.3686 45.3347 48.3686 42.0211V6.02259C48.3686 2.70902 45.6816 0.0228386 42.367 0.0228386Z"--}}
-{{--                        fill="white"/>--}}
-{{--                </mask>--}}
-{{--                <g mask="url(#mask0_0_144)">--}}
-{{--                    <path fill-rule="evenodd" clip-rule="evenodd"--}}
-{{--                          d="M48.3686 0.0228386H0.35614V48.0209H48.3686V0.0228386ZM14.1611 22.3952L34.1126 14.7039C35.0229 14.2921 35.9029 14.9232 35.5552 16.3171L32.1579 32.323C31.9206 33.4614 31.2352 33.7314 30.2809 33.206L25.1058 29.3846L22.6177 31.8032C22.6084 31.8121 22.5992 31.8211 22.5901 31.8299C22.3125 32.0983 22.0824 32.3207 21.5814 32.3207L21.9347 27.0424L31.5368 18.378C31.9576 18.0046 31.4457 17.8211 30.8853 18.1621L19.0337 25.6373L13.9113 24.0399C12.8074 23.7013 12.7995 22.9419 14.1611 22.3952Z"--}}
-{{--                          fill="#70AB34"/>--}}
-{{--                </g>--}}
-{{--            </g>--}}
-{{--            <defs>--}}
-{{--                <clipPath id="clip0_0_144">--}}
-{{--                    <rect width="48.0124" height="47.998" fill="white" transform="translate(0.35614 0.0228386)"/>--}}
-{{--                </clipPath>--}}
-{{--            </defs>--}}
-{{--        </svg>--}}
+        <div class="flex gap-4 ml-auto md:hidden">
+            <div class="flex items-center justify-center bg-blue-500 w-12 h-12 p-2 rounded">
+                <img src="/fixed/vk-logo.svg" class="w-full" alt="">
+            </div>
+            <div class="flex items-center justify-center bg-blue-500 w-12 h-12 p-2 rounded">
+                <img src="/fixed/telegram-logo.svg" class="w-full" alt="">
+            </div>
+            <div class="flex items-center justify-center bg-blue-500 w-12 h-12 p-2 rounded">
+                <img src="/fixed/zen-logo.svg" class="w-full" alt="">
+            </div>
+        </div>
+
         <div class="hidden md:flex justify-center ml-auto">
             <div class="flex justify-center">
                 <div x-data="{ open: false }" class="relative flex flex-col justify-center">
@@ -64,7 +56,8 @@
                                 <a wire:navigate href="" class="block px-4 py-2 text-gray-800 ">Аккредитация для СМИ</a>
                             </li>
                             <li>
-                                <a wire:navigate href="{{route('portal.participation-form')}}" class="block px-4 py-2 text-gray-800 ">Анкета участников</a>
+                                <a wire:navigate href="{{route('portal.participation-form')}}"
+                                   class="block px-4 py-2 text-gray-800 ">Анкета участников</a>
                             </li>
                         </ul>
                     </div>
