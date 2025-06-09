@@ -33,6 +33,9 @@ class PostResource extends Resource
                         ->label('Заголовок')
                         ->required()
                         ->maxLength(255),
+                    Forms\Components\Textarea::make('desc')
+                        ->label('Описание')
+                        ->required(),
                     Forms\Components\SpatieMediaLibraryFileUpload::make('cover')
                         ->label('Обложка')
                         ->collection('cover'),
