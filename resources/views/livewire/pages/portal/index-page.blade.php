@@ -151,7 +151,7 @@
                 <h2 class="text-2xl">«Земляне» на открытии медиаклуба ВСЕРОССИЙСКОГО<br>ЭКОЛОГИЧЕСКОГО ДВИЖЕНИЯ «ЭКОСИСТЕМА»</h2>
                 <p class="text-bright-600">Александр Цыбульский, Александр Уланов, Микаил Камилов</p>
             </div>
-            <div id="video_cover" style="background-image: url('/fixed/furm-meeting-people.png')"
+            <div id="video_cover" style="background-image: url('/fixed/video-background.jpg')"
                  class="w-full z-20 bg-cover absolute flex items-center justify-center bottom-0 top-0 h-full">
                 <div @click="playVideo('manufactured_video')"
                      class="flex items-center justify-center bg-bright-500 p-5 bg-opacity-80 rounded-full">
