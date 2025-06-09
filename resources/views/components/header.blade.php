@@ -1,4 +1,4 @@
-<header class="fixed top-0 w-full bg-bright-500 rounded-b-3xl py-4 z-20">
+<header class="fixed top-0 w-full bg-bright-500 rounded-b-3xl py-4 z-[999]">
     <div class="content flex items-center">
         <x-application-logo class="w-20 mr-10"/>
         <div class="flex gap-4 text-lg md:hidden">
