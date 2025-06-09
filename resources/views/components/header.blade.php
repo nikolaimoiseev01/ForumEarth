@@ -8,15 +8,15 @@
             <a wire:navigate href="{{route('portal.participation-form')}}">Анкета участников</a>
         </div>
         <div class="flex gap-4 ml-auto md:hidden">
-            <div class="flex items-center justify-center bg-blue-500 w-12 h-12 p-2 rounded">
+            <a href="https://vk.com/forumzemlyane" target="_blank" class="flex items-center justify-center bg-blue-500 w-12 h-12 p-2 rounded cursor-pointer">
                 <img src="/fixed/vk-logo.svg" class="w-full" alt="">
-            </div>
-            <div class="flex items-center justify-center bg-blue-500 w-12 h-12 p-2 rounded">
+            </a>
+            <a href="https://t.me/forumzemlyane" target="_blank" class="flex items-center justify-center bg-blue-500 w-12 h-12 p-2 rounded cursor-pointer">
                 <img src="/fixed/telegram-logo.svg" class="w-full" alt="">
-            </div>
-            <div class="flex items-center justify-center bg-blue-500 w-12 h-12 p-2 rounded">
+            </a>
+            <a href="https://dzen.ru/forumzemlyane" target="_blank" class="flex items-center justify-center bg-blue-500 w-12 h-12 p-2 rounded cursor-pointer">
                 <img src="/fixed/zen-logo.svg" class="w-full" alt="">
-            </div>
+            </a>
         </div>
 
         <div class="hidden md:flex justify-center ml-auto">

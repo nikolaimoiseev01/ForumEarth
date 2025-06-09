@@ -29,8 +29,8 @@
                     <p class="">Архангельская область, г. Архангельск<br>
                         22 — 29 июня</p>
                 </div>
-                <h1 class="relative uppercase">Земляне</h1>
-                <h3 class="relative text-2xl font-normal">Международный начно-практический<br> экологический форум</h3>
+                <h1 class="relative uppercase">«ЗЕМЛЯНЕ»</h1>
+                <h3 class="relative text-2xl font-normal">Международный научно-практический<br> экологический форум</h3>
             </div>
         </div>
     </section>
@@ -149,7 +149,7 @@
         <div class="content relative !max-w-6xl  rounded-[20px] relative flex items-center justify-center">
             <div class="absolute -bottom-12 -left-12 flex flex-col gap-2 py-2 px-4 rounded-xl z-50 bg-blue-500 text-bright-500 text-center w-auto border-t-4 border-r-4 border-bright-500 md:hidden">
                 <h2 class="text-2xl">«Земляне» на открытии медиаклуба ВСЕРОССИЙСКОГО<br>ЭКОЛОГИЧЕСКОГО ДВИЖЕНИЯ «ЭКОСИСТЕМА»</h2>
-                <p class="text-bright-600">Цыбульский, Уланов, Микаил</p>
+                <p class="text-bright-600">Александр Цыбульский, Александр Уланов, Микаил Камилов</p>
             </div>
             <div id="video_cover" style="background-image: url('/fixed/furm-meeting-people.png')"
                  class="w-full z-20 bg-cover absolute flex items-center justify-center bottom-0 top-0 h-full">
@@ -201,7 +201,6 @@
                         src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A23dab58c50df066f74d3a0d40fbf99da292c0c2acce5050f35a377794132b8a2&amp;lang=ru_RU&amp;scroll=true"></script>
             </div>
         </div>
-        <a href="" class="text-4xl bg-blue-500 w-full py-6 text-center text-white rounded-2xl md:text-2xl">Присоединиться</a>
     </section>
 
     <x-post-slider/>

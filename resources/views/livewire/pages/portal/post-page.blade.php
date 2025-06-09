@@ -21,7 +21,7 @@
         @foreach($post['content'] as $post)
             @if($post['type'] === 'img')
                 <div class="mb-10">
-                    <img src="/storage/{{$post['data']['url']}}" alt="" class="w-full h-auto rounded-lg">
+                    <img src="{{$post['data']['url']}}" alt="" class="w-full h-auto rounded-lg">
                 </div>
             @elseif($post['type'] === 'text')
                 <div class="mb-10">
