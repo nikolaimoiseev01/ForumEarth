@@ -159,7 +159,7 @@
                 </div>
             </div>
             <video id="manufactured_video" class="w-[99%]" controls>
-                <source src="/fixed/production.mp4" type="video/mp4">
+                <source src="/fixed/main-video.MOV" type="video/mp4">
                 Your browser does not support HTML video.
             </video>
         </div>
