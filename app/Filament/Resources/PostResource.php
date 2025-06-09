@@ -52,7 +52,8 @@ class PostResource extends Resource
                                 ->image()
                                 ->required()
                         ])->label('Изображение')
-                    ])
+                    ])->label('Содержание новости')
+                        ->addActionLabel('Добавить блок'),
 //                    Forms\Components\Section::make('Таймлайн')->schema([
 //                        Forms\Components\Builder::make('timeline')->blocks([
 //                            Block::make('general')->schema([
