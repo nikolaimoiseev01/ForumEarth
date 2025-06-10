@@ -71,7 +71,7 @@
                 1
             ); // Convert values we know to values we want https://gsap.com/docs/v3/GSAP/UtilityMethods/mapRange()
 
-            const blockHeight = 300;
+            const blockHeight = document.querySelector(".card-wrapper")?.offsetHeight || 300;
             const time = 1;
             if (window.innerWidth > 767) {
                 gsap.set(cardWrappers, {
@@ -102,13 +102,13 @@
                     duration: 1
                 });
                 // Animte cards up from off screen one by one.
+                const heights = cardWrappers.map((el) => el.offsetHeight);
                 tl.to(".card-wrapper:not(:first-child)", {
-                    yPercent: (i) => -100 * (i + 1),
+                    y: (i) => -heights.slice(0, i + 1).reduce((sum, h) => sum + h, 0),
                     duration: time / 2,
                     stagger: time
                 });
 
-                //
                 tl.to(
                     ".card-wrapper:not(:last-child)",
                     {

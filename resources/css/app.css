@@ -57,3 +57,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
 select {
     @apply text-lg
 }
+
+blockquote {
+    @apply border-l-2 border-dark-500 pl-4 italic text-lg text-dark-500 my-4;
+}
