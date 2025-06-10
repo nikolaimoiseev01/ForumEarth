@@ -9,9 +9,9 @@
         </div>
 
         <div
-            class="flex items-center justify-start p-6 md:p-2 w-full text-bright-500 md:text-center max-w-4xl bg-blue-500 bg-opacity-50 rounded-3xl">
+            class="flex items-center justify-start p-6 md:p-2 w-full text-bright-500 md:text-center max-w-[70vw] bg-blue-500 bg-opacity-50 rounded-3xl">
             <div class="flex bg-blue-500 p-12 flex-col justify-center gap-8 w-full relative rounded-3xl min-h-[40vh]">
-                <h1 class="relative leading-[5rem]">{{$post['title']}}</h1>
+                <h1 class="relative text-[3vw] leading-[3.5vw] md:text-lg">{{$post['title']}}</h1>
                 <h3 class="relative text-2xl font-normal">{{$post['created_at']->translatedFormat('j F H:i')}}</h3>
             </div>
         </div>
