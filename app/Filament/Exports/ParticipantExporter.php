@@ -28,6 +28,7 @@ class ParticipantExporter extends Exporter
             ExportColumn::make('team')->label('Команда'),
             ExportColumn::make('interests')->label('Интересы'),
             ExportColumn::make('expertise')->label('Экспертиза'),
+            ExportColumn::make('topic')->label('Тема интереса'),
             ExportColumn::make('interest_fact')->label('Интересные факты'),
             ExportColumn::make('created_at')->label('Создан'),
             ExportColumn::make('updated_at')->label('Обновлен'),
