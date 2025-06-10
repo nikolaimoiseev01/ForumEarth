@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="w-1/2 md:w-full">
-                <img class="img_trigger" src="/fixed/furm-meeting-people.png" alt="">
+                <img class="img_trigger" src="/fixed/sticky-block-background.jpg" alt="">
             </div>
         </div>
     </div>

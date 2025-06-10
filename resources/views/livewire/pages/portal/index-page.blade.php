@@ -43,7 +43,7 @@
 
         <div class="flex gap-5 content md:flex-col relative">
             <div class="flex flex-col p-6 bg-bright-500 shadow w-1/2 md:w-full rounded-3xl">
-                <img src="/fixed/furm-meeting-people.png" class="h-56 w-full object-cover mb-8 rounded-3xl" alt="">
+                <img src="/fixed/about-img.jpg" class="h-56 w-full object-cover mb-8 rounded-3xl" alt="">
                 <h3>Форум «Земляне»</h3>
                 <p class="text-xl">это международная научно-практическая экологическая инициатива, направленная на
                     развитие технологий и осознанного подхода к экологии.</p>
