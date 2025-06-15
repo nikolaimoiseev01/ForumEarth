@@ -36,6 +36,9 @@ class PostResource extends Resource
                     Forms\Components\Textarea::make('desc')
                         ->label('Описание')
                         ->required(),
+                    Forms\Components\DateTimePicker::make('custom_created_at')
+                        ->label('Дата создания')
+                        ->required(),
                     Forms\Components\SpatieMediaLibraryFileUpload::make('cover')
                         ->label('Обложка')
                         ->collection('cover'),
@@ -74,6 +77,10 @@ class PostResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
+                    ->label('Заголовок')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('custom_created_at')
+                    ->label('Своя дата создания')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()

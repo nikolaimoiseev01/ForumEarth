@@ -6,10 +6,10 @@
                 @foreach($posts as $key => $post)
                     <a wire:navigate href="{{route('portal.post', $post['id'])}}"
                        class="swiper-slide !flex !flex-col !gap-4">
-                        <img src="{{$post->getFirstMediaUrl('cover')}}" class="w-full object-cover mb-4" alt="">
+                        <img src="{{$post->getFirstMediaUrl('cover')}}" class="w-full object-cover mb-4 h-60" alt="">
                         <span
-                            class="text-bright-500 px-4 py-1 rounded font-light w-fit bg-blue-500">{{$post['created_at']->translatedFormat('j F H:i')}}</span>
-                        <h3 class="text-3xl">{{\Illuminate\Support\Str::limit($post['title'], $limit = 50, $end = '...')}}</h3>
+                            class="text-bright-500 px-4 py-1 rounded font-light w-fit bg-blue-500">{{$post['custom_created_at']->translatedFormat('j F H:i')}}</span>
+                        <h3 class="text-3xl">{{\Illuminate\Support\Str::limit($post['title'], $limit = 100, $end = '...')}}</h3>
                         <p class="text-bright-700 text-lg">{{\Illuminate\Support\Str::limit($post['desc'], $limit = 50, $end = '...')}}</p>
                     </a>
                 @endforeach

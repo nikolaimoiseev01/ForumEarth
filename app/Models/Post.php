@@ -12,5 +12,6 @@ class Post extends Model implements HasMedia
 
     protected $casts = [
         'content' => 'array',
+        'custom_created_at' => 'datetime:Y-m-d',
     ];
 }
