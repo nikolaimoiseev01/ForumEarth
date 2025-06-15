@@ -217,7 +217,7 @@
 
 
     <section class="mb-20">
-        <h2 class="text-blue-600 mb-20 relative tracking-wide content">Вузы-участники форума</h2>
+        <h2 class="text-blue-600 mb-20 relative tracking-wide content">ВУЗы-участники форума</h2>
         <div class="streaming-carousel h-[240px]" data-direction="left">
             <div class="carousel-wrapper flex gap-16">
                 @foreach($universities as $universitiy)
