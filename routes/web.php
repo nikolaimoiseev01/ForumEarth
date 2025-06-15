@@ -52,10 +52,10 @@ Route::middleware('auth')->group(function () {
 //endregion Auth
 
 
-Route::get('/', IndexPage::class)->name('portal.index');
-Route::get('/post/{id}', PostPage::class)->name('portal.post');
-Route::get('/speakers', SpeakersPage::class)->name('portal.speakers');
-Route::get('/participation-form', ParticipationFormPage::class)->name('portal.participation-form');
+//Route::get('/', IndexPage::class)->name('portal.index');
+//Route::get('/post/{id}', PostPage::class)->name('portal.post');
+//Route::get('/speakers', SpeakersPage::class)->name('portal.speakers');
+//Route::get('/participation-form', ParticipationFormPage::class)->name('portal.participation-form');
 
 Route::middleware('auth')->prefix('account')->group(function () {
     Route::get('settings', SettingsPage::class)->middleware(['auth', 'verified'])->name('account.settings');
