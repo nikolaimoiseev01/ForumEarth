@@ -1,6 +1,6 @@
 @if(count($posts) > 0)
-    <div {{ $attributes->merge(['class' => 'flex relative flex-col content'])}}>
-        <h2 class="text-center text-blue-500 mb-20">Последние новости</h2>
+    <div id="news" {{ $attributes->merge(['class' => 'flex relative flex-col content'])}}>
+        <h2 class="text-blue-600 mb-10">Последние новости</h2>
         <div class="swiper postSlider sm:!w-full mb-10">
             <div class="swiper-wrapper">
                 @foreach($posts as $key => $post)
@@ -9,8 +9,8 @@
                         <img src="{{$post->getFirstMediaUrl('cover')}}" class="w-full object-cover mb-4" alt="">
                         <span
                             class="text-bright-500 px-4 py-1 rounded font-light w-fit bg-blue-500">{{$post['created_at']->translatedFormat('j F H:i')}}</span>
-                        <h3>{{\Illuminate\Support\Str::limit($post['title'], $limit = 30, $end = '...')}}</h3>
-                        <p class="text-bright-700">{{\Illuminate\Support\Str::limit($post['desc'], $limit = 50, $end = '...')}}</p>
+                        <h3 class="text-3xl">{{\Illuminate\Support\Str::limit($post['title'], $limit = 50, $end = '...')}}</h3>
+                        <p class="text-bright-700 text-lg">{{\Illuminate\Support\Str::limit($post['desc'], $limit = 50, $end = '...')}}</p>
                     </a>
                 @endforeach
             </div>

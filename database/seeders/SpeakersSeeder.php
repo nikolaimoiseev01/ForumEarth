@@ -16,7 +16,17 @@ class SpeakersSeeder extends Seeder
         for ($i = 0; $i < 10; $i++) {
             $speaker = Speaker::create([
                 'name' => 'СУРОВА НАДЕЖДА (' . ($i + 1) . ')',
-                'description' => 'Бизнес-психолог и коуч, карьерный консультант, преподаватель Университета Иннополис, автор бизнес-тренингов'
+                'description' => 'Бизнес-психолог и коуч, карьерный консультант, преподаватель Университета Иннополис, автор бизнес-тренингов',
+                'type' => 'спикер'
+            ]);
+            $speaker->addMediaFromUrl(ENV('APP_URL') . '/fixed/test/temp-speaker.png')
+                ->toMediaCollection('image');
+        }
+        for ($i = 0; $i < 10; $i++) {
+            $speaker = Speaker::create([
+                'name' => 'СУРОВА НАДЕЖДА (' . ($i + 1) . ')',
+                'description' => 'Бизнес-психолог и коуч, карьерный консультант, преподаватель Университета Иннополис, автор бизнес-тренингов',
+                'type' => 'эксперт'
             ]);
             $speaker->addMediaFromUrl(ENV('APP_URL') . '/fixed/test/temp-speaker.png')
                 ->toMediaCollection('image');

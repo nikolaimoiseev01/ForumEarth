@@ -48,6 +48,7 @@ class DatabaseSeeder extends Seeder
         (new SponsorSeeder())->run();
         (new UniversitySeeder())->run();
         (new InfoPartnerSeeder())->run();
+        (new CountrySeeder())->run();
 
     }
 }

@@ -11,9 +11,12 @@ class Marquee extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public $elements;
+    public $countries;
+    public function __construct($eles, $countries)
     {
-        //
+        $this->elements = $eles;
+        $this->countries = $countries;
     }
 
     /**

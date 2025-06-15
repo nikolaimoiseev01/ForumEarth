@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Pages\Portal;
 
+use App\Models\Country;
 use App\Models\InfoPartner;
 use App\Models\Speaker;
 use App\Models\Sponsor;
@@ -41,6 +42,7 @@ class IndexPage extends Component
     public $sponsors;
     public $universities;
     public $info_partners;
+    public $countries;
 
     public function render()
     {
@@ -49,9 +51,10 @@ class IndexPage extends Component
 
     public function mount()
     {
-        $this->speakers = Speaker::with('media')->take(5)->get();
+        $this->speakers = Speaker::with('media')->where('type', 'спикер')->take(5)->get();
         $this->sponsors = Sponsor::all();
         $this->universities = University::all();
         $this->info_partners = InfoPartner::all();
+        $this->countries = Country::all();
     }
 }

@@ -149,11 +149,88 @@ window.addEventListener('swal:modal', event => {
 // }
 
 
-document.querySelectorAll('.streaming-carousel').forEach(container => {
-    const direction = container.dataset.direction || 'left';
-    streamingCarousel(container, direction);
-});
+// document.querySelectorAll('.streaming-carousel').forEach(container => {
+//     const direction = container.dataset.direction || 'left';
+//     streamingCarousel(container, direction);
+// });
 
 document.addEventListener('alpine:init', () => {
     console.log('test')
+});
+
+
+
+export default function LogosMarquee(containerEl) {
+    if (!containerEl) {
+        console.warn("Marquee: container not provided.");
+        return;
+    }
+
+    const track = containerEl.querySelector(".marquee__track");
+    const marqueeWrapper = containerEl.closest(".marquee");
+
+    if (!track || !marqueeWrapper) {
+        console.warn("Marquee: track or wrapper not found.");
+        return;
+    }
+
+    const speed = parseFloat(marqueeWrapper.dataset.speed) || 60;
+    const direction = marqueeWrapper.dataset.direction === 'right' ? 1 : -1;
+    const trackWidth = track.getBoundingClientRect().width;
+
+    let pos = 0;
+    let start = null;
+    let rafId = null;
+
+    // Расширить ширину контейнера
+    containerEl.style.width = trackWidth + "px";
+
+    // Клонирование
+    const clone = track.cloneNode(true);
+    if (direction === -1) {
+        containerEl.insertBefore(clone, track);
+    } else {
+        containerEl.appendChild(clone);
+    }
+
+    containerEl.style.willChange = "transform";
+
+    // Анимация
+    function animate(timestamp) {
+        if (!start) start = timestamp;
+
+        const elapsed = timestamp - start;
+        pos = direction * (-(elapsed / 1000) * speed);
+
+        if (Math.abs(pos) >= trackWidth) {
+            start = timestamp;
+            pos = 0;
+        }
+
+        containerEl.style.transform = "translateX(" + pos + "px)";
+        rafId = requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    return {
+        destroy() {
+            cancelAnimationFrame(rafId);
+            if (clone && clone.parentNode === containerEl) {
+                containerEl.removeChild(clone);
+            }
+            containerEl.style.transform = "";
+            containerEl.style.willChange = "";
+        }
+    };
+}
+
+// import LogosMarquee from './marquee.js';
+//
+window.addEventListener("load", function () {
+    const marquees = document.querySelectorAll('.marquee__ctn');
+
+    marquees.forEach(function (containerEl) {
+        LogosMarquee(containerEl); // можно сохранить в массив, если нужен destroy()
+    });
 });

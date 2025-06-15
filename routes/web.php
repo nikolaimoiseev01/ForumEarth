@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Livewire\Pages\Portal\JournalistFormPage;
 use App\Livewire\Pages\Portal\ParticipationFormPage;
 use App\Livewire\Pages\Account\SettingsPage;
 use App\Livewire\Pages\Auth\ConfirmPasswordPage;
@@ -52,10 +53,11 @@ Route::middleware('auth')->group(function () {
 //endregion Auth
 
 
-//Route::get('/', IndexPage::class)->name('portal.index');
-//Route::get('/post/{id}', PostPage::class)->name('portal.post');
-//Route::get('/speakers', SpeakersPage::class)->name('portal.speakers');
-//Route::get('/participation-form', ParticipationFormPage::class)->name('portal.participation-form');
+Route::get('/', IndexPage::class)->name('portal.index');
+Route::get('/post/{id}', PostPage::class)->name('portal.post');
+Route::get('/speakers', SpeakersPage::class)->name('portal.speakers');
+Route::get('/participation-form', ParticipationFormPage::class)->name('portal.participation-form');
+Route::get('/journalist-form', JournalistFormPage::class)->name('portal.journalist-form');
 
 Route::middleware('auth')->prefix('account')->group(function () {
     Route::get('settings', SettingsPage::class)->middleware(['auth', 'verified'])->name('account.settings');

@@ -1,11 +1,14 @@
 <header class="fixed top-0 w-full bg-bright-500 rounded-b-3xl py-4 z-[999]">
     <div class="content flex items-center">
         <x-application-logo class="w-20 mr-10"/>
-        <div class="flex gap-4 text-lg md:hidden">
+        <div class="flex gap-4 text-lg md:hidden mx-auto font-medium">
             <a href="/#about">О форуме</a>
+            <a href="#footer">Участники</a>
             <a href="#footer">Контакты</a>
-            <a href="/#journalist-form">Аккредитация для СМИ</a>
-            <a wire:navigate href="{{route('portal.participation-form')}}">Анкета участников</a>
+            <a href="/#speakers">Спикеры</a>
+            <a href="/#orgs">Организаторы</a>
+            <a href="/#news">Новости</a>
+            <a wire:navigate href="{{route('portal.journalist-form')}}">Аккредитация для СМИ</a>
         </div>
         <div class="flex gap-4 ml-auto md:hidden">
             <a href="https://vk.com/forumzemlyane" target="_blank" class="flex items-center justify-center bg-blue-500 w-12 h-12 p-2 rounded cursor-pointer">
@@ -53,7 +56,7 @@
                                 <a wire:navigate href="" class="block px-4 py-2 text-gray-800 ">Контакты</a>
                             </li>
                             <li>
-                                <a wire:navigate href="" class="block px-4 py-2 text-gray-800 ">Аккредитация для СМИ</a>
+                                <a wire:navigate href="{{route('portal.journalist-form')}}" class="block px-4 py-2 text-gray-800 ">Аккредитация для СМИ</a>
                             </li>
                             <li>
                                 <a wire:navigate href="{{route('portal.participation-form')}}"

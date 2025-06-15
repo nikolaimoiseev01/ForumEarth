@@ -30,6 +30,13 @@ class SpeakerResource extends Resource
                         ->label('Имя')
                         ->required()
                         ->maxLength(255),
+                    Forms\Components\Select::make('type')
+                        ->label('Тип')
+                        ->options([
+                            'спикер' => 'Спикер',
+                            'эксперт' => 'Эксперт'
+                        ])
+                    ,
                     SpatieMediaLibraryFileUpload::make('image')
                         ->collection('image')
                         ->label('Фото')
@@ -60,9 +67,12 @@ class SpeakerResource extends Resource
                 Tables\Columns\TextColumn::make('name')
                     ->label('Имя')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('type')
+                    ->label('Имя')
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('description')
                     ->label('Описание')
-                    ->limit(100)
+                    ->limit(50)
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
