@@ -168,11 +168,10 @@
                 </div>
             @endforeach
         </div>
-
     </section>
 
     {{--Темы форума--}}
-    <section class="content">
+    <section class="content mb-20">
         <h2 class="text-blue-600 mb-20 relative tracking-wide">Темы форума</h2>
         <div class="flex flex-col gap-4">
             @foreach($topics as $topic)
@@ -211,6 +210,8 @@
         </div>
     </section>
 
+    {{--Спикеры форума--}}
+    <x-speakers-cards :speakers="$speakers" mainPage="true"/>
 
     <section class="content py-20 relative flex flex-col">
         <h2 class="text-center mb-20">Место проведения</h2>

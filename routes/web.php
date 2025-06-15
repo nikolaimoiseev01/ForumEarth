@@ -11,6 +11,7 @@ use App\Livewire\Pages\Auth\ResetPasswordPage;
 use App\Livewire\Pages\Auth\VerifyEmailPage;
 use App\Livewire\Pages\Portal\IndexPage;
 use App\Livewire\Pages\Portal\PostPage;
+use App\Livewire\Pages\Portal\SpeakersPage;
 use Illuminate\Support\Facades\Route;
 
 
@@ -53,6 +54,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/', IndexPage::class)->name('portal.index');
 Route::get('/post/{id}', PostPage::class)->name('portal.post');
+Route::get('/speakers', SpeakersPage::class)->name('portal.speakers');
 Route::get('/participation-form', ParticipationFormPage::class)->name('portal.participation-form');
 
 Route::middleware('auth')->prefix('account')->group(function () {

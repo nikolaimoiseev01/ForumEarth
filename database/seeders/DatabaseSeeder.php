@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Post;
+use App\Models\Speaker;
 use App\Models\User;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -19,7 +20,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $password = ENV('APP_ENV') == ('local') ? '12345678' : ENV('ADMIN_PASSWORD');
-        $user = User::create([
+        User::create([
             'name' => 'admin',
             'email' => 'admin@mail.ru',
             'email_verified_at' => now(),
@@ -42,5 +43,6 @@ class DatabaseSeeder extends Seeder
             $post->addMediaFromUrl(ENV('APP_URL') . '/fixed/test/temp-image.png')
                 ->toMediaCollection('cover');
         }
+
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Pages\Portal;
 
+use App\Models\Speaker;
 use Livewire\Component;
 
 class IndexPage extends Component
@@ -33,8 +34,15 @@ class IndexPage extends Component
         ],
     ];
 
+    public $speakers;
+
     public function render()
     {
         return view('livewire.pages.portal.index-page');
+    }
+
+    public function mount()
+    {
+        $this->speakers = Speaker::with('media')->take(5)->get();
     }
 }
