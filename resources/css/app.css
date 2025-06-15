@@ -47,7 +47,7 @@ a {
 }
 
 .content {
-    @apply max-w-[1412px] mx-auto w-[90%];
+    @apply max-w-[1314px] mx-auto w-[90%];
 }
 
 

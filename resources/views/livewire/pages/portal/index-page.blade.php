@@ -132,7 +132,8 @@
 
     {{--    <x-sticky-info/>--}}
 
-    <section class="content py-20 relative flex flex-col">
+    {{--Форум «Земляне» в цифрах--}}
+    <section class="content py-20 relative flex flex-col mb-20">
         <h2 class="text-center text-blue-600 mb-20 relative tracking-wide">Форум «Земляне» в цифрах</h2>
         <div class="grid grid-cols-3 grid-rows-2 gap-5 md:grid-cols-1">
             @php
@@ -169,6 +170,48 @@
         </div>
 
     </section>
+
+    {{--Темы форума--}}
+    <section class="content">
+        <h2 class="text-blue-600 mb-20 relative tracking-wide">Темы форума</h2>
+        <div class="flex flex-col gap-4">
+            @foreach($topics as $topic)
+                <div x-data="{ open: false }" class="bg-blue-300 p-10 rounded-2xl">
+                    <div class="flex justify-between items-center">
+                        <div class="flex flex-col gap-2">
+                            <h2 class="text-4xl text-blue-600">{{$topic['title']}}</h2>
+                            <p class="text-xl text-blue-500">{{$topic['description']}}</p>
+                        </div>
+                        <div
+                            class="bg-blue-500 w-20 h-20 flex items-center justify-center rounded-xl cursor-pointer transition duration-300 hover:bg-blue-400"
+                            :class="open ? 'rotate-90' : ''"
+                            @click="open = !open"
+                        >
+                            <x-maki-arrow class="w-12 h-12 fill-white transition-transform duration-300 -rotate-45" />
+                        </div>
+                    </div>
+
+                    <!-- Дополнительный текст -->
+                    <div
+                        x-show="open"
+                        x-transition:enter="transition ease-out duration-500"
+                        x-transition:enter-start="opacity-0 max-h-0"
+                        x-transition:enter-end="opacity-100 max-h-screen"
+                        x-transition:leave="transition ease-in duration-400"
+                        x-transition:leave-start="opacity-100 max-h-screen"
+                        x-transition:leave-end="opacity-0 max-h-0"
+                        class="overflow-hidden text-blue-800 text-lg"
+                    >
+                        <p class="mt-6 text-blue-600 italic">
+                            Полное описание
+                        </p>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </section>
+
+
     <section class="content py-20 relative flex flex-col">
         <h2 class="text-center mb-20">Место проведения</h2>
         <div class="flex gap-5 md:flex-col mb-6">
@@ -188,6 +231,8 @@
             </div>
         </div>
     </section>
+
+
 
     <x-post-slider/>
 
