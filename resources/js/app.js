@@ -10,9 +10,11 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
+import {livewire_hot_reload} from 'virtual:livewire-hot-reload'
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+livewire_hot_reload();
 
 gsap.registerPlugin(ScrollTrigger);
 // Регистрация Swiper модулей

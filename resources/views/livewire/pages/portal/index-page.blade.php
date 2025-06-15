@@ -7,32 +7,16 @@
                 style="background: linear-gradient(180deg, rgba(18, 87, 124, 0.2) 116.33%, rgba(255, 255, 255, 0.2) 142.98%);"
                 class="absolute top-0 z-10 w-full h-full"></div>
         </div>
-
-        <div
-            class="flex items-center justify-start p-6 md:p-2 w-full text-bright-500 md:text-center max-w-4xl bg-blue-500 bg-opacity-50 rounded-3xl">
-            <div class="flex bg-blue-500 p-12 flex-col gap-4 w-full relative rounded-3xl">
-                <div class="flex gap-1 mb-10 relative md:text-center md:justify-center">
-                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_0_65)">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M11.2645 11.1459C10.1299 11.1459 9.21034 10.2263 9.21034 9.09174C9.21034 7.95716 10.1299 7.03758 11.2645 7.03758C12.3991 7.03758 13.3187 7.95716 13.3187 9.09174C13.3187 10.2263 12.3991 11.1459 11.2645 11.1459ZM11.2645 5.66814C9.37399 5.66814 7.8409 7.20054 7.8409 9.09174C7.8409 10.9829 9.37399 12.5153 11.2645 12.5153C13.155 12.5153 14.6881 10.9829 14.6881 9.09174C14.6881 7.20054 13.155 5.66814 11.2645 5.66814ZM11.2645 20.732C10.1258 20.7381 4.4173 11.9545 4.4173 9.09174C4.4173 5.31072 7.48279 2.24454 11.2645 2.24454C15.0462 2.24454 18.1117 5.31072 18.1117 9.09174C18.1117 11.9162 12.3854 20.7381 11.2645 20.732ZM11.2645 0.875107C6.72686 0.875107 3.04787 4.5541 3.04787 9.09174C3.04787 12.5277 9.89848 22.7936 11.2645 22.7861C12.6093 22.7936 19.4811 12.4811 19.4811 9.09174C19.4811 4.5541 15.8021 0.875107 11.2645 0.875107Z"
-                                  fill="white"/>
-                            <circle cx="11.2645" cy="9.23598" r="2.98916" fill="white"/>
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_0_65">
-                                <rect width="21.911" height="21.911" fill="white"
-                                      transform="translate(0.114441 0.916321)"/>
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    <p class="">Архангельская область, г. Архангельск<br>
+            <div class="flex bg-blue-500 bg-opacity-30 p-12 flex-col text-bright-500 gap-8 w-full max-w-3xl relative md:text-center rounded-3xl">
+                <div class="flex gap-1 relative md:text-center md:justify-center">
+                    <x-bi-geo-alt class="w-8 h-8"/>
+                    <p class="leading-[22px]">Архангельская область, г. Архангельск<br>
                         22 — 29 июня</p>
                 </div>
-                <h1 class="relative uppercase">«ЗЕМЛЯНЕ»</h1>
+                <h1 class="relative uppercase leading-[80px]">Форум<br>«ЗЕМЛЯНЕ»</h1>
                 <h3 class="relative text-2xl font-normal">Международный научно-практический<br> экологический форум</h3>
             </div>
-        </div>
+
     </section>
 
     <section class="bg-blue-500 pt-20 pb-40 rounded-t-[30px] -mt-10 relative" id="about">
@@ -145,8 +129,36 @@
 
     <x-video-player/>
 
-    <x-sticky-info/>
+{{--    <x-sticky-info/>--}}
 
+    <section class="content py-20 relative flex flex-col">
+        <h2 class="text-center text-blue-600 mb-20 relative tracking-wide">Форум «Земляне» в цифрах</h2>
+        <div class="grid grid-cols-3 grid-rows-2 gap-5 md:grid-cols-1">
+            @php
+                $numbers = [
+                    ['title' => '35', 'description' => 'Стран-участниц', 'bg-color' => 'bg-blue-400'],
+                    ['title' => '300+', 'description' => 'участников форума', 'bg-color' => 'bg-blue-500'],
+                    ['title' => '7', 'description' => 'дней работы форума', 'bg-color' => 'bg-blue-400'],
+                    ['title' => '21', 'description' => 'команд из ведущих ВУЗов', 'bg-color' => 'bg-blue-400'],
+                ];
+            @endphp
+            <div class="col-span-1 row-span-2 gap-8 flex flex-col items-center bg-blue-500 rounded-3xl p-8">
+                <div class="bg-white p-20 rounded-full flex aspect-square items-center justify-center h-auto mt-4">
+                    <x-application-logo class="w-44"/>
+                </div>
+                <div class="bg-white rounded-xl py-2 px-4">
+                    <p class="text-blue-500 text-2xl font-medium">Кто, если не мы. Когда, если не на «Землянах»</p>
+                </div>
+            </div>
+            @foreach($numbers as $number)
+                <div class="col-span-1 row-span-1 flex flex-col gap-8 {{$number['bg-color']}} p-6 rounded-3xl text-white">
+                    <h3 class="font-bold text-9xl">{{ $number['title'] }}</h3>
+                    <p class="opacity-70 text-2xl">{{ $number['description'] }}</p>
+                </div>
+            @endforeach
+        </div>
+
+    </section>
     <section class="content py-20 relative flex flex-col">
         <h2 class="text-center mb-20">Место проведения</h2>
         <div class="flex gap-5 md:flex-col mb-6">
