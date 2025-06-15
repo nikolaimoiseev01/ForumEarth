@@ -7,15 +7,16 @@
                 style="background: linear-gradient(180deg, rgba(18, 87, 124, 0.2) 116.33%, rgba(255, 255, 255, 0.2) 142.98%);"
                 class="absolute top-0 z-10 w-full h-full"></div>
         </div>
-            <div class="flex bg-blue-500 bg-opacity-30 p-12 flex-col text-bright-500 gap-8 w-full max-w-3xl relative md:text-center rounded-3xl">
-                <div class="flex gap-1 relative md:text-center md:justify-center">
-                    <x-bi-geo-alt class="w-8 h-8"/>
-                    <p class="leading-[22px]">Архангельская область, г. Архангельск<br>
-                        22 — 29 июня</p>
-                </div>
-                <h1 class="relative uppercase leading-[80px]">Форум<br>«ЗЕМЛЯНЕ»</h1>
-                <h3 class="relative text-2xl font-normal">Международный научно-практический<br> экологический форум</h3>
+        <div
+            class="flex bg-blue-500 bg-opacity-30 p-12 flex-col text-bright-500 gap-8 w-full max-w-3xl relative md:text-center rounded-3xl">
+            <div class="flex gap-1 relative md:text-center md:justify-center">
+                <x-bi-geo-alt class="w-8 h-8"/>
+                <p class="leading-[22px]">Архангельская область, г. Архангельск<br>
+                    22 — 29 июня</p>
             </div>
+            <h1 class="relative uppercase leading-[80px]">Форум<br>«ЗЕМЛЯНЕ»</h1>
+            <h3 class="relative text-2xl font-normal">Международный научно-практический<br> экологический форум</h3>
+        </div>
 
     </section>
 
@@ -129,29 +130,38 @@
 
     <x-video-player/>
 
-{{--    <x-sticky-info/>--}}
+    {{--    <x-sticky-info/>--}}
 
     <section class="content py-20 relative flex flex-col">
         <h2 class="text-center text-blue-600 mb-20 relative tracking-wide">Форум «Земляне» в цифрах</h2>
         <div class="grid grid-cols-3 grid-rows-2 gap-5 md:grid-cols-1">
             @php
                 $numbers = [
-                    ['title' => '35', 'description' => 'Стран-участниц', 'bg-color' => 'bg-blue-400'],
+                    ['title' => '35', 'description' => 'команд из ведущих ВУЗов', 'bg-color' => 'bg-blue-400'],
                     ['title' => '300+', 'description' => 'участников форума', 'bg-color' => 'bg-blue-500'],
                     ['title' => '7', 'description' => 'дней работы форума', 'bg-color' => 'bg-blue-400'],
-                    ['title' => '21', 'description' => 'команд из ведущих ВУЗов', 'bg-color' => 'bg-blue-400'],
+                    ['title' => '21', 'description' => 'стран-участниц', 'bg-color' => 'bg-blue-400'],
                 ];
             @endphp
             <div class="col-span-1 row-span-2 gap-8 flex flex-col items-center bg-blue-500 rounded-3xl p-8">
                 <div class="bg-white p-20 rounded-full flex aspect-square items-center justify-center h-auto mt-4">
                     <x-application-logo class="w-44"/>
                 </div>
-                <div class="bg-white rounded-xl py-2 px-4">
-                    <p class="text-blue-500 text-2xl font-medium">Кто, если не мы. Когда, если не на «Землянах»</p>
+                <div class="bg-white rounded-lg relative">
+                    <span class="absolute -top-[20px] left-3 py-3 px-[10px] bg-blue-400 flex items-center justify-center rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
+                            <path
+                                d="M0.463778 9V6.54545C0.463778 5.82102 0.600142 5.05824 0.872869 4.2571C1.1456 3.45596 1.52486 2.68892 2.01065 1.95597C2.49645 1.22301 3.06747 0.59659 3.72372 0.0767047L5.61577 1.43182C5.09588 2.19034 4.6527 2.98295 4.28622 3.80966C3.91974 4.63636 3.73651 5.53551 3.73651 6.5071V9H0.463778ZM6.98366 9V6.54545C6.98366 5.82102 7.12003 5.05824 7.39276 4.2571C7.66548 3.45596 8.04474 2.68892 8.53054 1.95597C9.01634 1.22301 9.58736 0.59659 10.2436 0.0767047L12.1357 1.43182C11.6158 2.19034 11.1726 2.98295 10.8061 3.80966C10.4396 4.63636 10.2564 5.53551 10.2564 6.5071V9H6.98366Z"
+                                fill="white"/>
+                        </svg>
+                    </span>
+                    <p class="text-blue-500 text-2xl font-medium tracking-[-0.8px]  py-3 px-12">Кто, если не мы. Когда,
+                        если не на «Землянах»</p>
                 </div>
             </div>
             @foreach($numbers as $number)
-                <div class="col-span-1 row-span-1 flex flex-col gap-8 {{$number['bg-color']}} p-6 rounded-3xl text-white">
+                <div
+                    class="col-span-1 row-span-1 flex flex-col gap-8 {{$number['bg-color']}} p-6 rounded-3xl text-white">
                     <h3 class="font-bold text-9xl">{{ $number['title'] }}</h3>
                     <p class="opacity-70 text-2xl">{{ $number['description'] }}</p>
                 </div>
