@@ -16,6 +16,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 livewire_hot_reload();
 
+
 gsap.registerPlugin(ScrollTrigger);
 // Регистрация Swiper модулей
 Swiper.use([Navigation, Pagination]);
@@ -88,3 +89,71 @@ window.addEventListener('swal:modal', event => {
         showConfirmButton: false,
     })
 })
+//
+// function streamingCarousel(containerEl, direction = 'left') {
+//     const speed = 0.5;
+//     const wrapperEl = containerEl.querySelector('.carousel-wrapper');
+//     const cards = Array.from(wrapperEl.children);
+//
+//     const positions = cards.map((el) => {
+//         const style = window.getComputedStyle(el);
+//         const marginLeft = parseFloat(style.marginLeft) || 0;
+//         const marginRight = parseFloat(style.marginRight) || 0;
+//         const width = el.offsetWidth;
+//
+//         return {
+//             el,
+//             width,
+//             marginLeft,
+//             marginRight,
+//             x: 0
+//         };
+//     });
+//
+//     // Устанавливаем начальные позиции
+//     let currentX = 0;
+//     positions.forEach((card) => {
+//         card.x = currentX + card.marginLeft;
+//         card.el.style.position = 'absolute';
+//         card.el.style.left = `${card.x}px`;
+//         currentX += card.width + card.marginLeft + card.marginRight;
+//     });
+//
+//     const containerWidth = containerEl.offsetWidth;
+//
+//     const animate = () => {
+//         // Сначала сдвигаем все
+//         positions.forEach(card => {
+//             card.x += (direction === 'left' ? -speed : speed);
+//         });
+//
+//         // Проверяем только те, что ушли полностью за экран
+//         positions.forEach(card => {
+//             if (direction === 'left' && card.x + card.width < 0) {
+//                 const rightmost = Math.max(...positions.map(p => p.x + p.width + p.marginRight));
+//                 card.x = rightmost + card.marginLeft;
+//             }
+//
+//             if (direction === 'right' && card.x > containerWidth) {
+//                 const leftmost = Math.min(...positions.map(p => p.x - p.marginLeft));
+//                 card.x = leftmost - card.width - card.marginRight;
+//             }
+//
+//             card.el.style.left = `${card.x}px`;
+//         });
+//
+//         // requestAnimationFrame(animate);
+//     };
+//
+//     // requestAnimationFrame(animate);
+// }
+
+
+document.querySelectorAll('.streaming-carousel').forEach(container => {
+    const direction = container.dataset.direction || 'left';
+    streamingCarousel(container, direction);
+});
+
+document.addEventListener('alpine:init', () => {
+    console.log('test')
+});

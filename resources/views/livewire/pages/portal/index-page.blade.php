@@ -149,7 +149,8 @@
                     <x-application-logo class="w-44"/>
                 </div>
                 <div class="bg-white rounded-lg relative">
-                    <span class="absolute -top-[20px] left-3 py-3 px-[10px] bg-blue-400 flex items-center justify-center rounded">
+                    <span
+                        class="absolute -top-[20px] left-3 py-3 px-[10px] bg-blue-400 flex items-center justify-center rounded">
                         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
                             <path
                                 d="M0.463778 9V6.54545C0.463778 5.82102 0.600142 5.05824 0.872869 4.2571C1.1456 3.45596 1.52486 2.68892 2.01065 1.95597C2.49645 1.22301 3.06747 0.59659 3.72372 0.0767047L5.61577 1.43182C5.09588 2.19034 4.6527 2.98295 4.28622 3.80966C3.91974 4.63636 3.73651 5.53551 3.73651 6.5071V9H0.463778ZM6.98366 9V6.54545C6.98366 5.82102 7.12003 5.05824 7.39276 4.2571C7.66548 3.45596 8.04474 2.68892 8.53054 1.95597C9.01634 1.22301 9.58736 0.59659 10.2436 0.0767047L12.1357 1.43182C11.6158 2.19034 11.1726 2.98295 10.8061 3.80966C10.4396 4.63636 10.2564 5.53551 10.2564 6.5071V9H6.98366Z"
@@ -186,7 +187,7 @@
                             :class="open ? 'rotate-90' : ''"
                             @click="open = !open"
                         >
-                            <x-maki-arrow class="w-12 h-12 fill-white transition-transform duration-300 -rotate-45" />
+                            <x-maki-arrow class="w-12 h-12 fill-white transition-transform duration-300 -rotate-45"/>
                         </div>
                     </div>
 
@@ -213,6 +214,70 @@
     {{--Спикеры форума--}}
     <x-speakers-cards :speakers="$speakers" mainPage="true"/>
 
+
+
+    <section class="mb-20">
+        <h2 class="text-blue-600 mb-20 relative tracking-wide content">Вузы-участники форума</h2>
+        <div class="streaming-carousel h-[240px]" data-direction="left">
+            <div class="carousel-wrapper flex gap-16">
+                @foreach($universities as $universitiy)
+                    <div class="flex mx-6 items-center justify-center px-16 py-8 bg-blue-300 rounded-3xl">
+                        <img src="{{$universitiy->getFirstMediaUrl('image')}}" class="max-w-56" alt="">
+                    </div>
+                @endforeach
+                <div class="carousel-card bg-blue-500">1</div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="mb-20">
+        <h2 class="text-blue-600 mb-20 relative tracking-wide content">Партнеры</h2>
+                <div class="streaming-carousel h-[240px]" data-direction="left">
+                    <div class="carousel-wrapper flex gap-16">
+                        @foreach($sponsors as $sponsor)
+                            <div class="flex mx-6 items-center justify-center px-16 py-8 bg-blue-300 rounded-3xl">
+                                <img src="{{$sponsor->getFirstMediaUrl('image')}}" class="max-w-56" alt="">
+                            </div>
+                        @endforeach
+                        <div class="carousel-card bg-blue-500">1</div>
+                    </div>
+                </div>
+
+{{--        <div class="marquee-wrapper">--}}
+{{--            <div class="container">--}}
+{{--                <div class="marquee-block" style="--total-marquee-items:20; height: 240px; width: calc(374px * (20));">--}}
+{{--                    <div class="marquee-inner to-right">--}}
+{{--				<span>--}}
+{{--                  @foreach($sponsors as $sponsor)--}}
+{{--                        <div class="marquee-item">--}}
+{{--                            <div class="flex mx-6 items-center justify-center px-16 py-8 bg-blue-300 rounded-3xl">--}}
+{{--                        <img src="{{$sponsor->getFirstMediaUrl('image')}}" class="max-w-64" alt="">--}}
+{{--                    </div>--}}
+{{--                        </div>--}}
+{{--                    @endforeach--}}
+{{--				</span>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+
+    </section>
+
+    <section class="mb-20">
+        <h2 class="text-blue-600 mb-20 relative tracking-wide content">Инфопартнеры</h2>
+        <div class="streaming-carousel h-[240px]" data-direction="left">
+            <div class="carousel-wrapper flex gap-16">
+                @foreach($info_partners as $info_partner)
+                    <div class="flex mx-6 items-center justify-center px-16 py-8 bg-blue-300 rounded-3xl">
+                        <img src="{{$info_partner->getFirstMediaUrl('image')}}" class="max-w-56" alt="">
+                    </div>
+                @endforeach
+                <div class="carousel-card bg-blue-500">1</div>
+            </div>
+        </div>
+    </section>
+
     <section class="content py-20 relative flex flex-col">
         <h2 class="text-center mb-20">Место проведения</h2>
         <div class="flex gap-5 md:flex-col mb-6">
@@ -232,7 +297,6 @@
             </div>
         </div>
     </section>
-
 
 
     <x-post-slider/>

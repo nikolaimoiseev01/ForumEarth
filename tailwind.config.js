@@ -36,7 +36,21 @@ export default {
                 'lg': {'max': '1023px'}, // => @media (max-width: 1023px) { ... }
                 'md': {'max': '767px'}, // => @media (max-width: 767px) { ... }
                 'sm': {'max': '639px'}, // => @media (max-width: 639px) { ... }
-            }
+            },
+            animation: {
+                marquee: 'marquee 25s linear infinite',
+                marquee2: 'marquee2 25s linear infinite',
+            },
+            keyframes: {
+                marquee: {
+                    '0%': { transform: 'translateX(0%)' },
+                    '100%': { transform: 'translateX(-100%)' },
+                },
+                marquee2: {
+                    '0%': { transform: 'translateX(100%)' },
+                    '100%': { transform: 'translateX(0%)' },
+                },
+            },
         },
     },
 

@@ -44,5 +44,10 @@ class DatabaseSeeder extends Seeder
                 ->toMediaCollection('cover');
         }
 
+        (new SpeakersSeeder())->run();
+        (new SponsorSeeder())->run();
+        (new UniversitySeeder())->run();
+        (new InfoPartnerSeeder())->run();
+
     }
 }
