@@ -14,7 +14,7 @@ class CountrySeeder extends Seeder
      */
     public function run(): void
     {
-        for ($i = 0; $i < 20; $i++) {
+        for ($i = 0; $i < 10; $i++) {
             $sponsor = Country::create([
                 'name' => 'Страна ' . ($i + 1),
             ]);

@@ -29,7 +29,9 @@
         <div class="flex gap-5 content md:flex-col relative">
             <div class="flex flex-col p-6 bg-bright-500 shadow w-1/2 md:w-full rounded-3xl">
                 <img src="/fixed/cibulskiy.png" class="h-56 mx-auto object-top object-cover mb-8 rounded-3xl" alt="">
-                <p class="text-xl">«Название форума — «Земляне» — уже вызов, потому что мы решили, что должны действовать в интересах всего человечества, а не только Архангельской области и даже Российской Федерации. Ведь экология касается каждого жителя нашей планеты».</p>
+                <p class="text-xl">«Название форума — «Земляне» — уже вызов, потому что мы решили, что должны
+                    действовать в интересах всего человечества, а не только Архангельской области и даже Российской
+                    Федерации. Ведь экология касается каждого жителя нашей планеты».</p>
             </div>
             <div class="flex flex-col flex-1 gap-5">
                 <div
@@ -128,18 +130,18 @@
 
     <x-video-player/>
 
-    {{--    <x-sticky-info/>--}}
+{{--    --}}{{--    <x-sticky-info/>--}}
 
-    {{--Форум «Земляне» в цифрах--}}
+{{--    --}}{{--Форум «Земляне» в цифрах--}}
     <section class="content py-20 relative flex flex-col mb-20">
         <h2 class="text-center text-blue-600 mb-20 relative tracking-wide">Форум «Земляне» в цифрах</h2>
         <div class="grid grid-cols-3 grid-rows-2 gap-5 md:grid-cols-1">
             @php
                 $numbers = [
-                    ['title' => '35', 'description' => 'команд из ведущих ВУЗов', 'bg-color' => 'bg-blue-400'],
-                    ['title' => '300+', 'description' => 'участников форума', 'bg-color' => 'bg-blue-500'],
-                    ['title' => '7', 'description' => 'дней работы форума', 'bg-color' => 'bg-blue-400'],
                     ['title' => '21', 'description' => 'стран-участниц', 'bg-color' => 'bg-blue-400'],
+                    ['title' => '300+', 'description' => 'участников форума', 'bg-color' => 'bg-blue-500'],
+                    ['title' => '30', 'description' => 'команд-участниц', 'bg-color' => 'bg-blue-400'],
+                    ['title' => '7', 'description' => 'дней форума', 'bg-color' => 'bg-blue-400'],
                 ];
             @endphp
             <div class="col-span-1 row-span-2 gap-8 flex flex-col items-center bg-blue-500 rounded-3xl p-8">
@@ -155,8 +157,7 @@
                                 fill="white"/>
                         </svg>
                     </span>
-                    <p class="text-blue-500 text-2xl font-medium tracking-[-0.8px]  py-3 px-12">Кто, если не мы. Когда,
-                        если не на «Землянах»</p>
+                    <p class="text-blue-500 text-2xl font-medium tracking-[-0.8px]  py-3 px-12">Идей много. Планета одна . Ищем лучшие</p>
                 </div>
             </div>
             @foreach($numbers as $number)
@@ -169,23 +170,23 @@
         </div>
     </section>
 
-    {{--Темы форума--}}
+{{--    --}}{{--Темы форума--}}
     <section class="content mb-20">
         <h2 class="text-blue-600 mb-20 relative tracking-wide">Темы форума</h2>
         <div class="flex flex-col gap-4">
             @foreach($topics as $topic)
                 <div x-data="{ open: false }" class="bg-blue-300 p-10 rounded-2xl">
-                    <div class="flex justify-between items-center">
+                    <div class="flex justify-between sm:flex-col gap-8 items-center">
                         <div class="flex flex-col gap-2">
                             <h2 class="text-4xl text-blue-600">{{$topic['title']}}</h2>
                             <p class="text-xl text-blue-500">{{$topic['description']}}</p>
                         </div>
                         <div
-                            class="bg-blue-500 w-20 h-20 flex items-center justify-center rounded-xl cursor-pointer transition duration-300 hover:bg-blue-400"
+                            class="bg-blue-500 w-20 h-20 min-w-20 min-h-20 md:h-12 md:h-12 flex items-center justify-center rounded-xl cursor-pointer transition duration-300 hover:bg-blue-400"
                             :class="open ? 'rotate-90' : ''"
                             @click="open = !open"
                         >
-                            <x-maki-arrow class="w-12 h-12 fill-white transition-transform duration-300 -rotate-45"/>
+                            <x-maki-arrow class="w-12 h-12 md:h-8 md:h-8 fill-white transition-transform duration-300 -rotate-45"/>
                         </div>
                     </div>
 
@@ -201,7 +202,7 @@
                         class="overflow-hidden text-blue-800 text-lg"
                     >
                         <p class="mt-6 text-blue-600 italic">
-                            Полное описание
+                            {!! $topic['full'] !!}
                         </p>
                     </div>
                 </div>
@@ -209,7 +210,7 @@
         </div>
     </section>
 
-    {{--Спикеры форума--}}
+{{--    --}}{{--Спикеры форума--}}
     <x-speakers-cards id="speakers" :speakers="$speakers" mainPage="true"/>
 
 
@@ -220,13 +221,30 @@
 
     <section class="mb-20">
         <h2 class="text-blue-600 mb-10 relative tracking-wide content">Партнеры</h2>
-        <x-marquee :eles="$sponsors" countries="0"/>
+        <div x-ref="item" class="flex items-center flex-wrap justify-center gap-4 w-full py-2 text-white">
+            @foreach($sponsors as $sponsor)
+                <div
+                    class="px-16 py-8 bg-blue-300 flex items-center justify-center
+                        rounded-3xl">
+                    <img src="{{$sponsor->getFirstMediaUrl('image')}}" class="max-w-56" alt="">
+                </div>
+            @endforeach
+        </div>
     </section>
 
     <section class="mb-20">
-        <h2 class="text-blue-600 mb-10 relative tracking-wide content">Инфопартнеры</h2>
-        <x-marquee :eles="$info_partners" countries="0"/>
+        <h2 class="text-blue-600 mb-10 relative tracking-wide content">Партнеры</h2>
+        <div x-ref="item" class="flex items-center flex-wrap justify-center gap-4 w-full py-2 text-white">
+            @foreach($info_partners as $info_partner)
+                <div
+                    class="px-16 py-8 bg-blue-300 flex items-center justify-center
+                        rounded-3xl">
+                    <img src="{{$info_partner->getFirstMediaUrl('image')}}" class="max-w-56" alt="">
+                </div>
+            @endforeach
+        </div>
     </section>
+
 
     <section class="mb-20">
         <h2 class="text-blue-600 mb-10 relative tracking-wide content">Страны участницы</h2>
@@ -238,32 +256,32 @@
         <x-expert-slider/>
     </section>
 
-    <section class="mb-20 relative">
-        <img src="/fixed/prganizers-background.png" class="absolute -bottom-80 max-w-2xl left-0" alt="">
-        <div class="content">
-            <h2 class="text-blue-600 mb-20">Организаторы форума</h2>
-            <div class="grid grid-cols-2 grid-rows-2 gap-6 relative">
-                <div
-                    class="col-span-1 row-span-1 bg-blue-400 p-4 rounded-3xl w-full h-full flex items-center justify-center">
-                    <div class="flex items-center justify-center bg-white w-full h-full  rounded-2xl">
-                        <img src="/fixed/logo-ecosystem.png" class="" alt="">
-                    </div>
-                </div>
-                <div
-                    class="col-span-1 row-span-1 bg-blue-400 p-4 rounded-3xl w-full h-full flex items-center justify-center">
-                    <div class="flex items-center justify-center bg-white w-full h-full  rounded-2xl">
-                        <img src="/fixed/logo-mik.png" class="" alt="">
-                    </div>
-                </div>
-                <div
-                    class="col-span-2 row-span-1 bg-blue-400 p-4 rounded-3xl w-full h-full flex items-center justify-center">
-                    <div class="flex items-center justify-center bg-white w-full h-full  rounded-2xl">
-                        <img src="/fixed/logo-pao.png" class="" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+{{--    <section class="mb-20 relative">--}}
+{{--        <img src="/fixed/prganizers-background.png" class="absolute -bottom-80 max-w-2xl left-0" alt="">--}}
+{{--        <div class="content">--}}
+{{--            <h2 class="text-blue-600 mb-20">Организаторы форума</h2>--}}
+{{--            <div class="grid grid-cols-2 grid-rows-2 gap-6 relative">--}}
+{{--                <div--}}
+{{--                    class="col-span-1 row-span-1 bg-blue-400 p-4 rounded-3xl w-full h-full flex items-center justify-center">--}}
+{{--                    <div class="flex items-center justify-center bg-white w-full h-full  rounded-2xl">--}}
+{{--                        <img src="/fixed/logo-ecosystem.png" class="" alt="">--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div--}}
+{{--                    class="col-span-1 row-span-1 bg-blue-400 p-4 rounded-3xl w-full h-full flex items-center justify-center">--}}
+{{--                    <div class="flex items-center justify-center bg-white w-full h-full  rounded-2xl">--}}
+{{--                        <img src="/fixed/logo-mik.png" class="" alt="">--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div--}}
+{{--                    class="col-span-2 row-span-1 bg-blue-400 p-4 rounded-3xl w-full h-full flex items-center justify-center">--}}
+{{--                    <div class="flex items-center justify-center bg-white w-full h-full  rounded-2xl">--}}
+{{--                        <img src="/fixed/logo-pao.png" class="" alt="">--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
     <section class="content py-20 relative flex flex-col">
         <h2 class="mb-20 text-blue-600">Место проведения</h2>

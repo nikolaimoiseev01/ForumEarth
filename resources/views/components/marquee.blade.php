@@ -107,13 +107,13 @@
         <div class="absolute left-0 z-20 w-40 h-full bg-gradient-to-r from-white to-transparent"></div>
         <div class="absolute right-0 z-20 w-40 h-full bg-gradient-to-l from-white to-transparent"></div>
         <div x-ref="content" class="flex animate-marquee">
-            <div x-ref="item" class="flex items-center justify-around flex-shrink-0 w-full py-2 space-x-4 text-white">
+            <div x-ref="item" class="flex items-center justify-around flex-shrink-0 w-full py-2 text-white">
                 @foreach($elements as $key=>$el)
                     <div
-                        class="@if($key == 0) translay-y-0.5 @endif marquee__item flex mx-6 items-center justify-center
+                        class="@if($key == 0)  @endif marquee__item flex mx-6 items-center justify-center overflow-hidden
                         @if($countries == '0')px-16 py-8 bg-blue-300 @endif
                         rounded-3xl">
-                        <img src="{{$el->getFirstMediaUrl('image')}}" class="@if($countries == '1') w-full max-w-lg @else max-w-56 @endif" alt="">
+                        <img src="{{$el->getFirstMediaUrl('image')}}" class="@if($countries == '1') w-72 h-44 !max-w-72 !max-h-44 rounded-xl @else max-w-56 @endif" alt="">
                     </div>
                 @endforeach
             </div>
