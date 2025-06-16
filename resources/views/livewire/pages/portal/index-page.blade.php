@@ -28,7 +28,7 @@
 
         <div class="flex gap-5 content md:flex-col relative">
             <div class="flex gap-4 sm:flex-col p-6 bg-bright-500 items-center shadow w-1/2 md:w-full rounded-3xl">
-                <img src="/fixed/cibulskiy.png" class="h-56 mx-auto object-top object-cover mb-8 rounded-3xl" alt="">
+                <img src="/fixed/cibulskiy.png" class="h-72 mx-auto object-top object-cover mb-8 rounded-3xl" alt="">
                 <p class="text-xl"><span class="font-medium text-3xl"><b>Александр <br>Витальевич <br>Цыбульский</b></span><br>Губернатор Архангельской области</p>
             </div>
             <div class="flex flex-col flex-1 gap-5">
