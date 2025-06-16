@@ -8,14 +8,14 @@
                 class="absolute top-0 z-10 w-full h-full"></div>
         </div>
         <div
-            class="flex bg-blue-500 bg-opacity-30 p-12 flex-col text-bright-500 gap-8 w-full max-w-3xl relative md:text-center rounded-3xl">
+            class="flex bg-blue-500 bg-opacity-30 p-12 sm:p-2 flex-col text-bright-500 gap-8 w-full max-w-3xl relative md:text-center rounded-3xl">
             <div class="flex gap-1 relative md:text-center md:justify-center">
                 <x-bi-geo-alt class="w-8 h-8"/>
                 <p class="leading-[22px]">Архангельская область, г. Архангельск<br>
                     22 — 29 июня</p>
             </div>
-            <h1 class="relative uppercase leading-[80px]">Форум<br>«ЗЕМЛЯНЕ»</h1>
-            <h3 class="relative text-2xl font-normal">Международный научно-практический<br> экологический форум</h3>
+            <h1 class="relative uppercase leading-[80px] sm:text-4xl">Форум<br>«ЗЕМЛЯНЕ»</h1>
+            <h3 class="relative text-2xl font-normal sm:text-lg">Международный научно-практический<br> экологический форум</h3>
         </div>
 
     </section>
@@ -27,9 +27,9 @@
         </div>
 
         <div class="flex gap-5 content md:flex-col relative">
-            <div class="flex flex-col p-6 bg-bright-500 shadow w-1/2 md:w-full rounded-3xl">
+            <div class="flex gap-4 sm:flex-col p-6 bg-bright-500 items-center shadow w-1/2 md:w-full rounded-3xl">
                 <img src="/fixed/cibulskiy.png" class="h-56 mx-auto object-top object-cover mb-8 rounded-3xl" alt="">
-                <p class="text-xl">Губернатор Архангельской области Александр Витальевич Цыбульский</p>
+                <p class="text-xl">Александр <br>Витальевич <br>Цыбульский<br>Губернатор Архангельской области</p>
             </div>
             <div class="flex flex-col flex-1 gap-5">
                 <div
