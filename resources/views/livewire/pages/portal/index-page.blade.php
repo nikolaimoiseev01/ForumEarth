@@ -28,7 +28,7 @@
 
         <div class="flex gap-5 content md:flex-col relative">
             <div class="flex flex-col p-6 bg-bright-500 shadow w-1/2 md:w-full rounded-3xl">
-                <img src="/fixed/about-img.jpg" class="h-56 w-full object-top object-cover mb-8 rounded-3xl" alt="">
+                <img src="/fixed/cibulskiy.png" class="h-56 mx-auto object-top object-cover mb-8 rounded-3xl" alt="">
                 <p class="text-xl">«Название форума — «Земляне» — уже вызов, потому что мы решили, что должны действовать в интересах всего человечества, а не только Архангельской области и даже Российской Федерации. Ведь экология касается каждого жителя нашей планеты».</p>
             </div>
             <div class="flex flex-col flex-1 gap-5">
