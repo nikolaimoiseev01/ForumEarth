@@ -29,9 +29,7 @@
         <div class="flex gap-5 content md:flex-col relative">
             <div class="flex flex-col p-6 bg-bright-500 shadow w-1/2 md:w-full rounded-3xl">
                 <img src="/fixed/cibulskiy.png" class="h-56 mx-auto object-top object-cover mb-8 rounded-3xl" alt="">
-                <p class="text-xl">«Название форума — «Земляне» — уже вызов, потому что мы решили, что должны
-                    действовать в интересах всего человечества, а не только Архангельской области и даже Российской
-                    Федерации. Ведь экология касается каждого жителя нашей планеты».</p>
+                <p class="text-xl">Губернатор Архангельской области Александр Витальевич Цыбульский</p>
             </div>
             <div class="flex flex-col flex-1 gap-5">
                 <div
@@ -119,7 +117,7 @@
 
                     </div>
                     <h3>Главная идея форума</h3>
-                    <p class="text-xl md:text-lg">синергия экологии и прогресса Мы верим: экологичность — это не
+                    <p class="text-xl md:text-lg">синергия экологии и прогресса. Мы верим: экологичность — это не
                         ограничение, а
                         стимул для
                         инноваций.</p>
@@ -157,7 +155,7 @@
                                 fill="white"/>
                         </svg>
                     </span>
-                    <p class="text-blue-500 text-2xl font-medium tracking-[-0.8px]  py-3 px-12">Идей много. Планета одна . Ищем лучшие</p>
+                    <p class="text-blue-500 text-2xl font-medium tracking-[-0.8px]  py-3 px-12">Идей много. Планета одна. Ищем лучшие</p>
                 </div>
             </div>
             @foreach($numbers as $number)
