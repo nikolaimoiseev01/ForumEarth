@@ -233,7 +233,7 @@
     </section>
 
     <section class="mb-20">
-        <h2 class="text-blue-600 mb-10 relative tracking-wide content">Партнеры</h2>
+        <h2 class="text-blue-600 mb-10 relative tracking-wide content">Инфопартнеры</h2>
         <div x-ref="item" class="flex items-center flex-wrap justify-center gap-4 w-full py-2 text-white">
             @foreach($info_partners as $info_partner)
                 <div
