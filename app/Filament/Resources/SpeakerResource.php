@@ -83,12 +83,14 @@ class SpeakerResource extends Resource
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
+            ->reorderable('position')
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
+            ->defaultSort('position')
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
