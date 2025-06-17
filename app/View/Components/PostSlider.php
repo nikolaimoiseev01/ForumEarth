@@ -22,7 +22,7 @@ class PostSlider extends Component
      */
     public function render(): View|Closure|string
     {
-        $posts = Post::orderBy('custom_created_at', 'asc')->get();
+        $posts = Post::orderBy('custom_created_at', 'desc')->get();
         return view('components.post-slider', [
             'posts' => $posts,
         ]);

@@ -24,7 +24,7 @@ class ExpertSlider extends Component
     {
         $this->experts = \App\Models\Speaker::with('media')
             ->where('type', 'эксперт')
-            ->orderBy('position','desc')
+            ->orderBy('position')
             ->get();
         return view('components.expert-slider');
     }
