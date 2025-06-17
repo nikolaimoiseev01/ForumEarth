@@ -11,7 +11,7 @@ class SpeakersPage extends Component
     public function render()
     {
         $this->speakers = \App\Models\Speaker::with('media')->orderBy('position')->where('type', 'спикер')->get();
-        $this->experts = \App\Models\Speaker::with('media')->orderBy('position')->where('type', 'спикер')->get();
+        $this->experts = \App\Models\Speaker::with('media')->orderBy('position')->where('type', 'эксперт')->get();
         return view('livewire.pages.portal.speakers-page');
     }
 }
