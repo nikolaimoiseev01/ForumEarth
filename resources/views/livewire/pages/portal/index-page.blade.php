@@ -254,32 +254,32 @@
         <x-expert-slider/>
     </section>
 
-{{--    <section class="mb-20 relative">--}}
-{{--        <img src="/fixed/prganizers-background.png" class="absolute -bottom-80 max-w-2xl left-0" alt="">--}}
-{{--        <div class="content">--}}
-{{--            <h2 class="text-blue-600 mb-20">Организаторы форума</h2>--}}
-{{--            <div class="grid grid-cols-2 grid-rows-2 gap-6 relative">--}}
-{{--                <div--}}
-{{--                    class="col-span-1 row-span-1 bg-blue-400 p-4 rounded-3xl w-full h-full flex items-center justify-center">--}}
-{{--                    <div class="flex items-center justify-center bg-white w-full h-full  rounded-2xl">--}}
-{{--                        <img src="/fixed/logo-ecosystem.png" class="" alt="">--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div--}}
-{{--                    class="col-span-1 row-span-1 bg-blue-400 p-4 rounded-3xl w-full h-full flex items-center justify-center">--}}
-{{--                    <div class="flex items-center justify-center bg-white w-full h-full  rounded-2xl">--}}
-{{--                        <img src="/fixed/logo-mik.png" class="" alt="">--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div--}}
-{{--                    class="col-span-2 row-span-1 bg-blue-400 p-4 rounded-3xl w-full h-full flex items-center justify-center">--}}
-{{--                    <div class="flex items-center justify-center bg-white w-full h-full  rounded-2xl">--}}
-{{--                        <img src="/fixed/logo-pao.png" class="" alt="">--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </section>--}}
+    <section class="mb-20 relative">
+        <img src="/fixed/prganizers-background.png" class="absolute -bottom-80 max-w-2xl left-0 md:hidden" alt="">
+        <div class="content">
+            <h2 class="text-blue-600 mb-20">Организаторы форума</h2>
+            <div class="grid grid-cols-2 grid-rows-2 md:grid-cols-1 md:grid-rows-3 gap-6 relative">
+                <div
+                    class="col-span-1 row-span-1 bg-blue-400 p-4 rounded-3xl w-full h-full flex items-center justify-center">
+                    <div class="flex items-center justify-center bg-white w-full h-full  rounded-2xl">
+                        <img src="/fixed/logo-ecosystem.png" class="" alt="">
+                    </div>
+                </div>
+                <div
+                    class="col-span-1 row-span-1 md:row-span-2 bg-blue-400 p-4 rounded-3xl w-full h-full flex items-center justify-center">
+                    <div class="flex items-center justify-center bg-white w-full h-full  rounded-2xl">
+                        <img src="/fixed/logo-mik.png" class="" alt="">
+                    </div>
+                </div>
+                <div
+                    class="col-span-2 row-span-1 md:col-span-1 md:row-span-3 bg-blue-400 p-4 rounded-3xl w-full h-full flex items-center justify-center">
+                    <div class="flex items-center justify-center bg-white w-full h-full  rounded-2xl">
+                        <img src="/fixed/logo-pao.png" class="" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="content py-20 relative flex flex-col">
         <h2 class="mb-20 text-blue-600">Место проведения</h2>
