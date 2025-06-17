@@ -13,10 +13,12 @@ class SpeakersCards extends Component
      */
     public $speakers;
     public $main_page;
-    public function __construct($speakers, $mainPage)
+    public $main_title;
+    public function __construct($speakers, $mainPage, $mainTitle)
     {
         $this->speakers = $speakers;
         $this->main_page = $mainPage;
+        $this->main_title = $mainTitle;
     }
 
     /**

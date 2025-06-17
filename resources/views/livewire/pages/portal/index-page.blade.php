@@ -26,12 +26,13 @@
             <h2 class="text-bright-500 relative">О форуме</h2>
         </div>
 
-        <div class="flex gap-5 content md:flex-col relative">
-            <div class="flex gap-4 sm:flex-col p-6 bg-bright-500 items-center shadow w-1/2 md:w-full rounded-3xl">
+        <div class="flex flex-col gap-5 content md:flex-col relative">
+            <div class="flex gap-4 sm:flex-col p-6 bg-bright-500 items-center shadow w-full md:w-full rounded-3xl">
                 <img src="/fixed/cibulskiy.png" class="h-72 mx-auto object-top object-cover mb-8 rounded-3xl" alt="">
                 <p class="text-xl"><span class="font-medium text-3xl"><b>Александр <br>Витальевич <br>Цыбульский</b></span><br>Губернатор Архангельской области</p>
+                <p class="italic">Когда речь заходит об экологии, мы говорим прежде всего о будущем. Это простая истина: от наших действий сегодня зависит, что мы оставим следующим поколениям. Поэтому мы поставили перед собой цель — создать площадку, которая позволит подойти к обсуждению вопросов экологии нестандартным образом. Тема сохранения окружающей среды и её биоразнообразия касается не только Архангельской области. Бережное отношение к природному наследию региона, страны и планеты в целом — задача общечеловеческого масштаба. И форум «Земляне» даст нам возможность сообща поработать над решением этих проблем.</p>
             </div>
-            <div class="flex flex-col flex-1 gap-5">
+            <div class="flex flex-1 gap-5">
                 <div
                     class="flex flex-col p-6 bg-bright-500 shadow h-fit flex-1 justify-center rounded-3xl pr-20 relative">
 
@@ -209,7 +210,7 @@
     </section>
 
 {{--    --}}{{--Спикеры форума--}}
-    <x-speakers-cards id="speakers" :speakers="$speakers" mainPage="true"/>
+    <x-speakers-cards main_title="Приглашенные спикеры" id="speakers" :speakers="$speakers" mainPage="true"/>
 
 
     <section class="mb-20">
@@ -259,24 +260,24 @@
         <div class="content">
             <h2 class="text-blue-600 mb-20">Организаторы форума</h2>
             <div class="grid grid-cols-2 grid-rows-2 md:grid-cols-1 md:grid-rows-3 gap-6 relative">
-                <div
+                <a target="_blank" href="https://xn--80adffaaepcbv0ahr9bbr6q.xn--p1ai/"
                     class="col-span-1 row-span-1 bg-blue-400 p-4 rounded-3xl w-full h-full flex items-center justify-center">
                     <div class="flex items-center justify-center bg-white w-full h-full  rounded-2xl">
                         <img src="/fixed/logo-ecosystem.png" class="" alt="">
                     </div>
-                </div>
-                <div
+                </a>
+                <a target="_blank" href="https://i.moscow/lomonosov_cluster"
                     class="col-span-1 row-span-1 md:row-span-2 bg-blue-400 p-4 rounded-3xl w-full h-full flex items-center justify-center">
                     <div class="flex items-center justify-center bg-white w-full h-full  rounded-2xl">
                         <img src="/fixed/logo-mik.png" class="" alt="">
                     </div>
-                </div>
-                <div
+                </a>
+                <a target="_blank" href="https://dvinaland.ru/"
                     class="col-span-2 row-span-1 md:col-span-1 md:row-span-3 bg-blue-400 p-4 rounded-3xl w-full h-full flex items-center justify-center">
                     <div class="flex items-center justify-center bg-white w-full h-full  rounded-2xl">
                         <img src="/fixed/logo-pao.png" class="" alt="">
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
