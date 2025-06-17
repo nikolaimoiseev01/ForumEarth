@@ -260,6 +260,12 @@
         <div class="content">
             <h2 class="text-blue-600 mb-20">Организаторы форума</h2>
             <div class="grid grid-cols-2 grid-rows-2 md:grid-cols-1 md:grid-rows-3 gap-6 relative">
+                <a target="_blank" href="https://dvinaland.ru/"
+                   class="col-span-2 row-span-1 md:col-span-1 md:row-span-3 bg-blue-400 p-4 rounded-3xl w-full h-full flex items-center justify-center">
+                    <div class="flex items-center justify-center bg-white w-full h-full  rounded-2xl">
+                        <img src="/fixed/logo-pao.png" class="" alt="">
+                    </div>
+                </a>
                 <a target="_blank" href="https://xn--80adffaaepcbv0ahr9bbr6q.xn--p1ai/"
                     class="col-span-1 row-span-1 bg-blue-400 p-4 rounded-3xl w-full h-full flex items-center justify-center">
                     <div class="flex items-center justify-center bg-white w-full h-full  rounded-2xl">
@@ -270,12 +276,6 @@
                     class="col-span-1 row-span-1 md:row-span-2 bg-blue-400 p-4 rounded-3xl w-full h-full flex items-center justify-center">
                     <div class="flex items-center justify-center bg-white w-full h-full  rounded-2xl">
                         <img src="/fixed/logo-mik.png" class="" alt="">
-                    </div>
-                </a>
-                <a target="_blank" href="https://dvinaland.ru/"
-                    class="col-span-2 row-span-1 md:col-span-1 md:row-span-3 bg-blue-400 p-4 rounded-3xl w-full h-full flex items-center justify-center">
-                    <div class="flex items-center justify-center bg-white w-full h-full  rounded-2xl">
-                        <img src="/fixed/logo-pao.png" class="" alt="">
                     </div>
                 </a>
             </div>
