@@ -15,7 +15,8 @@
                     22 — 29 июня</p>
             </div>
             <h1 class="relative uppercase leading-[80px] sm:text-4xl">Форум<br>«ЗЕМЛЯНЕ»</h1>
-            <h3 class="relative text-2xl font-normal sm:text-lg">Международный научно-практический<br> экологический форум</h3>
+            <h3 class="relative text-2xl font-normal sm:text-lg">Международный научно-практический<br> экологический
+                форум</h3>
         </div>
 
     </section>
@@ -27,10 +28,29 @@
         </div>
 
         <div class="flex flex-col gap-5 content md:flex-col relative">
-            <div class="flex gap-4 sm:flex-col p-6 bg-bright-500 items-center shadow w-full md:w-full rounded-3xl">
-                <img src="/fixed/cibulskiy.png" class="h-72 mx-auto object-top object-cover mb-8 rounded-3xl" alt="">
-                <p class="text-xl"><span class="font-medium text-3xl"><b>Александр <br>Витальевич <br>Цыбульский</b></span><br>Губернатор Архангельской области</p>
-                <p class="italic">Когда речь заходит об экологии, мы говорим прежде всего о будущем. Это простая истина: от наших действий сегодня зависит, что мы оставим следующим поколениям. Поэтому мы поставили перед собой цель — создать площадку, которая позволит подойти к обсуждению вопросов экологии нестандартным образом. Тема сохранения окружающей среды и её биоразнообразия касается не только Архангельской области. Бережное отношение к природному наследию региона, страны и планеты в целом — задача общечеловеческого масштаба. И форум «Земляне» даст нам возможность сообща поработать над решением этих проблем.</p>
+            <div class="flex gap-8 sm:flex-col p-6 bg-bright-500 items-center shadow w-full md:w-full rounded-3xl">
+                <div class="flex flex-col w-1/2 md:w-full">
+                    <img src="/fixed/cibulskiy.png" class="h-72 object-top object-cover rounded-t-3xl w-fit mx-auto border-2 border-blue-500 !border-b-0"
+                         alt="">
+                    <div class="flex flex-col bg-blue-500 p-2 text-center text-white rounded-2xl border border-white">
+                        <h2 class="text-3xl md:!text-xl">Александр Витальевич Цыбульский</h2>
+                        <p class="font-light text-base ">губернатор Архангельской области</p>
+                    </div>
+                </div>
+                <div class="p-4 border-2 border-blue-500 rounded-2xl relative w-1/2 md:w-full">
+                        <span
+                            class="absolute -top-[20px] left-3 py-3 px-[10px] bg-blue-400 flex items-center justify-center rounded">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
+                                <path
+                                    d="M0.463778 9V6.54545C0.463778 5.82102 0.600142 5.05824 0.872869 4.2571C1.1456 3.45596 1.52486 2.68892 2.01065 1.95597C2.49645 1.22301 3.06747 0.59659 3.72372 0.0767047L5.61577 1.43182C5.09588 2.19034 4.6527 2.98295 4.28622 3.80966C3.91974 4.63636 3.73651 5.53551 3.73651 6.5071V9H0.463778ZM6.98366 9V6.54545C6.98366 5.82102 7.12003 5.05824 7.39276 4.2571C7.66548 3.45596 8.04474 2.68892 8.53054 1.95597C9.01634 1.22301 9.58736 0.59659 10.2436 0.0767047L12.1357 1.43182C11.6158 2.19034 11.1726 2.98295 10.8061 3.80966C10.4396 4.63636 10.2564 5.53551 10.2564 6.5071V9H6.98366Z"
+                                    fill="white"/>
+                            </svg>
+                        </span>
+                    <p class="font-bold">«От наших действий сегодня зависит, что мы оставим следующим поколениям. Бережное отношение к
+                        природному наследию региона, страны и планеты в целом — задача общечеловеческого масштаба.
+                        Форум «Земляне» даст возможность всем сообща поработать над решением существующих
+                        экологических проблем.»</p>
+                </div>
             </div>
             <div class="flex md:flex-col flex-1 gap-5">
                 <div
@@ -129,9 +149,9 @@
 
     <x-video-player/>
 
-{{--    --}}{{--    <x-sticky-info/>--}}
+    {{--    --}}{{--    <x-sticky-info/>--}}
 
-{{--    --}}{{--Форум «Земляне» в цифрах--}}
+    {{--    --}}{{--Форум «Земляне» в цифрах--}}
     <section class="content py-20 relative flex flex-col mb-20">
         <h2 class="text-center text-blue-600 mb-20 relative tracking-wide">Форум «Земляне» в цифрах</h2>
         <div class="grid grid-cols-3 grid-rows-2 gap-5 md:grid-cols-1">
@@ -156,7 +176,8 @@
                                 fill="white"/>
                         </svg>
                     </span>
-                    <p class="text-blue-500 text-2xl font-medium tracking-[-0.8px]  py-3 px-12">Идей много. Планета одна. Ищем лучшие</p>
+                    <p class="text-blue-500 text-2xl font-medium tracking-[-0.8px]  py-3 px-12">Идей много. Планета
+                        одна. Ищем лучшие</p>
                 </div>
             </div>
             @foreach($numbers as $number)
@@ -169,7 +190,7 @@
         </div>
     </section>
 
-{{--    --}}{{--Темы форума--}}
+    {{--    --}}{{--Темы форума--}}
     <section class="content mb-20">
         <h2 class="text-blue-600 mb-20 relative tracking-wide">Темы форума</h2>
         <div class="flex flex-col gap-4">
@@ -185,7 +206,8 @@
                             :class="open ? 'rotate-90' : ''"
                             @click="open = !open"
                         >
-                            <x-maki-arrow class="w-12 h-12 md:h-8 md:h-8 fill-white transition-transform duration-300 -rotate-45"/>
+                            <x-maki-arrow
+                                class="w-12 h-12 md:h-8 md:h-8 fill-white transition-transform duration-300 -rotate-45"/>
                         </div>
                     </div>
 
@@ -209,7 +231,7 @@
         </div>
     </section>
 
-{{--    --}}{{--Спикеры форума--}}
+    {{--    --}}{{--Спикеры форума--}}
     <x-speakers-cards main_title="Приглашенные спикеры" id="speakers" :speakers="$speakers" mainPage="true"/>
 
 
@@ -267,13 +289,13 @@
                     </div>
                 </a>
                 <a target="_blank" href="https://xn--80adffaaepcbv0ahr9bbr6q.xn--p1ai/"
-                    class="col-span-1 row-span-1 bg-blue-400 p-4 rounded-3xl w-full h-full flex items-center justify-center">
+                   class="col-span-1 row-span-1 bg-blue-400 p-4 rounded-3xl w-full h-full flex items-center justify-center">
                     <div class="flex items-center justify-center bg-white w-full h-full  rounded-2xl">
                         <img src="/fixed/logo-ecosystem.png" class="" alt="">
                     </div>
                 </a>
                 <a target="_blank" href="https://i.moscow/lomonosov_cluster"
-                    class="col-span-1 row-span-1 md:row-span-2 bg-blue-400 p-4 rounded-3xl w-full h-full flex items-center justify-center">
+                   class="col-span-1 row-span-1 md:row-span-2 bg-blue-400 p-4 rounded-3xl w-full h-full flex items-center justify-center">
                     <div class="flex items-center justify-center bg-white w-full h-full  rounded-2xl">
                         <img src="/fixed/logo-mik.png" class="" alt="">
                     </div>
