@@ -245,9 +245,9 @@
         <div x-ref="item" class="flex items-center flex-wrap justify-center gap-4 w-full py-2 text-white">
             @foreach($sponsors as $sponsor)
                 <div
-                    class="px-16 py-8 bg-blue-300 flex items-center justify-center
+                    class="px-16 py-8  max-h-32 bg-blue-300 flex items-center justify-center
                         rounded-3xl">
-                    <img src="{{$sponsor->getFirstMediaUrl('image')}}" class="max-w-56" alt="">
+                    <img src="{{$sponsor->getFirstMediaUrl('image')}}" class="max-w-56 max-h-[inherit]" alt="">
                 </div>
             @endforeach
         </div>
@@ -258,9 +258,9 @@
         <div x-ref="item" class="flex items-center flex-wrap justify-center gap-4 w-full py-2 text-white">
             @foreach($info_partners as $info_partner)
                 <div
-                    class="px-16 py-8 bg-blue-300 flex items-center justify-center
+                    class="px-16 py-8  max-h-32 bg-blue-300 flex items-center justify-center
                         rounded-3xl">
-                    <img src="{{$info_partner->getFirstMediaUrl('image')}}" class="max-w-56" alt="">
+                    <img src="{{$info_partner->getFirstMediaUrl('image')}}" class="max-w-56 max-h-[inherit]" alt="">
                 </div>
             @endforeach
         </div>
