@@ -25,7 +25,7 @@
                              class="@if($countries == '1') w-72 h-44 !max-w-72 !max-h-44 rounded-xl @else max-w-56 max-h-[inherit] @endif"
                              alt="">
                         @if($countries == '1')
-                            <p class="text-blue-500">{{$el['name']}}</p>
+                            <p class="text-blue-500 font-normal">{{$el['name']}}</p>
                         @endif
                     </div>
                 @endforeach
