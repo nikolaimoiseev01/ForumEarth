@@ -232,10 +232,13 @@
     </section>
 
     {{--    --}}{{--Спикеры форума--}}
-    <x-speakers-cards main_title="Приглашенные спикеры" id="speakers" :speakers="$speakers" mainPage="true"/>
+    <section class=" -mt-28 pt-28">
+        <x-speakers-cards main_title="Приглашенные спикеры" id="speakers" :speakers="$speakers" mainPage="true"/>
+    </section>
 
 
-    <section class="mb-20">
+
+    <section id="universities" class="mb-20 -mt-28 pt-28">
         <h2 class="text-blue-600 mb-10 relative tracking-wide content">ВУЗы-участники форума</h2>
         <x-marquee :eles="$universities" countries="0"/>
         <x-university-slider :universities="$universities"/>
@@ -278,7 +281,7 @@
         <x-expert-slider/>
     </section>
 
-    <section class="mb-20 relative">
+    <section id="orgs" class="mb-20 -mt-28 pt-28 relative">
         <img src="/fixed/prganizers-background.png" class="absolute -bottom-80 max-w-2xl left-0 md:hidden" alt="">
         <div class="content">
             <h2 class="text-blue-600 mb-20">Организаторы форума</h2>
@@ -325,6 +328,9 @@
         </div>
     </section>
 
-    <x-post-slider/>
+    <section id="news" class="-mt-28 pt-28">
+        <x-post-slider/>
+    </section>
+
 
 </main>

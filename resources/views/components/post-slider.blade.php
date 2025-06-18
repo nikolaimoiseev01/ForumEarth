@@ -1,5 +1,5 @@
 @if(count($posts) > 0)
-    <div id="news" {{ $attributes->merge(['class' => 'flex relative flex-col content'])}}>
+    <div {{ $attributes->merge(['class' => 'flex relative flex-col content'])}}>
         <h2 class="text-blue-600 mb-10">Последние новости</h2>
         <div class="swiper postSlider sm:!w-full mb-10">
             <div class="swiper-wrapper">

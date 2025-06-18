@@ -3,7 +3,7 @@
         <x-application-logo class="w-20 mr-10"/>
         <div class="flex gap-4 text-lg md:hidden mx-auto font-medium">
             <a href="/#about">О форуме</a>
-            <a href="#footer">Участники</a>
+            <a href="/#universities">Участники</a>
             <a href="#footer">Контакты</a>
             <a href="/#speakers">Спикеры</a>
             <a href="/#orgs">Организаторы</a>

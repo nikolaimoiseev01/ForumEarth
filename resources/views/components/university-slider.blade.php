@@ -1,4 +1,4 @@
-<div id="news" {{ $attributes->merge(['class' => 'relative flex-col content hidden sm:block'])}}>
+<div {{ $attributes->merge(['class' => 'relative flex-col content hidden sm:block'])}}>
     <div class="swiper universitySlider sm:!w-full mb-10">
         <div class="swiper-wrapper">
             @foreach($universities as $key => $el)
