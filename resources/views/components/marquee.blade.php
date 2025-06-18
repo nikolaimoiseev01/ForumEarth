@@ -111,9 +111,14 @@
                 @foreach($elements as $key=>$el)
                     <div
                         class="@if($key == 0)  @endif marquee__item flex mx-6 items-center justify-center overflow-hidden
-                        @if($countries == '0')px-16 py-8 bg-blue-300 @endif
+                        @if($countries == '0')px-16 py-8 bg-blue-300 @else flex-col @endif
                         rounded-3xl">
-                        <img src="{{$el->getFirstMediaUrl('image')}}" class="@if($countries == '1') w-72 h-44 !max-w-72 !max-h-44 rounded-xl @else max-w-56 @endif" alt="">
+                        <img src="{{$el->getFirstMediaUrl('image')}}"
+                             class="@if($countries == '1') w-72 h-44 !max-w-72 !max-h-44 rounded-xl @else max-w-56 @endif"
+                             alt="">
+                        @if($countries == '1')
+                            <p class="text-blue-500">{{$el['name']}}</p>
+                        @endif
                     </div>
                 @endforeach
             </div>
