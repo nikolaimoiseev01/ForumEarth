@@ -3,7 +3,7 @@
         <div class="swiper-wrapper">
             @foreach($universities as $key => $el)
                 <div
-                    class="@if($key == 0)  @endif swiper-slide items-center !w-fit justify-center
+                    class="@if($key == 0)  @endif swiper-slide items-center !flex !w-fit justify-center
                         px-16 py-8 max-h-32 bg-blue-300
                         rounded-3xl">
                     <img src="{{$el->getFirstMediaUrl('image')}}"
@@ -45,7 +45,7 @@
 @push('page-js')
     <script type="module">
         var swiper2 = new Swiper(".universitySlider", {
-            spaceBetween: 10,
+            spaceBetween: 20,
             slidesPerView: 'auto',
             navigation: {
                 nextEl: ".nextUni",
