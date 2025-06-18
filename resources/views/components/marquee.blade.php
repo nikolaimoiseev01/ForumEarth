@@ -22,7 +22,7 @@
                         @if($countries == '0')px-16 py-8 max-h-32 bg-blue-300 @else flex-col @endif
                         rounded-3xl">
                         <img src="{{$el->getFirstMediaUrl('image')}}"
-                             class="@if($countries == '1') w-72 h-44 !max-w-72 !max-h-44 rounded-xl @else max-w-56 max-h-[inherit] @endif"
+                             class="@if($countries == '1') w-72 h-auto !max-w-72 !max-h-44 rounded-xl @else max-w-56 max-h-[inherit] @endif"
                              alt="">
                         @if($countries == '1')
                             <p class="text-blue-500">{{$el['name']}}</p>
