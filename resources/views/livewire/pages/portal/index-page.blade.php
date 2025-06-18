@@ -238,6 +238,7 @@
     <section class="mb-20">
         <h2 class="text-blue-600 mb-10 relative tracking-wide content">ВУЗы-участники форума</h2>
         <x-marquee :eles="$universities" countries="0"/>
+        <x-university-slider :universities="$universities"/>
     </section>
 
     <section class="mb-20">
