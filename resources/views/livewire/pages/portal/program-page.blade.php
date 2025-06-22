@@ -81,7 +81,7 @@
             <table class="tg table-auto w-full rounded-t-3xl ">
                 <thead class="rounded-t-3xl">
                 <tr class="rounded-t-3xl text-blue-600">
-                    <th class="border-r-2 border-blue-500 text-center py-4 px-2">Время</th>
+                    <th class="border-r-2 border-blue-500 text-center py-4 px-2 min-w-28">Время</th>
                     <th class="border-r-2 border-blue-500 text-center py-4 px-2">Мероприятия</th>
                     <th class="border-r-2 border-blue-500 text-center py-4 px-2">ТЕМА</th>
                     <th class="text-center py-4 px-2">СПИКЕРЫ</th>

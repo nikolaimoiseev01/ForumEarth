@@ -46,12 +46,11 @@ class PageResource extends Resource
                                         TextInput::make('time')->label('Время')->required(),
                                         TextInput::make('name')->label('Название')->required(),
                                     ]),
-                                    TextInput::make('topic')->label('Тема')->required(),
+                                    TextInput::make('topic')->label('Тема'),
                                     Forms\Components\RichEditor::make('speakers')->label('Спикеры')
                                         ->toolbarButtons([
                                             'bold',
-                                        ])
-                                        ->required(),
+                                        ]),
                                 ])
                         ])
                 ])
