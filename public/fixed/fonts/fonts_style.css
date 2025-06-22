@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Lkdown';
+    src: url('/fixed/fonts/Lkdown/Lkdown.eot');
+    src: url('/fixed/fonts/Lkdown/Lkdown.eot?#iefix') format('embedded-opentype'),
+        url('/fixed/fonts/Lkdown/Lkdown.woff2') format('woff2'),
+        url('/fixed/fonts/Lkdown/Lkdown.woff') format('woff'),
+        url('/fixed/fonts/Lkdown/Lkdown.ttf') format('truetype'),
+        url('/fixed/fonts/Lkdown/Lkdown.svg#Lkdown') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
