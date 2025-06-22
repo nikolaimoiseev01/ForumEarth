@@ -60,7 +60,7 @@
                                 <a wire:navigate href="{{route('portal.journalist-form')}}" class="block px-4 py-2 text-gray-800 ">Аккредитация для СМИ</a>
                             </li>
                             <li>
-                                <a wire:navigate href="{{route('portal.program-form')}}"
+                                <a wire:navigate href="{{route('portal.program')}}"
                                    class="block px-4 py-2 text-gray-800 ">Программа</a>
                             </li>
 
