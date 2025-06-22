@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Page;
 use App\Models\Post;
 use App\Models\Speaker;
 use App\Models\User;
@@ -27,6 +28,10 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make($password),
             'remember_token' => Str::random(10),
         ]);
+        Page::create([
+            'title' => 'Программа'
+        ]);
+
         $text = [[
             'type' => 'text',
             'data' => [
