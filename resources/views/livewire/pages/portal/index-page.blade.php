@@ -15,8 +15,7 @@
                     22 — 29 июня</p>
             </div>
             <h1 class="relative uppercase leading-[80px] sm:text-4xl">Форум<br>«ЗЕМЛЯНЕ»</h1>
-            <h3 class="relative text-2xl font-normal sm:text-lg">Международный научно-практический<br> экологический
-                форум</h3>
+            <h3 class="relative text-2xl font-normal sm:text-lg">Научно-практический форум</h3>
         </div>
 
     </section>
