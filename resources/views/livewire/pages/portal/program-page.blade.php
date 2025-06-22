@@ -95,10 +95,10 @@
                         </td>
                     </tr>
                     @foreach($day['events'] as $key=>$event)
-                        <tr class="border-b-2 border-blue-600  last:mb-10">
+                        <tr class="border-b-2 border-blue-600  last:mb-10 ">
                             <td class="px-2 py-4 border-r-2 border-blue-500"><p>{{$event['time']}}</p></td>
                             <td class="px-2 py-4 border-r-2 border-blue-500 font-bold"><p>{{$event['name']}}</p></td>
-                            <td class="px-2 py-4 border-r-2 border-blue-500"><p>{{$event['topic']}}</p></td>
+                            <td class="px-2 py-4 border-r-2 border-blue-500 max-w-7xl"><p>{{$event['topic']}}</p></td>
                             <td class="px-2 py-4 ">{!! $event['speakers'] !!}</td>
                         </tr>
                     @endforeach
