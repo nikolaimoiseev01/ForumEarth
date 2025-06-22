@@ -240,8 +240,10 @@
 
     <section id="universities" class="mb-20 -mt-28 pt-28">
         <h2 class="text-blue-600 mb-10 relative tracking-wide content">ВУЗы-участники форума</h2>
-        <x-marquee :eles="$universities" countries="0"/>
-        <x-university-slider :universities="$universities"/>
+        <div class="sm:hidden">
+            <x-marquee :eles="$universities" countries="0"/>
+        </div>
+        <x-university-slider :universities="$universities"  countries="0"/>
     </section>
 
     <section class="mb-20">
@@ -273,7 +275,11 @@
 
     <section class="mb-20">
         <h2 class="text-blue-600 mb-10 relative tracking-wide content">Страны участницы</h2>
-        <x-marquee :eles="$countries" countries="1"/>
+{{--        <x-marquee :eles="$countries" countries="1"/>--}}
+        <div class="sm:hidden">
+            <x-marquee :eles="$countries" countries="1"/>
+        </div>
+        <x-university-slider :universities="$countries"  countries="1"/>
     </section>
 
 

@@ -12,9 +12,11 @@ class UniversitySlider extends Component
      * Create a new component instance.
      */
     public $universities;
-    public function __construct($universities)
+    public $countries;
+    public function __construct($universities, $countries)
     {
         $this->universities = $universities;
+        $this->countries = $countries;
     }
 
     /**

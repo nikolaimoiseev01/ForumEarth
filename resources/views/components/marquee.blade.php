@@ -8,7 +8,7 @@
 
             });
     "
-    {{ $attributes->merge(['class' => 'relative w-full container-block sm:hidden'])}}
+    {{ $attributes->merge(['class' => 'relative w-full container-block'])}}
 >
     <div
         class="relative w-full py-3 mx-auto overflow-hidden text-lg italic tracking-wide text-white uppercase sm:text-xs md:text-sm lg:text-base xl:text-xl 2xl:text-2xl">
