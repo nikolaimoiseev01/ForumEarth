@@ -314,7 +314,7 @@
         </div>
     </section>
 
-    <section class="content py-20 relative flex flex-col">
+    <section class="content mb-20 relative flex flex-col">
         <h2 class="mb-20 text-blue-600">Место проведения</h2>
         <div class="flex gap-5 md:flex-col mb-6">
             <div class="flex flex-col w-1/2 md:w-full gap-5">

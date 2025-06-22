@@ -17,7 +17,7 @@
 {{--        </div>--}}
 {{--    </section>--}}
     <section class="mt-32">
-        <h2 class="mb-20">{{$post['title']}}</h2>
+        <h2 class="mb-20 md:!text-4xl md:mb-10">{{$post['title']}}</h2>
         <img src="{{$post->getFirstMediaUrl('cover')}}" class="w-full mb-20" alt="">
     </section>
 
