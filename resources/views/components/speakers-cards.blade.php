@@ -6,8 +6,8 @@
                 <div class="col-span-1 flex flex-col gap-4 bg-white rounded-2xl p-6">
                     <img src="{{$speaker->getFirstMediaUrl('image')}}" class="w-full h-64 object-cover rounded-xl"
                          alt="">
-                    <h2 class="font-bold text-3xl text-blue-600">{{$speaker['name']}}</h2>
-                    <p class="text-xl text-blue-600">{{$speaker['description']}}</p>
+                    <h2 class="font-bold text-3xl text-blue-600 md:!text-2xl">{{$speaker['name']}}</h2>
+                    <p class="text-xl text-blue-600 md:text-lg">{{$speaker['description']}}</p>
                 </div>
             @endforeach
             @if($main_page =='true')
