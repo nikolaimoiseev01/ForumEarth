@@ -30,7 +30,8 @@
         <div class="flex flex-col gap-5 content md:flex-col relative">
             <div class="flex gap-8 sm:flex-col p-6 bg-bright-500 items-center shadow w-full md:w-full rounded-3xl">
                 <div class="flex flex-col w-1/2 md:w-full">
-                    <img src="/fixed/cibulskiy.png" class="h-72 object-top object-cover rounded-t-3xl w-fit mx-auto border-2 border-blue-500 !border-b-0"
+                    <img src="/fixed/cibulskiy.png"
+                         class="h-72 object-top object-cover rounded-t-3xl w-fit mx-auto border-2 border-blue-500 !border-b-0"
                          alt="">
                     <div class="flex flex-col bg-blue-500 p-2 text-center text-white rounded-2xl border border-white">
                         <h2 class="text-3xl md:!text-xl">Александр Витальевич Цыбульский</h2>
@@ -40,16 +41,20 @@
                 <div class="p-4 border-2 border-blue-500 rounded-2xl relative w-1/2 md:w-full">
                         <span
                             class="absolute -top-[20px] left-3 py-3 px-[10px] bg-blue-400 flex items-center justify-center rounded">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9"
+                                 fill="none">
                                 <path
                                     d="M0.463778 9V6.54545C0.463778 5.82102 0.600142 5.05824 0.872869 4.2571C1.1456 3.45596 1.52486 2.68892 2.01065 1.95597C2.49645 1.22301 3.06747 0.59659 3.72372 0.0767047L5.61577 1.43182C5.09588 2.19034 4.6527 2.98295 4.28622 3.80966C3.91974 4.63636 3.73651 5.53551 3.73651 6.5071V9H0.463778ZM6.98366 9V6.54545C6.98366 5.82102 7.12003 5.05824 7.39276 4.2571C7.66548 3.45596 8.04474 2.68892 8.53054 1.95597C9.01634 1.22301 9.58736 0.59659 10.2436 0.0767047L12.1357 1.43182C11.6158 2.19034 11.1726 2.98295 10.8061 3.80966C10.4396 4.63636 10.2564 5.53551 10.2564 6.5071V9H6.98366Z"
                                     fill="white"/>
                             </svg>
                         </span>
-                    <p class="font-bold text-2xl">«От наших действий сегодня зависит, что мы оставим следующим поколениям. Бережное отношение к
-                        природному наследию региона, страны и планеты в целом — задача общечеловеческого масштаба.
-                        Форум «Земляне» даст возможность всем сообща поработать над решением существующих
-                        экологических проблем.»</p>
+                    <p class="font-bold text-2xl">«Наш форум называется «Земляне» — и в этом слове звучит напоминание:
+                        мы не хозяева, а часть этой планеты. Сегодня у каждого открытия, у каждой технологии, у каждого
+                        промышленного решения должна появиться приставка «эко». Не как формальность, а как внутренний
+                        смысл. Потому что настоящее развитие — это не просто быстрее, выше, мощнее. Это — чище,
+                        бережнее, мудрее. Там, где раньше строили «любой ценой», теперь должно звучать другое правило:
+                        «не в ущерб Земле». Пусть форум «Земляне» станет тем местом, где такие смыслы обретут форму и
+                        силу.»</p>
                 </div>
             </div>
             <div class="flex md:flex-col flex-1 gap-5">
@@ -237,13 +242,12 @@
     </section>
 
 
-
     <section id="universities" class="mb-20 -mt-28 pt-28">
         <h2 class="text-blue-600 mb-10 relative tracking-wide content">ВУЗы-участники форума</h2>
         <div class="sm:hidden">
             <x-marquee :eles="$universities" countries="0"/>
         </div>
-        <x-university-slider :universities="$universities"  countries="0"/>
+        <x-university-slider :universities="$universities" countries="0"/>
     </section>
 
     <section class="mb-20">
@@ -264,7 +268,7 @@
         <div x-ref="item" class="flex items-center flex-wrap justify-center gap-4 w-full py-2 text-white">
             @foreach($info_partners as $info_partner)
                 <a @if($info_partner['link'])href="{{$info_partner['link']}}" target="_blank" @endif
-                    class="px-16 py-8 h-32 min-h-32 max-h-32 bg-blue-300 flex items-center justify-center
+                class="px-16 py-8 h-32 min-h-32 max-h-32 bg-blue-300 flex items-center justify-center
                         rounded-3xl">
                     <img src="{{$info_partner->getFirstMediaUrl('image')}}" class="max-w-56 max-h-[inherit]" alt="">
                 </a>
@@ -275,11 +279,11 @@
 
     <section class="mb-20">
         <h2 class="text-blue-600 mb-10 relative tracking-wide content">Страны участницы</h2>
-{{--        <x-marquee :eles="$countries" countries="1"/>--}}
+        {{--        <x-marquee :eles="$countries" countries="1"/>--}}
         <div class="sm:hidden">
             <x-marquee :eles="$countries" countries="1"/>
         </div>
-        <x-university-slider :universities="$countries"  countries="1"/>
+        <x-university-slider :universities="$countries" countries="1"/>
     </section>
 
 
