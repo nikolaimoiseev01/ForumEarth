@@ -300,7 +300,7 @@
                 </a>
                 <a target="_blank" href="https://xn--80adffaaepcbv0ahr9bbr6q.xn--p1ai/"
                    class="col-span-1 row-span-1 bg-blue-400 p-4 rounded-3xl w-full h-full flex items-center justify-center">
-                    <div class="flex items-center justify-center bg-white w-full h-full  rounded-2xl">
+                    <div class="flex items-center justify-center bg-white w-full h-full  rounded-2xl p-2">
                         <img src="/fixed/logo-ecosystem.png" class="" alt="">
                     </div>
                 </a>
