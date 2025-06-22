@@ -264,7 +264,7 @@
         <div x-ref="item" class="flex items-center flex-wrap justify-center gap-4 w-full py-2 text-white">
             @foreach($info_partners as $info_partner)
                 <a @if($info_partner['link'])href="{{$info_partner['link']}}" target="_blank" @endif
-                    class="px-16 py-8  max-h-32 bg-blue-300 flex items-center justify-center
+                    class="px-16 py-8 h-32 min-h-32 max-h-32 bg-blue-300 flex items-center justify-center
                         rounded-3xl">
                     <img src="{{$info_partner->getFirstMediaUrl('image')}}" class="max-w-56 max-h-[inherit]" alt="">
                 </a>
