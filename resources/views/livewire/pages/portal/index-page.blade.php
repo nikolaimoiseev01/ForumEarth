@@ -158,8 +158,8 @@
             @php
                 $numbers = [
                     ['title' => '21', 'description' => 'страна-участница', 'bg-color' => 'bg-blue-400'],
-                    ['title' => '300+', 'description' => 'участников форума', 'bg-color' => 'bg-blue-500'],
-                    ['title' => '30', 'description' => 'команд-участниц', 'bg-color' => 'bg-blue-400'],
+                    ['title' => '200+', 'description' => 'участников форума', 'bg-color' => 'bg-blue-500'],
+                    ['title' => '27', 'description' => 'команд-участниц', 'bg-color' => 'bg-blue-400'],
                     ['title' => '7', 'description' => 'дней форума', 'bg-color' => 'bg-blue-400'],
                 ];
             @endphp
