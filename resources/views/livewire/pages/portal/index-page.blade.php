@@ -251,7 +251,7 @@
         <div x-ref="item" class="flex items-center flex-wrap justify-center gap-4 w-full py-2 text-white">
             @foreach($sponsors as $sponsor)
                 <div
-                    class="px-16 py-8  max-h-32 bg-blue-300 flex items-center justify-center
+                    class="px-16 py-8 h-32 min-h-32 max-h-32 bg-blue-300 flex items-center justify-center
                         rounded-3xl">
                     <img src="{{$sponsor->getFirstMediaUrl('image')}}" class="max-w-56 max-h-[inherit]" alt="">
                 </div>
