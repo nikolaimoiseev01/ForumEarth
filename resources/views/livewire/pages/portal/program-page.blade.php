@@ -1,6 +1,8 @@
 <main class="flex-1 mt-24">
-    <section class="bg-blue-500 h-[40vh] flex flex-col items-center justify-center relative p-8 text-white mb-20">
+    <section class="bg-blue-600 h-[40vh] flex flex-col items-center justify-center relative p-8 text-white mb-20 relative">
         {{--        <img src="/fixed/logo-white.png" class="w-40" alt="">--}}
+        <img src="/fixed/sots-programm-1.svg" class="absolute top-0 right-0 w-80 md:w-40" alt="">
+        <img src="/fixed/sots-programm-2.svg" class="absolute bottom-0 left-0 w-80 md:w-40" alt="">
         <h1 class="text-8xl font-bold text-white mb-4 font-[Lkdown] md:text-5xl">Программа</h1>
         <p class="text-4xl text-center md:text-2xl">22-29 ИЮНЯ 2025 ГОДА</p>
         <p class="">АРХАНГЕЛЬСКАЯ ОБЛАСТЬ</p>
