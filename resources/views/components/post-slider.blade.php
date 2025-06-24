@@ -1,6 +1,6 @@
 @if(count($posts) > 0)
     <div {{ $attributes->merge(['class' => 'flex relative flex-col content'])}}>
-        <h2 class="text-blue-600 mb-10">Последние новости</h2>
+        <h2 class="text-blue-600 mb-10">Новости</h2>
         <div class="swiper postSlider sm:!w-full mb-10">
             <div class="swiper-wrapper">
                 @foreach($posts as $key => $post)
