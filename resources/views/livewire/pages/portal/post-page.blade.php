@@ -16,6 +16,11 @@
 {{--            </div>--}}
 {{--        </div>--}}
 {{--    </section>--}}
+    <style>
+        .attachment__caption {
+            display: none;
+        }
+    </style>
     <section class="mt-32">
         <h2 class="mb-20 md:!text-4xl md:mb-10">{{$post['title']}}</h2>
         <img src="{{$post->getFirstMediaUrl('cover')}}" class="w-full mb-20" alt="">
