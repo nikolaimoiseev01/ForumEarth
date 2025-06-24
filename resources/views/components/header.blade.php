@@ -44,26 +44,32 @@
                         x-transition:leave-end="opacity-0 scale-90"
                         class="absolute right-0 top-6 mt-2 w-48 bg-white rounded-md shadow-lg overflow-hidden z-20">
                         <ul class="py-2">
+
                             <li>
-                                <a wire:navigate href="/" class="block px-4 py-2 text-gray-800 ">Главная</a>
+                                <a href="/#about" class="block px-4 py-2 text-gray-800 ">О форуме</a>
                             </li>
                             <li>
-                                <a href="/#map" class="block px-4 py-2 text-gray-800 ">О форуме</a>
+                                <a href="/#universities" class="block px-4 py-2 text-gray-800 ">Участники</a>
                             </li>
                             <li>
-                                <a wire:navigate href="" class="block px-4 py-2 text-gray-800 ">Участники</a>
+                                <a href="/#footer" class="block px-4 py-2 text-gray-800 ">Контакты</a>
                             </li>
                             <li>
-                                <a wire:navigate href="" class="block px-4 py-2 text-gray-800 ">Контакты</a>
+                                <a  href="/#speakers" class="block px-4 py-2 text-gray-800 ">Спикеры</a>
                             </li>
                             <li>
-                                <a wire:navigate href="{{route('portal.journalist-form')}}" class="block px-4 py-2 text-gray-800 ">Аккредитация для СМИ</a>
+                                <a  href="/#orgs" class="block px-4 py-2 text-gray-800 ">Организаторы</a>
+                            </li>
+                            <li>
+                                <a  href="/#news" class="block px-4 py-2 text-gray-800 ">Новости</a>
                             </li>
                             <li>
                                 <a wire:navigate href="{{route('portal.program')}}"
                                    class="block px-4 py-2 text-gray-800 ">Программа</a>
                             </li>
-
+                            <li>
+                                <a wire:navigate href="{{route('portal.journalist-form')}}" class="block px-4 py-2 text-gray-800 ">Аккредитация для СМИ</a>
+                            </li>
                             <li>
                                 <a wire:navigate href="{{route('portal.participation-form')}}"
                                    class="block px-4 py-2 text-gray-800 ">Анкета участников</a>
