@@ -290,7 +290,7 @@
         <x-expert-slider/>
     </section>
 
-    <section id="orgs" class="mb-20 -mt-28 pt-32 relative">
+    <section id="orgs" class="mb-20 -mt-20 pt-32 relative">
         <img src="/fixed/prganizers-background.png" class="absolute -bottom-80 max-w-2xl left-0 md:hidden" alt="">
         <div class="content">
             <h2 class="text-blue-600 mb-20">Организаторы форума</h2>
