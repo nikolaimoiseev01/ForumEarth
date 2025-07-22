@@ -2,14 +2,14 @@
     <div class="swiper universitySlider sm:!w-full mb-10">
         <div class="swiper-wrapper">
             @foreach($universities as $key => $el)
-                <div
+                <a href="vk.com"
                     class="@if($key == 0)  @endif swiper-slide items-center !flex !w-fit justify-center
                         py-8 max-h-32 @if($countries == '0') bg-blue-300 px-16 @endif
                         rounded-3xl">
                     <img src="{{$el->getFirstMediaUrl('image')}}"
                          class="max-w-56 max-h-[inherit]"
                          alt="">
-                </div>
+                </a>
             @endforeach
         </div>
     </div>
