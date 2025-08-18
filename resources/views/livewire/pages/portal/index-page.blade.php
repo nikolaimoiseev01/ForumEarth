@@ -194,6 +194,67 @@
         </div>
     </section>
 
+    <section class="content py-20 relative flex flex-col mb-20">
+        @php
+            $parts = [
+                ['title' => 'Доработка проектов с экспертами:', 'description' => 'кросс-работа со всеми экспертами кластера', 'img' => '/fixed/icon-settings.svg'],
+                ['title' => 'Тренинговая часть:', 'description' => 'прокачиваем навыки публичных выступлений и матчасти своих проектов', 'img' => '/fixed/icon-training.svg'],
+                ['title' => 'Экскурсионная программа:', 'description' => 'общая и индивидуальная для команд (разрабатывается с учетом интересов партнеров)', 'img' => '/fixed/icon-bus.svg'],
+            ]
+        @endphp
+
+        <h2 class="text-center text-blue-600 mb-20 relative tracking-wide">Второй этап</h2>
+
+        <!-- Две колонки одинаковой высоты -->
+        <div class="grid grid-cols-2 md:grid-cols-1 gap-5 items-stretch">
+            <!-- Левая колонка -->
+            <div class="flex flex-col gap-5 min-h-0">
+                <div class="flex flex-col text-center p-4 border border-blue-500 rounded-3xl">
+                    <h2 class="text-4xl md:!text-3xl font-semibold">
+                        7 ноября —<br><span class="text-blue-500">ОТКРЫТИЕ ФОРУМА</span>
+                    </h2>
+                </div>
+                <div class="flex flex-col p-8 text-white bg-blue-500 rounded-3xl">
+                    <h2 class="mb-4 text-4xl  md:!text-3xl  font-normal">
+                        <span class="font-semibold">8 – 12 НОЯБРЯ<br></span>
+                        Работа по программе форума:
+                    </h2>
+                    <div class="flex flex-col gap-4">
+                        @foreach($parts as $part)
+                            <div class="flex gap-2">
+                                <img src="{{ $part['img'] }}" alt="">
+                                <div class="flex flex-col">
+                                    <p><b>{{ $part['title'] }}</b></p>
+                                    <p class="leading-tight">{{ $part['description'] }}</p>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+
+            <!-- Правая колонка: верх — картинка растягивается, низ — карточка -->
+            <div class="grid grid-rows-[1fr_auto] gap-5 min-h-0">
+                <!-- Контейнер под картинку -->
+                <div class="relative rounded-3xl overflow-hidden min-h-0 ">
+                    <img
+                        src="/fixed/second-round.png"
+                        alt=""
+                        class="absolute md:relative inset-0 w-full h-full object-cover" >
+                </div>
+
+                <div class="flex flex-col text-center p-4 border border-blue-500 rounded-3xl">
+                    <h2 class="text-4xl md:!text-3xl  font-semibold">
+                        13 НОЯБРЯ — ФИНАЛ<br>
+                        <span class="text-blue-500">ЗАЩИТА ПРОЕКТОВ ПЕРЕД ИНВЕСТОРАМИ</span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
     {{--    --}}{{--Темы форума--}}
     <section class="content mb-20">
         <h2 class="text-blue-600 mb-20 relative tracking-wide">Темы форума</h2>
