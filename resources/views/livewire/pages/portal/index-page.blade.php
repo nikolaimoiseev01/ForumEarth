@@ -155,44 +155,44 @@
 
     {{--    --}}{{--    <x-sticky-info/>--}}
 
-    {{--    --}}{{--Форум «Земляне» в цифрах--}}
-    <section class="content py-20 relative flex flex-col mb-20">
-        <h2 class="text-center text-blue-600 mb-20 relative tracking-wide">Форум «Земляне» в цифрах</h2>
-        <div class="grid grid-cols-3 grid-rows-2 gap-5 md:grid-cols-1">
-            @php
-                $numbers = [
-                    ['title' => '21', 'description' => 'страна-участница', 'bg-color' => 'bg-blue-400'],
-                    ['title' => '200+', 'description' => 'участников форума', 'bg-color' => 'bg-blue-500'],
-                    ['title' => '27', 'description' => 'команд-участниц', 'bg-color' => 'bg-blue-400'],
-                    ['title' => '7', 'description' => 'дней форума', 'bg-color' => 'bg-blue-400'],
-                ];
-            @endphp
-            <div class="col-span-1 row-span-2 gap-8 flex flex-col items-center bg-blue-500 rounded-3xl p-8">
-                <div class="bg-white p-20 rounded-full flex aspect-square items-center justify-center h-auto mt-4">
-                    <x-application-logo class="w-44"/>
-                </div>
-                <div class="bg-white rounded-lg relative">
-                    <span
-                        class="absolute -top-[20px] left-3 py-3 px-[10px] bg-blue-400 flex items-center justify-center rounded">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
-                            <path
-                                d="M0.463778 9V6.54545C0.463778 5.82102 0.600142 5.05824 0.872869 4.2571C1.1456 3.45596 1.52486 2.68892 2.01065 1.95597C2.49645 1.22301 3.06747 0.59659 3.72372 0.0767047L5.61577 1.43182C5.09588 2.19034 4.6527 2.98295 4.28622 3.80966C3.91974 4.63636 3.73651 5.53551 3.73651 6.5071V9H0.463778ZM6.98366 9V6.54545C6.98366 5.82102 7.12003 5.05824 7.39276 4.2571C7.66548 3.45596 8.04474 2.68892 8.53054 1.95597C9.01634 1.22301 9.58736 0.59659 10.2436 0.0767047L12.1357 1.43182C11.6158 2.19034 11.1726 2.98295 10.8061 3.80966C10.4396 4.63636 10.2564 5.53551 10.2564 6.5071V9H6.98366Z"
-                                fill="white"/>
-                        </svg>
-                    </span>
-                    <p class="text-blue-500 text-2xl font-medium tracking-[-0.8px]  py-3 px-12">Идей много. Планета
-                        одна. Ищем лучшие</p>
-                </div>
-            </div>
-            @foreach($numbers as $number)
-                <div
-                    class="col-span-1 row-span-1 flex flex-col gap-8 {{$number['bg-color']}} p-6 rounded-3xl text-white">
-                    <h3 class="font-bold text-9xl">{{ $number['title'] }}</h3>
-                    <p class="opacity-70 text-2xl">{{ $number['description'] }}</p>
-                </div>
-            @endforeach
-        </div>
-    </section>
+{{--    --}}{{--    --}}{{----}}{{--Форум «Земляне» в цифрах--}}
+{{--    <section class="content py-20 relative flex flex-col mb-20">--}}
+{{--        <h2 class="text-center text-blue-600 mb-20 relative tracking-wide">Форум «Земляне» в цифрах</h2>--}}
+{{--        <div class="grid grid-cols-3 grid-rows-2 gap-5 md:grid-cols-1">--}}
+{{--            @php--}}
+{{--                $numbers = [--}}
+{{--                    ['title' => '21', 'description' => 'страна-участница', 'bg-color' => 'bg-blue-400'],--}}
+{{--                    ['title' => '200+', 'description' => 'участников форума', 'bg-color' => 'bg-blue-500'],--}}
+{{--                    ['title' => '27', 'description' => 'команд-участниц', 'bg-color' => 'bg-blue-400'],--}}
+{{--                    ['title' => '7', 'description' => 'дней форума', 'bg-color' => 'bg-blue-400'],--}}
+{{--                ];--}}
+{{--            @endphp--}}
+{{--            <div class="col-span-1 row-span-2 gap-8 flex flex-col items-center bg-blue-500 rounded-3xl p-8">--}}
+{{--                <div class="bg-white p-20 rounded-full flex aspect-square items-center justify-center h-auto mt-4">--}}
+{{--                    <x-application-logo class="w-44"/>--}}
+{{--                </div>--}}
+{{--                <div class="bg-white rounded-lg relative">--}}
+{{--                    <span--}}
+{{--                        class="absolute -top-[20px] left-3 py-3 px-[10px] bg-blue-400 flex items-center justify-center rounded">--}}
+{{--                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">--}}
+{{--                            <path--}}
+{{--                                d="M0.463778 9V6.54545C0.463778 5.82102 0.600142 5.05824 0.872869 4.2571C1.1456 3.45596 1.52486 2.68892 2.01065 1.95597C2.49645 1.22301 3.06747 0.59659 3.72372 0.0767047L5.61577 1.43182C5.09588 2.19034 4.6527 2.98295 4.28622 3.80966C3.91974 4.63636 3.73651 5.53551 3.73651 6.5071V9H0.463778ZM6.98366 9V6.54545C6.98366 5.82102 7.12003 5.05824 7.39276 4.2571C7.66548 3.45596 8.04474 2.68892 8.53054 1.95597C9.01634 1.22301 9.58736 0.59659 10.2436 0.0767047L12.1357 1.43182C11.6158 2.19034 11.1726 2.98295 10.8061 3.80966C10.4396 4.63636 10.2564 5.53551 10.2564 6.5071V9H6.98366Z"--}}
+{{--                                fill="white"/>--}}
+{{--                        </svg>--}}
+{{--                    </span>--}}
+{{--                    <p class="text-blue-500 text-2xl font-medium tracking-[-0.8px]  py-3 px-12">Идей много. Планета--}}
+{{--                        одна. Ищем лучшие</p>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            @foreach($numbers as $number)--}}
+{{--                <div--}}
+{{--                    class="col-span-1 row-span-1 flex flex-col gap-8 {{$number['bg-color']}} p-6 rounded-3xl text-white">--}}
+{{--                    <h3 class="font-bold text-9xl">{{ $number['title'] }}</h3>--}}
+{{--                    <p class="opacity-70 text-2xl">{{ $number['description'] }}</p>--}}
+{{--                </div>--}}
+{{--            @endforeach--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
     <section class="content py-20 relative flex flex-col mb-20">
         @php
@@ -256,45 +256,45 @@
 
 
     {{--    --}}{{--Темы форума--}}
-    <section class="content mb-20">
-        <h2 class="text-blue-600 mb-20 relative tracking-wide">Темы форума</h2>
-        <div class="flex flex-col gap-4">
-            @foreach($topics as $topic)
-                <div x-data="{ open: false }" class="bg-blue-300 p-10 rounded-2xl">
-                    <div class="flex justify-between sm:flex-col gap-8 items-center">
-                        <div class="flex flex-col gap-2">
-                            <h2 class="text-4xl text-blue-600">{{$topic['title']}}</h2>
-                            <p class="text-xl text-blue-500">{{$topic['description']}}</p>
-                        </div>
-                        <div
-                            class="bg-blue-500 w-20 h-20 min-w-20 min-h-20 md:h-12 md:h-12 flex items-center justify-center rounded-xl cursor-pointer transition duration-300 hover:bg-blue-400"
-                            :class="open ? 'rotate-90' : ''"
-                            @click="open = !open"
-                        >
-                            <x-maki-arrow
-                                class="w-12 h-12 md:h-8 md:h-8 fill-white transition-transform duration-300 -rotate-45"/>
-                        </div>
-                    </div>
+{{--    <section class="content mb-20">--}}
+{{--        <h2 class="text-blue-600 mb-20 relative tracking-wide">Темы форума</h2>--}}
+{{--        <div class="flex flex-col gap-4">--}}
+{{--            @foreach($topics as $topic)--}}
+{{--                <div x-data="{ open: false }" class="bg-blue-300 p-10 rounded-2xl">--}}
+{{--                    <div class="flex justify-between sm:flex-col gap-8 items-center">--}}
+{{--                        <div class="flex flex-col gap-2">--}}
+{{--                            <h2 class="text-4xl text-blue-600">{{$topic['title']}}</h2>--}}
+{{--                            <p class="text-xl text-blue-500">{{$topic['description']}}</p>--}}
+{{--                        </div>--}}
+{{--                        <div--}}
+{{--                            class="bg-blue-500 w-20 h-20 min-w-20 min-h-20 md:h-12 md:h-12 flex items-center justify-center rounded-xl cursor-pointer transition duration-300 hover:bg-blue-400"--}}
+{{--                            :class="open ? 'rotate-90' : ''"--}}
+{{--                            @click="open = !open"--}}
+{{--                        >--}}
+{{--                            <x-maki-arrow--}}
+{{--                                class="w-12 h-12 md:h-8 md:h-8 fill-white transition-transform duration-300 -rotate-45"/>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
 
-                    <!-- Дополнительный текст -->
-                    <div
-                        x-show="open"
-                        x-transition:enter="transition ease-out duration-500"
-                        x-transition:enter-start="opacity-0 max-h-0"
-                        x-transition:enter-end="opacity-100 max-h-screen"
-                        x-transition:leave="transition ease-in duration-400"
-                        x-transition:leave-start="opacity-100 max-h-screen"
-                        x-transition:leave-end="opacity-0 max-h-0"
-                        class="overflow-hidden text-blue-800 text-lg"
-                    >
-                        <p class="mt-6 text-blue-600 italic">
-                            {!! $topic['full'] !!}
-                        </p>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-    </section>
+{{--                    <!-- Дополнительный текст -->--}}
+{{--                    <div--}}
+{{--                        x-show="open"--}}
+{{--                        x-transition:enter="transition ease-out duration-500"--}}
+{{--                        x-transition:enter-start="opacity-0 max-h-0"--}}
+{{--                        x-transition:enter-end="opacity-100 max-h-screen"--}}
+{{--                        x-transition:leave="transition ease-in duration-400"--}}
+{{--                        x-transition:leave-start="opacity-100 max-h-screen"--}}
+{{--                        x-transition:leave-end="opacity-0 max-h-0"--}}
+{{--                        class="overflow-hidden text-blue-800 text-lg"--}}
+{{--                    >--}}
+{{--                        <p class="mt-6 text-blue-600 italic">--}}
+{{--                            {!! $topic['full'] !!}--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            @endforeach--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
     {{--    --}}{{--Спикеры форума--}}
     <section class=" -mt-28 pt-28">
