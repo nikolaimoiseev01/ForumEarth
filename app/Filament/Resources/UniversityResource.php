@@ -29,6 +29,9 @@ class UniversityResource extends Resource
                     ->label('Название')
                     ->required()
                     ->maxLength(255),
+                Forms\Components\TextInput::make('link')
+                    ->label('Ссылка')
+                    ->required(),
                 SpatieMediaLibraryFileUpload::make('image')
                     ->collection('image')
                     ->label('Фото')

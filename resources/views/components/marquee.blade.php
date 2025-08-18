@@ -17,8 +17,8 @@
         <div x-ref="content" class="flex animate-marquee">
             <div x-ref="item" class="flex items-center justify-around flex-shrink-0 w-full py-2 text-white">
                 @foreach($elements as $key=>$el)
-                    <div
-                        class="@if($key == 0)  @endif marquee__item flex mx-6 items-center justify-center overflow-hidden
+                    <a @if($el['link'])href="{{$el['link'] ?? ''}}" target="_blank" @endif
+                    class="@if($key == 0)  @endif marquee__item flex mx-6 items-center justify-center overflow-hidden
                         @if($countries == '0')px-16 py-8 max-h-32 bg-blue-300 @else flex-col @endif
                         rounded-3xl">
                         <img src="{{$el->getFirstMediaUrl('image')}}"
@@ -27,7 +27,7 @@
                         @if($countries == '1')
                             <p class="text-blue-500 !not-italic">{{$el['name']}}</p>
                         @endif
-                    </div>
+                    </a>
                 @endforeach
             </div>
         </div>
