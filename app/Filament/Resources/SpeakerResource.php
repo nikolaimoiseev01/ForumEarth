@@ -85,6 +85,7 @@ class SpeakerResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->reorderable('position')
+            ->defaultSort('position')
             ->filters([
                 SelectFilter::make('type')
                     ->options([
@@ -95,7 +96,6 @@ class SpeakerResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
-            ->defaultSort('position')
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),

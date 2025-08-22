@@ -1,4 +1,4 @@
-<div id="speakers" {{$attributes->merge(['class' => 'py-20 mb-20 bg-blue-500 flex flex-col rounded-t-3xl'])}}>
+<div id="speakers" {{$attributes->merge(['class' => 'py-20 mb-20 bg-blue-500 flex flex-col rounded-[60px]'])}}>
     <div class="content">
         <h2 class="text-white mb-20 relative tracking-wide">{{$main_title}}</h2>
         <div class="grid grid-cols-3 md:grid-cols-2 sm:!grid-cols-1 gap-8">

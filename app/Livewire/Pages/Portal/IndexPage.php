@@ -6,6 +6,7 @@ use App\Models\Country;
 use App\Models\InfoPartner;
 use App\Models\Speaker;
 use App\Models\Sponsor;
+use App\Models\Team;
 use App\Models\University;
 use Livewire\Component;
 

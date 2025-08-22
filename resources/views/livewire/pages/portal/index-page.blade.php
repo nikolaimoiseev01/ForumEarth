@@ -1,64 +1,156 @@
 <main class="flex-1">
-    <section class="w-full h-screen bg-cover flex items-center px-28 md:px-4 relative"
+    <section
+        x-data="{ page: 0 }"
+        class="relative h-screen overflow-hidden content mb-32"
     >
-        <div class="absolute top-0 left-0 w-full h-full -z-[1]">
-            <img src="/fixed/welcome-background.png" class="z-0 h-full w-full object-cover" alt="">
-            <div
-                style="background: linear-gradient(180deg, rgba(18, 87, 124, 0.2) 116.33%, rgba(255, 255, 255, 0.2) 142.98%);"
-                class="absolute top-0 z-10 w-full h-full"></div>
-        </div>
+        <!-- Лента из двух экранов -->
         <div
-            class="flex bg-blue-500 bg-opacity-30 p-12 sm:p-2 flex-col text-bright-500 gap-8 w-full max-w-3xl relative md:text-center rounded-3xl">
-            <div class="flex gap-1 relative md:text-center md:justify-center">
-                <x-bi-geo-alt class="w-8 h-8"/>
-                <p class="leading-[22px]">Архангельская область, г. Архангельск<br>
-                    22 — 29 июня</p>
-            </div>
-            <h1 class="relative uppercase leading-[80px] sm:text-4xl">Форум<br>«ЗЕМЛЯНЕ»</h1>
-            <h3 class="relative text-2xl font-normal sm:text-lg">Международный научно-практический форум</h3>
-        </div>
+            class="flex w-[200%] h-full transition-transform duration-500 ease-in-out"
+            :style="`transform: translateX(-${page * 50}%);`"
+        >
+            <!-- === ЭКРАН 1 (оригинал): большой левый, узкий правый === -->
+            <div class="w-1/2 h-full flex md:flex-col gap-4 md:px-4 relative pt-28 pb-4">
+                <div
+                    class="flex flex-col bg-blue-500 text-white z-10 md:min-h-[70vh] relative h-full w-full rounded-3xl overflow-hidden md:flex md:justify-center md:items-center md:gap-8 md:text-center">
+                    <img src="/fixed/welcome-background.png" class="absolute -right-64 bottom-0" alt="">
+                    <img src="/fixed/welcome-attr-1.png" class="absolute top-8 left-56 w-40" alt="">
+                    <img src="/fixed/welcome-attr-2.png" class="absolute left-16 bottom-16 w-28" alt="">
+                    <span
+                        class="text-6xl font-bold py-4 px-12 bg-white rounded-full absolute top-16 left-16 md:relative text-blue-500 w-fit md:text-2xl md:top-auto md:left-auto">Битва вузов</span>
+                    <div class="flex flex-col gap-5 absolute  md:relative md:top-auto md:left-auto left-16 top-1/2 -translate-y-1/2 md:translate-y-0">
+                        <h1 class="leading-none font-medium text-[84px] tracking-wide md:!text-4xl">Форум<br>«Земляне»</h1>
+                        <h2 class="text-3xl tracking-wide leading-snug md:!text-xl">Второй этап международного<br>
+                            научно-практического эко-форума</h2>
+                    </div>
+                </div>
 
+                <!-- Узкая правая колонка -->
+                <button
+                    @click="page = 1"
+                    class="flex cursor-pointer flex-col md:flex-row md:gap-4 bg-blue-500 rounded-3xl py-4 px-6 h-full items-center justify-center gap-8 w-[96px] md:w-full shrink-0 md:shrink md:!text-xl group hover:bg-blue-400 transition"
+                    aria-label="Перейти к архитектуре проекта"
+                >
+                    <h2 class="[writing-mode:sideways-lr] [text-orientation:mixed] md:[writing-mode:horizontal-tb] md:[text-orientation:initial] mr-3 md:m-auto md: text-5xl md:!text-2xl text-white font-extrabold">
+                        Архитектура проекта
+                    </h2>
+                    <div class="bg-white rounded-full flex items-center justify-center p-3">
+                        <x-maki-arrow
+                            class="w-10 md:w-6 fill-blue-500 transition-transform duration-300 -rotate-45 group-hover:scale-110 group-hover:fill-blue-400"/>
+                    </div>
+                </button>
+            </div>
+
+            <!-- === ЭКРАН 2 (зеркально): узкий левый, большой правый === -->
+            <div class="w-1/2 md:flex-col h-full flex gap-4 md:px-4 relative pt-28 pb-4">
+                <!-- Узкая левая колонка (кнопка назад) -->
+                <button
+                    @click="page = 0"
+                    class="flex cursor-pointer flex-col bg-blue-500 rounded-3xl py-4 px-6 h-full md:h-auto md:flex-row md:gap-4 items-center justify-center gap-8 md:w-full w-[96px] shrink-0 group hover:bg-blue-400 transition"
+                    aria-label="Вернуться к описанию форума"
+                >
+                    <h2 class="[writing-mode:sideways-lr] [text-orientation:mixed] md:[writing-mode:horizontal-tb] md:[text-orientation:initial]  mr-3 text-5xl md:!text-2xl text-white font-extrabold">
+                        О форуме
+                    </h2>
+                    <div class="bg-white rounded-full flex items-center justify-center p-3">
+                        <x-maki-arrow
+                            class="w-10 md:w-6 fill-blue-500 transition-transform duration-300 rotate-[225deg]  group-hover:scale-110 group-hover:fill-blue-400"/>
+                    </div>
+                </button>
+
+                <!-- Большой правый кастомный блок -->
+                @php
+                    $events = [
+                            [
+                                'title' => 'Первый этап',
+                                'place' => 'г. Архангельск,<br> 22-29 июня 2025 г',
+                                'numbers' => [
+                                    'стран-участниц' => '20',
+                                    'участников форума' => '300+',
+                                    'дней работы форума' => '7',
+                                    'команд из ведущих ВУЗов' => '27',
+                                ]
+                            ],
+                            [
+                                'title' => 'Второй этап',
+                                'place' => 'г. Москва<br> 7-13 ноября 2025 г',
+                                'numbers' => [
+                                    'стран-участниц' => '20',
+                                    'участников форума' => '300+',
+                                    'наставников' => '30',
+                                    'команд из ведущих ВУЗов' => '10',
+                                ]
+                            ]
+                        ];
+                @endphp
+                <div class="flex gap-4 w-full md:flex-col">
+                    @foreach($events as $event)
+                        <div class="flex flex-1 flex-col justify-between bg-blue-500 rounded-3xl p-6">
+                            <span class="text-5xl md:text-2xl font-medium mb-2 py-4 px-10 bg-white text-blue-500 rounded-full w-fit">
+                                {{$event['title']}}
+                            </span>
+                            <div class="flex flex-col">
+                                <span class="text-white text-2xl md:text-base">место проведения</span>
+                                <h2 class="font-medium text-white text-6xl mb-4 md:!text-3xl">{!! $event['place'] !!}</h2>
+                                <div class="grid grid-cols-2 md:grid-cols-1 gap-4 md:hidden">
+                                    @foreach($event['numbers'] as $value => $number)
+                                        <div class="bg-white p-8 md:p-4 text-blue-600 flex flex-col items-center justify-center text-center gap-2 rounded-3xl">
+                                            <span class="text-6xl md:text-3xl font-extrabold">{{$number}}</span>
+                                            <span class="text-2xl md:text-base">{{$value}}</span>
+                                        </div>
+                                    @endforeach
+                                </div>
+
+                            </div>
+
+                        </div>
+                    @endforeach
+
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="bg-blue-500 pt-20 pb-40 rounded-t-[30px] -mt-10 relative" id="about">
-        <img src="/fixed/background-2.png" class="absolute w-full h-full top-0 right-0 object-cover opacity-30" alt="">
+    <section class="pt-20 mb-32 rounded-t-[30px] -mt-10 relative" id="about">
         <div class="w-full mb-20 content ">
-            <h2 class="text-bright-500 relative">О форуме</h2>
+            <h2 class="text-blue-600 flex justify-center relative">О Форуме</h2>
         </div>
 
         <div class="flex flex-col gap-5 content md:flex-col relative">
-            <div class="flex gap-8 sm:flex-col p-6 bg-bright-500 items-center shadow w-full md:w-full rounded-3xl">
+            <div
+                class="flex gap-8 sm:flex-col bg-bright-500 items-center shadow w-full md:w-full rounded-3xl border-2 border-blue-500 p-8">
                 <div class="flex flex-col w-1/2 md:w-full">
                     <img src="/fixed/cibulskiy.png"
                          class="h-72 object-top object-cover rounded-t-3xl w-fit mx-auto border-2 border-blue-500 !border-b-0"
                          alt="">
                     <div class="flex flex-col bg-blue-500 p-2 text-center text-white rounded-2xl border border-white">
                         <h2 class="text-3xl md:!text-xl">Александр Витальевич Цыбульский</h2>
-                        <p class="font-light text-base ">губернатор Архангельской области</p>
+                        <p class="font-light text-base ">губернатор Архангельской облатси, руководитель госсовета по
+                            экспорту комиссии Государственного Совета «Международная кооперация и экспорт»</p>
                     </div>
                 </div>
-                <div class="p-4 border-2 border-blue-500 rounded-2xl relative w-1/2 md:w-full">
+                <div class="p-6 pt-12 border-2 border-blue-500 rounded-2xl relative w-1/2 md:w-full">
                         <span
-                            class="absolute -top-[20px] left-3 py-3 px-[10px] bg-blue-400 flex items-center justify-center rounded">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9"
+                            class="absolute -top-[20px] left-3 py-4 px-[16px] bg-blue-400 flex items-center justify-center rounded-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="23" viewBox="0 0 13 9"
                                  fill="none">
                                 <path
                                     d="M0.463778 9V6.54545C0.463778 5.82102 0.600142 5.05824 0.872869 4.2571C1.1456 3.45596 1.52486 2.68892 2.01065 1.95597C2.49645 1.22301 3.06747 0.59659 3.72372 0.0767047L5.61577 1.43182C5.09588 2.19034 4.6527 2.98295 4.28622 3.80966C3.91974 4.63636 3.73651 5.53551 3.73651 6.5071V9H0.463778ZM6.98366 9V6.54545C6.98366 5.82102 7.12003 5.05824 7.39276 4.2571C7.66548 3.45596 8.04474 2.68892 8.53054 1.95597C9.01634 1.22301 9.58736 0.59659 10.2436 0.0767047L12.1357 1.43182C11.6158 2.19034 11.1726 2.98295 10.8061 3.80966C10.4396 4.63636 10.2564 5.53551 10.2564 6.5071V9H6.98366Z"
                                     fill="white"/>
                             </svg>
                         </span>
-                    <p class="font-bold text-2xl">«Наш форум называется «Земляне» — и в этом слове звучит напоминание:
-                        мы не хозяева, а часть этой планеты. Сегодня у каждого открытия, у каждой технологии, у каждого
+                    <p class="font-semibold text-xl">«Наш форум называется «Земляне» — и в этом слове звучит
+                        напоминание: мы не хозяева, а часть этой планеты. Сегодня
+                        у каждого открытия, у каждой технологии, у каждого
                         промышленного решения должна появиться приставка «эко». Не как формальность, а как внутренний
                         смысл. Потому что настоящее развитие — это не просто быстрее, выше, мощнее. Это — чище,
                         бережнее, мудрее. Там, где раньше строили «любой ценой», теперь должно звучать другое правило:
-                        «не в ущерб Земле». Пусть форум «Земляне» станет тем местом, где такие смыслы обретут форму и
+                        «не в ущерб Земле». Пусть форум «Земляне» станет тем местом,где такие смыслы обретут форму и
                         силу.»</p>
                 </div>
             </div>
-            <div class="flex md:flex-col flex-1 gap-5">
+            <div class="flex md:flex-col flex-1 gap-5 items-stretch">
                 <div
-                    class="flex flex-col p-6 bg-bright-500 shadow h-fit flex-1 justify-center rounded-3xl pr-20 relative">
+                    class="flex flex-col p-6 border-2 border-blue-500 flex-1 justify-center rounded-3xl pr-20 relative">
 
                     <div class="flex items-center justify-center p-4 bg-blue-500 rounded-full absolute top-4 right-4">
                         <svg width="35" height="38" viewBox="0 0 35 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,14 +177,14 @@
                         </svg>
                     </div>
 
-                    <h3 class="">Мероприятие объединяет</h3>
-                    <p class="text-xl md:text-lg">учёных, технологические корпорации и молодых лидеров для создания
+                    <h3 class="mb-4 text-5xl md:text-3xl">Мероприятие<br> объединяет</h3>
+                    <p class="text-2xl md:text-lg">учёных, технологические корпорации и молодых лидеров для создания
                         устойчивого
                         будущего через
                         инновации. </p>
                 </div>
                 <div
-                    class="flex flex-col p-6 bg-bright-500 shadow h-fit justify-center rounded-3xl pr-20 relative flex-1">
+                    class="flex flex-col p-6 border-2 border-blue-500 justify-center rounded-3xl pr-20 relative flex-1">
 
                     <div class="flex items-center justify-center p-4 bg-blue-500 rounded-full absolute top-4 right-4">
                         <svg width="37" height="33" viewBox="0 0 37 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -141,65 +233,106 @@
                         </svg>
 
                     </div>
-                    <h3>Главная идея форума</h3>
-                    <p class="text-xl md:text-lg">синергия экологии и прогресса. Мы верим: экологичность — это не
+                    <h3 class="mb-4 text-5xl md:text-3xl">Главная идея форума</h3>
+                    <p class="text-2xl md:text-lg">синергия экологии и прогресса. Мы верим: экологичность — это не
                         ограничение, а
                         стимул для
                         инноваций.</p>
                 </div>
             </div>
+            @php
+                $items = [
+                    [
+                    'text' => 'Наука + экология = <span class="text-blue-400">Будущее</span>'
+                    ],
+                    [
+                        'title' => 'ломоносов',
+                        'text' => 'как символ форума'
+                    ],
+                    [
+                        'title' => 'экология развития',
+                        'text' => 'мы расширяем границы экологии'
+                    ],
+                    [
+                        'title' => 'экомышление',
+                        'text' => 'основа для инновации'
+                    ]
+                ];
+            @endphp
+            <div class="grid grid-cols-4 md:grid-cols-2 sm:!grid-cols-1 gap-8">
+                @foreach($items as $key => $item)
+                    <div class="flex border border-blue-500 rounded-xl flex-1 items-stretch">
+                        <!-- квадрат фиксируется обёрткой -->
+                        <div class="flex h-full">
+                            <div class="flex bg-blue-400 px-8 min-w-16 min-h-16 rounded-xl items-center justify-center">
+                                <span class="text-3xl font-bold text-white">{{$key + 1}}</span>
+                            </div>
+                        </div>
+                        <!-- текст -->
+                        <div class="flex flex-col justify-center ml-4 p-2">
+                            @if(isset($item['title']))
+                                <p class="text-blue-400 font-bold uppercase">{{$item['title']}}</p>
+                            @endif
+                            <p class=" text-sm font-semibold">{!!$item['text']!!}</p>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
         </div>
     </section>
 
-    <x-video-player/>
+    <section class="mb-32">
+        <x-video-player/>
+    </section>
+
 
     {{--    --}}{{--    <x-sticky-info/>--}}
 
-{{--    --}}{{--    --}}{{----}}{{--Форум «Земляне» в цифрах--}}
-{{--    <section class="content py-20 relative flex flex-col mb-20">--}}
-{{--        <h2 class="text-center text-blue-600 mb-20 relative tracking-wide">Форум «Земляне» в цифрах</h2>--}}
-{{--        <div class="grid grid-cols-3 grid-rows-2 gap-5 md:grid-cols-1">--}}
-{{--            @php--}}
-{{--                $numbers = [--}}
-{{--                    ['title' => '21', 'description' => 'страна-участница', 'bg-color' => 'bg-blue-400'],--}}
-{{--                    ['title' => '200+', 'description' => 'участников форума', 'bg-color' => 'bg-blue-500'],--}}
-{{--                    ['title' => '27', 'description' => 'команд-участниц', 'bg-color' => 'bg-blue-400'],--}}
-{{--                    ['title' => '7', 'description' => 'дней форума', 'bg-color' => 'bg-blue-400'],--}}
-{{--                ];--}}
-{{--            @endphp--}}
-{{--            <div class="col-span-1 row-span-2 gap-8 flex flex-col items-center bg-blue-500 rounded-3xl p-8">--}}
-{{--                <div class="bg-white p-20 rounded-full flex aspect-square items-center justify-center h-auto mt-4">--}}
-{{--                    <x-application-logo class="w-44"/>--}}
-{{--                </div>--}}
-{{--                <div class="bg-white rounded-lg relative">--}}
-{{--                    <span--}}
-{{--                        class="absolute -top-[20px] left-3 py-3 px-[10px] bg-blue-400 flex items-center justify-center rounded">--}}
-{{--                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">--}}
-{{--                            <path--}}
-{{--                                d="M0.463778 9V6.54545C0.463778 5.82102 0.600142 5.05824 0.872869 4.2571C1.1456 3.45596 1.52486 2.68892 2.01065 1.95597C2.49645 1.22301 3.06747 0.59659 3.72372 0.0767047L5.61577 1.43182C5.09588 2.19034 4.6527 2.98295 4.28622 3.80966C3.91974 4.63636 3.73651 5.53551 3.73651 6.5071V9H0.463778ZM6.98366 9V6.54545C6.98366 5.82102 7.12003 5.05824 7.39276 4.2571C7.66548 3.45596 8.04474 2.68892 8.53054 1.95597C9.01634 1.22301 9.58736 0.59659 10.2436 0.0767047L12.1357 1.43182C11.6158 2.19034 11.1726 2.98295 10.8061 3.80966C10.4396 4.63636 10.2564 5.53551 10.2564 6.5071V9H6.98366Z"--}}
-{{--                                fill="white"/>--}}
-{{--                        </svg>--}}
-{{--                    </span>--}}
-{{--                    <p class="text-blue-500 text-2xl font-medium tracking-[-0.8px]  py-3 px-12">Идей много. Планета--}}
-{{--                        одна. Ищем лучшие</p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            @foreach($numbers as $number)--}}
-{{--                <div--}}
-{{--                    class="col-span-1 row-span-1 flex flex-col gap-8 {{$number['bg-color']}} p-6 rounded-3xl text-white">--}}
-{{--                    <h3 class="font-bold text-9xl">{{ $number['title'] }}</h3>--}}
-{{--                    <p class="opacity-70 text-2xl">{{ $number['description'] }}</p>--}}
-{{--                </div>--}}
-{{--            @endforeach--}}
-{{--        </div>--}}
-{{--    </section>--}}
+    {{--    --}}{{--    --}}{{----}}{{--Форум «Земляне» в цифрах--}}
+    {{--    <section class="content py-20 relative flex flex-col mb-20">--}}
+    {{--        <h2 class="text-center text-blue-600 mb-20 relative tracking-wide">Форум «Земляне» в цифрах</h2>--}}
+    {{--        <div class="grid grid-cols-3 grid-rows-2 gap-5 md:grid-cols-1">--}}
+    {{--            @php--}}
+    {{--                $numbers = [--}}
+    {{--                    ['title' => '21', 'description' => 'страна-участница', 'bg-color' => 'bg-blue-400'],--}}
+    {{--                    ['title' => '200+', 'description' => 'участников форума', 'bg-color' => 'bg-blue-500'],--}}
+    {{--                    ['title' => '27', 'description' => 'команд-участниц', 'bg-color' => 'bg-blue-400'],--}}
+    {{--                    ['title' => '7', 'description' => 'дней форума', 'bg-color' => 'bg-blue-400'],--}}
+    {{--                ];--}}
+    {{--            @endphp--}}
+    {{--            <div class="col-span-1 row-span-2 gap-8 flex flex-col items-center bg-blue-500 rounded-3xl p-8">--}}
+    {{--                <div class="bg-white p-20 rounded-full flex aspect-square items-center justify-center h-auto mt-4">--}}
+    {{--                    <x-application-logo class="w-44"/>--}}
+    {{--                </div>--}}
+    {{--                <div class="bg-white rounded-lg relative">--}}
+    {{--                    <span--}}
+    {{--                        class="absolute -top-[20px] left-3 py-3 px-[10px] bg-blue-400 flex items-center justify-center rounded">--}}
+    {{--                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">--}}
+    {{--                            <path--}}
+    {{--                                d="M0.463778 9V6.54545C0.463778 5.82102 0.600142 5.05824 0.872869 4.2571C1.1456 3.45596 1.52486 2.68892 2.01065 1.95597C2.49645 1.22301 3.06747 0.59659 3.72372 0.0767047L5.61577 1.43182C5.09588 2.19034 4.6527 2.98295 4.28622 3.80966C3.91974 4.63636 3.73651 5.53551 3.73651 6.5071V9H0.463778ZM6.98366 9V6.54545C6.98366 5.82102 7.12003 5.05824 7.39276 4.2571C7.66548 3.45596 8.04474 2.68892 8.53054 1.95597C9.01634 1.22301 9.58736 0.59659 10.2436 0.0767047L12.1357 1.43182C11.6158 2.19034 11.1726 2.98295 10.8061 3.80966C10.4396 4.63636 10.2564 5.53551 10.2564 6.5071V9H6.98366Z"--}}
+    {{--                                fill="white"/>--}}
+    {{--                        </svg>--}}
+    {{--                    </span>--}}
+    {{--                    <p class="text-blue-500 text-2xl font-medium tracking-[-0.8px]  py-3 px-12">Идей много. Планета--}}
+    {{--                        одна. Ищем лучшие</p>--}}
+    {{--                </div>--}}
+    {{--            </div>--}}
+    {{--            @foreach($numbers as $number)--}}
+    {{--                <div--}}
+    {{--                    class="col-span-1 row-span-1 flex flex-col gap-8 {{$number['bg-color']}} p-6 rounded-3xl text-white">--}}
+    {{--                    <h3 class="font-bold text-9xl">{{ $number['title'] }}</h3>--}}
+    {{--                    <p class="opacity-70 text-2xl">{{ $number['description'] }}</p>--}}
+    {{--                </div>--}}
+    {{--            @endforeach--}}
+    {{--        </div>--}}
+    {{--    </section>--}}
 
     <section class="content py-20 relative flex flex-col mb-20">
         @php
             $parts = [
-                ['title' => 'Доработка проектов с экспертами:', 'description' => 'кросс-работа со всеми экспертами кластера', 'img' => '/fixed/icon-settings.svg'],
-                ['title' => 'Тренинговая часть:', 'description' => 'прокачиваем навыки публичных выступлений и матчасти своих проектов', 'img' => '/fixed/icon-training.svg'],
-                ['title' => 'Экскурсионная программа:', 'description' => 'общая и индивидуальная для команд (разрабатывается с учетом интересов партнеров)', 'img' => '/fixed/icon-bus.svg'],
+            ['title' => 'Доработка проектов с экспертами:', 'description' => 'кросс-работа со всеми экспертами кластера', 'img' => '/fixed/icon-settings.svg'],
+            ['title' => 'Тренинговая часть:', 'description' => 'прокачиваем навыки публичных выступлений и матчасти своих проектов', 'img' => '/fixed/icon-training.svg'],
+            ['title' => 'Экскурсионная программа:', 'description' => 'общая и индивидуальная для команд (разрабатывается с учетом интересов партнеров)', 'img' => '/fixed/icon-bus.svg'],
             ]
         @endphp
 
@@ -240,7 +373,7 @@
                     <img
                         src="/fixed/second-round.png"
                         alt=""
-                        class="absolute md:relative inset-0 w-full h-full object-cover" >
+                        class="absolute md:relative inset-0 w-full h-full object-cover">
                 </div>
 
                 <div class="flex flex-col text-center p-4 border border-blue-500 rounded-3xl">
@@ -253,48 +386,54 @@
         </div>
     </section>
 
+    <section class="w-full rounded-[60px] p-8 bg-blue-500 flex flex-col mb-32 pt-16">
+        <livewire:components.team-modal/>
+        <h2 class="text-white mb-20 relative tracking-wide content">Команды финалисты</h2>
+        <livewire:components.team-cards/>
+
+    </section>
 
 
     {{--    --}}{{--Темы форума--}}
-{{--    <section class="content mb-20">--}}
-{{--        <h2 class="text-blue-600 mb-20 relative tracking-wide">Темы форума</h2>--}}
-{{--        <div class="flex flex-col gap-4">--}}
-{{--            @foreach($topics as $topic)--}}
-{{--                <div x-data="{ open: false }" class="bg-blue-300 p-10 rounded-2xl">--}}
-{{--                    <div class="flex justify-between sm:flex-col gap-8 items-center">--}}
-{{--                        <div class="flex flex-col gap-2">--}}
-{{--                            <h2 class="text-4xl text-blue-600">{{$topic['title']}}</h2>--}}
-{{--                            <p class="text-xl text-blue-500">{{$topic['description']}}</p>--}}
-{{--                        </div>--}}
-{{--                        <div--}}
-{{--                            class="bg-blue-500 w-20 h-20 min-w-20 min-h-20 md:h-12 md:h-12 flex items-center justify-center rounded-xl cursor-pointer transition duration-300 hover:bg-blue-400"--}}
-{{--                            :class="open ? 'rotate-90' : ''"--}}
-{{--                            @click="open = !open"--}}
-{{--                        >--}}
-{{--                            <x-maki-arrow--}}
-{{--                                class="w-12 h-12 md:h-8 md:h-8 fill-white transition-transform duration-300 -rotate-45"/>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
+    {{--    <section class="content mb-20">--}}
+    {{--        <h2 class="text-blue-600 mb-20 relative tracking-wide">Темы форума</h2>--}}
+    {{--        <div class="flex flex-col gap-4">--}}
+    {{--            @foreach($topics as $topic)--}}
+    {{--                <div x-data="{ open: false }" class="bg-blue-300 p-10 rounded-2xl">--}}
+    {{--                    <div class="flex justify-between sm:flex-col gap-8 items-center">--}}
+    {{--                        <div class="flex flex-col gap-2">--}}
+    {{--                            <h2 class="text-4xl text-blue-600">{{$topic['title']}}</h2>--}}
+    {{--                            <p class="text-xl text-blue-500">{{$topic['description']}}</p>--}}
+    {{--                        </div>--}}
+    {{--                        <div--}}
+    {{--                            class="bg-blue-500 w-20 h-20 min-w-20 min-h-20 md:h-12 md:h-12 flex items-center justify-center rounded-xl cursor-pointer transition duration-300 hover:bg-blue-400"--}}
+    {{--                            :class="open ? 'rotate-90' : ''"--}}
+    {{--                            @click="open = !open"--}}
+    {{--                        >--}}
+    {{--                            <x-maki-arrow--}}
+    {{--                                class="w-12 h-12 md:h-8 md:h-8 fill-white transition-transform duration-300 -rotate-45"/>--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
 
-{{--                    <!-- Дополнительный текст -->--}}
-{{--                    <div--}}
-{{--                        x-show="open"--}}
-{{--                        x-transition:enter="transition ease-out duration-500"--}}
-{{--                        x-transition:enter-start="opacity-0 max-h-0"--}}
-{{--                        x-transition:enter-end="opacity-100 max-h-screen"--}}
-{{--                        x-transition:leave="transition ease-in duration-400"--}}
-{{--                        x-transition:leave-start="opacity-100 max-h-screen"--}}
-{{--                        x-transition:leave-end="opacity-0 max-h-0"--}}
-{{--                        class="overflow-hidden text-blue-800 text-lg"--}}
-{{--                    >--}}
-{{--                        <p class="mt-6 text-blue-600 italic">--}}
-{{--                            {!! $topic['full'] !!}--}}
-{{--                        </p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            @endforeach--}}
-{{--        </div>--}}
-{{--    </section>--}}
+    {{--                    <!-- Дополнительный текст -->--}}
+    {{--                    <div--}}
+    {{--                        x-show="open"--}}
+    {{--                        x-transition:enter="transition ease-out duration-500"--}}
+    {{--                        x-transition:enter-start="opacity-0 max-h-0"--}}
+    {{--                        x-transition:enter-end="opacity-100 max-h-screen"--}}
+    {{--                        x-transition:leave="transition ease-in duration-400"--}}
+    {{--                        x-transition:leave-start="opacity-100 max-h-screen"--}}
+    {{--                        x-transition:leave-end="opacity-0 max-h-0"--}}
+    {{--                        class="overflow-hidden text-blue-800 text-lg"--}}
+    {{--                    >--}}
+    {{--                        <p class="mt-6 text-blue-600 italic">--}}
+    {{--                            {!! $topic['full'] !!}--}}
+    {{--                        </p>--}}
+    {{--                    </div>--}}
+    {{--                </div>--}}
+    {{--            @endforeach--}}
+    {{--        </div>--}}
+    {{--    </section>--}}
 
     {{--    --}}{{--Спикеры форума--}}
     <section class=" -mt-28 pt-28">
@@ -316,11 +455,15 @@
             @foreach($sponsors as $sponsor)
                 <div
                     class="px-16 py-8 h-32 min-h-32 max-h-32 bg-blue-300 flex items-center justify-center
-                        rounded-3xl">
+rounded-3xl">
                     <img src="{{$sponsor->getFirstMediaUrl('image')}}" class="max-w-56 max-h-[inherit]" alt="">
                 </div>
             @endforeach
         </div>
+        <div class="content mt-8">
+            <a href="/#footer" class="bg-blue-500 px-8 py-4 text-white rounded hover:bg-blue-400 transition">Как стать партнером Форума</a>
+        </div>
+
     </section>
 
     <section class="mb-20">
@@ -329,10 +472,13 @@
             @foreach($info_partners as $info_partner)
                 <a @if($info_partner['link'])href="{{$info_partner['link']}}" target="_blank" @endif
                 class="px-16 py-8 h-32 min-h-32 max-h-32 bg-blue-300 flex items-center justify-center
-                        rounded-3xl">
+rounded-3xl">
                     <img src="{{$info_partner->getFirstMediaUrl('image')}}" class="max-w-56 max-h-[inherit]" alt="">
                 </a>
             @endforeach
+        </div>
+        <div class="content mt-8">
+            <a href="/#footer" class="bg-blue-500 px-8 py-4 text-white rounded hover:bg-blue-400 transition">Как стать партнером Форума</a>
         </div>
     </section>
 
@@ -378,22 +524,53 @@
         </div>
     </section>
 
+{{--    <section class="content mb-20 relative flex flex-col">--}}
+{{--        <h2 class="mb-20 text-blue-600">Место проведения</h2>--}}
+{{--        <div class="flex gap-5 md:flex-col mb-6">--}}
+{{--            <div class="flex flex-col w-1/2 md:w-full gap-5">--}}
+{{--                <div--}}
+{{--                    class="grid-rows-1 flex flex-col p-6 bg-blue-500 shadow justify-center rounded-3xl pr-20 relative flex-1 md:w-full text-bright-500">--}}
+{{--                    <h2 class="text-[56px]">22 - 29 июня<br> 2025 г.</h2>--}}
+{{--                    <p class="font-medium text-3xl">Россия, Архангельская область, г. Архангельск, ул. пос. Беломорье,--}}
+{{--                        11--}}
+{{--                        (Санаторий Беломорье)</p>--}}
+{{--                </div>--}}
+{{--                <img src="/fixed/forum-meeting-people-2.jpg" class=" object-cover rounded-3xl flex-1 md:w-full" alt="">--}}
+{{--            </div>--}}
+{{--            <div class="flex-1">--}}
+{{--                <script type="text/javascript" charset="utf-8" async--}}
+{{--                        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A23dab58c50df066f74d3a0d40fbf99da292c0c2acce5050f35a377794132b8a2&amp;lang=ru_RU&amp;scroll=true"></script>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
+
     <section class="content mb-20 relative flex flex-col">
         <h2 class="mb-20 text-blue-600">Место проведения</h2>
-        <div class="flex gap-5 md:flex-col mb-6">
-            <div class="flex flex-col w-1/2 md:w-full gap-5">
-                <div
-                    class="grid-rows-1 flex flex-col p-6 bg-blue-500 shadow justify-center rounded-3xl pr-20 relative flex-1 md:w-full text-bright-500">
-                    <h2 class="text-[56px]">22 - 29 июня<br> 2025 г.</h2>
-                    <p class="font-medium text-3xl">Россия, Архангельская область, г. Архангельск, ул. пос. Беломорье,
-                        11
-                        (Санаторий Беломорье)</p>
-                </div>
-                <img src="/fixed/forum-meeting-people-2.jpg" class=" object-cover rounded-3xl flex-1 md:w-full" alt="">
-            </div>
-            <div class="flex-1">
+        <div class="grid grid-cols-5 md:grid-cols-1 gap-8 rounded-3xl">
+            <div class="col-span-3 md:col-span-1 rounded-3xl overflow-hidden shadow">
                 <script type="text/javascript" charset="utf-8" async
                         src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A23dab58c50df066f74d3a0d40fbf99da292c0c2acce5050f35a377794132b8a2&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+            <div class="col-span-2 md:col-span-1 bg-blue-500 p-8 flex flex-col rounded-3xl shadow">
+                <div class="flex justify-between text-white mb-4">
+                    <p class="text-3xl md:text-xl">1-ый этап</p>
+                    <span class="bg-white rounded-full text-blue-500 px-4 py-2 text-2xl font-bold md:text-lg">уже прошел</span>
+                </div>
+                <p class="text-5xl font-semibold text-white mb-4 md:text-3xl">22 июня — 29 июня</p>
+                <p class="text-3xl font-medium text-white mb-4 md:text-xl">Россия, Архангельская область, г. Архангельск, ул. пос. Беломорье, 11. </p>
+                <p class="text-gray-400 text-xl md:text-lg">Санаторий "Беломорье"</p>
+            </div>
+            <div class="col-span-2 md:col-span-1 bg-blue-500 p-8 flex flex-col rounded-3xl shadow">
+                <div class="flex justify-between text-white mb-4">
+                    <p class="text-3xl md:text-xl">2-ой этап</p>
+                    <span class="bg-white rounded-full text-blue-500 px-4 py-2 text-2xl md:text-lg font-bold">ожидается</span>
+                </div>
+                <p class="text-5xl md:text-3xl font-semibold text-white mb-4">7 – 13 ноября 2025 г.</p>
+                <p class="text-3xl md:text-xl font-medium text-white mb-4">Россия, г. Москва,<br> Раменский бул., 1</p>
+                <p class="text-gray-400 text-xl md:text-lg">Кластер «Ломоносов»</p>
+            </div>
+            <div class="col-span-3 md:col-span-1 shadow rounded-3xl overflow-hidden">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afc88c9e50066371cf9b2c87b521cf541e60c4f78ca9623b284fb7d26742e5167&amp;lang=ru_RU&amp;scroll=true"></script>
             </div>
         </div>
     </section>
