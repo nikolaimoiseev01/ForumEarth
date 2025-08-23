@@ -17,8 +17,10 @@
                     <img src="/fixed/welcome-attr-2.png" class="absolute left-16 bottom-16 w-28" alt="">
                     <span
                         class="text-6xl font-bold py-4 px-12 bg-white rounded-full absolute top-16 left-16 md:relative text-blue-500 w-fit md:text-2xl md:top-auto md:left-auto">Битва вузов</span>
-                    <div class="flex flex-col gap-5 absolute  md:relative md:top-auto md:left-auto left-16 top-1/2 -translate-y-1/2 md:translate-y-0">
-                        <h1 class="leading-none font-medium text-[84px] tracking-wide md:!text-4xl">Форум<br>«Земляне»</h1>
+                    <div
+                        class="flex flex-col gap-5 absolute  md:relative md:top-auto md:left-auto left-16 top-1/2 -translate-y-1/2 md:translate-y-0">
+                        <h1 class="leading-none font-medium text-[84px] tracking-wide md:!text-4xl">Форум<br>«Земляне»
+                        </h1>
                         <h2 class="text-3xl tracking-wide leading-snug md:!text-xl">Второй этап международного<br>
                             научно-практического эко-форума</h2>
                     </div>
@@ -67,7 +69,7 @@
                                     'стран-участниц' => '20',
                                     'участников форума' => '300+',
                                     'дней работы форума' => '7',
-                                    'команд из ведущих ВУЗов' => '27',
+                                    'лучших команд из ведущих ВУЗов' => '27',
                                 ]
                             ],
                             [
@@ -83,9 +85,10 @@
                         ];
                 @endphp
                 <div class="flex gap-4 w-full md:flex-col">
-                    @foreach($events as $event)
+                    @foreach($events as $key => $event)
                         <div class="flex flex-1 flex-col justify-between bg-blue-500 rounded-3xl p-6">
-                            <span class="text-5xl md:text-2xl font-medium mb-2 py-4 px-10 bg-white text-blue-500 rounded-full w-fit">
+                            <span
+                                class="text-5xl md:text-2xl font-medium mb-2 py-4 px-10 bg-white text-blue-500 rounded-full w-fit">
                                 {{$event['title']}}
                             </span>
                             <div class="flex flex-col">
@@ -93,12 +96,16 @@
                                 <h2 class="font-medium text-white text-6xl mb-4 md:!text-3xl">{!! $event['place'] !!}</h2>
                                 <div class="grid grid-cols-2 md:grid-cols-1 gap-4 md:hidden">
                                     @foreach($event['numbers'] as $value => $number)
-                                        <div class="bg-white p-8 md:p-4 text-blue-600 flex flex-col items-center justify-center text-center gap-2 rounded-3xl">
+                                        <div
+                                            class="bg-white p-8 md:p-4 text-blue-600 flex flex-col items-center justify-center text-center gap-2 rounded-3xl">
                                             <span class="text-6xl md:text-3xl font-extrabold">{{$number}}</span>
                                             <span class="text-2xl md:text-base">{{$value}}</span>
                                         </div>
                                     @endforeach
                                 </div>
+                                @if($key == 1)
+                                    <p class="text-white my-2 font-medium text-center mx-auto">создают будущее через инновации</p>
+                                @endif
 
                             </div>
 
@@ -261,10 +268,10 @@
             @endphp
             <div class="grid grid-cols-4 md:grid-cols-2 sm:!grid-cols-1 gap-8">
                 @foreach($items as $key => $item)
-                    <div class="flex border border-blue-500 rounded-xl flex-1 items-stretch">
+                    <div class="flex border border-blue-500 rounded-xl flex-1 items-stretch overflow-hidden">
                         <!-- квадрат фиксируется обёрткой -->
                         <div class="flex h-full">
-                            <div class="flex bg-blue-400 px-8 min-w-16 min-h-16 rounded-xl items-center justify-center">
+                            <div class="flex bg-blue-400 px-8 min-w-16 min-h-16 rounded-r-xl items-center justify-center">
                                 <span class="text-3xl font-bold text-white">{{$key + 1}}</span>
                             </div>
                         </div>
@@ -461,7 +468,8 @@ rounded-3xl">
             @endforeach
         </div>
         <div class="content mt-8">
-            <a href="/#footer" class="bg-blue-500 px-8 py-4 text-white rounded hover:bg-blue-400 transition">Как стать партнером Форума</a>
+            <a href="/#footer" class="bg-blue-500 px-8 py-4 text-white rounded hover:bg-blue-400 transition">Как стать
+                партнером Форума</a>
         </div>
 
     </section>
@@ -478,7 +486,8 @@ rounded-3xl">
             @endforeach
         </div>
         <div class="content mt-8">
-            <a href="/#footer" class="bg-blue-500 px-8 py-4 text-white rounded hover:bg-blue-400 transition">Как стать партнером Форума</a>
+            <a href="/#footer" class="bg-blue-500 px-8 py-4 text-white rounded hover:bg-blue-400 transition">Как стать
+                партнером Форума</a>
         </div>
     </section>
 
@@ -524,25 +533,25 @@ rounded-3xl">
         </div>
     </section>
 
-{{--    <section class="content mb-20 relative flex flex-col">--}}
-{{--        <h2 class="mb-20 text-blue-600">Место проведения</h2>--}}
-{{--        <div class="flex gap-5 md:flex-col mb-6">--}}
-{{--            <div class="flex flex-col w-1/2 md:w-full gap-5">--}}
-{{--                <div--}}
-{{--                    class="grid-rows-1 flex flex-col p-6 bg-blue-500 shadow justify-center rounded-3xl pr-20 relative flex-1 md:w-full text-bright-500">--}}
-{{--                    <h2 class="text-[56px]">22 - 29 июня<br> 2025 г.</h2>--}}
-{{--                    <p class="font-medium text-3xl">Россия, Архангельская область, г. Архангельск, ул. пос. Беломорье,--}}
-{{--                        11--}}
-{{--                        (Санаторий Беломорье)</p>--}}
-{{--                </div>--}}
-{{--                <img src="/fixed/forum-meeting-people-2.jpg" class=" object-cover rounded-3xl flex-1 md:w-full" alt="">--}}
-{{--            </div>--}}
-{{--            <div class="flex-1">--}}
-{{--                <script type="text/javascript" charset="utf-8" async--}}
-{{--                        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A23dab58c50df066f74d3a0d40fbf99da292c0c2acce5050f35a377794132b8a2&amp;lang=ru_RU&amp;scroll=true"></script>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </section>--}}
+    {{--    <section class="content mb-20 relative flex flex-col">--}}
+    {{--        <h2 class="mb-20 text-blue-600">Место проведения</h2>--}}
+    {{--        <div class="flex gap-5 md:flex-col mb-6">--}}
+    {{--            <div class="flex flex-col w-1/2 md:w-full gap-5">--}}
+    {{--                <div--}}
+    {{--                    class="grid-rows-1 flex flex-col p-6 bg-blue-500 shadow justify-center rounded-3xl pr-20 relative flex-1 md:w-full text-bright-500">--}}
+    {{--                    <h2 class="text-[56px]">22 - 29 июня<br> 2025 г.</h2>--}}
+    {{--                    <p class="font-medium text-3xl">Россия, Архангельская область, г. Архангельск, ул. пос. Беломорье,--}}
+    {{--                        11--}}
+    {{--                        (Санаторий Беломорье)</p>--}}
+    {{--                </div>--}}
+    {{--                <img src="/fixed/forum-meeting-people-2.jpg" class=" object-cover rounded-3xl flex-1 md:w-full" alt="">--}}
+    {{--            </div>--}}
+    {{--            <div class="flex-1">--}}
+    {{--                <script type="text/javascript" charset="utf-8" async--}}
+    {{--                        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A23dab58c50df066f74d3a0d40fbf99da292c0c2acce5050f35a377794132b8a2&amp;lang=ru_RU&amp;scroll=true"></script>--}}
+    {{--            </div>--}}
+    {{--        </div>--}}
+    {{--    </section>--}}
 
     <section class="content mb-20 relative flex flex-col">
         <h2 class="mb-20 text-blue-600">Место проведения</h2>
@@ -554,23 +563,27 @@ rounded-3xl">
             <div class="col-span-2 md:col-span-1 bg-blue-500 p-8 flex flex-col rounded-3xl shadow">
                 <div class="flex justify-between text-white mb-4">
                     <p class="text-3xl md:text-xl">1-ый этап</p>
-                    <span class="bg-white rounded-full text-blue-500 px-4 py-2 text-2xl font-bold md:text-lg">уже прошел</span>
+                    <span
+                        class="bg-white rounded-full text-blue-500 px-4 py-2 text-2xl font-bold md:text-lg">уже прошел</span>
                 </div>
                 <p class="text-5xl font-semibold text-white mb-4 md:text-3xl">22 июня — 29 июня</p>
-                <p class="text-3xl font-medium text-white mb-4 md:text-xl">Россия, Архангельская область, г. Архангельск, ул. пос. Беломорье, 11. </p>
+                <p class="text-3xl font-medium text-white mb-4 md:text-xl">Россия, Архангельская область, г.
+                    Архангельск, ул. пос. Беломорье, 11. </p>
                 <p class="text-gray-400 text-xl md:text-lg">Санаторий "Беломорье"</p>
             </div>
             <div class="col-span-2 md:col-span-1 bg-blue-500 p-8 flex flex-col rounded-3xl shadow">
                 <div class="flex justify-between text-white mb-4">
                     <p class="text-3xl md:text-xl">2-ой этап</p>
-                    <span class="bg-white rounded-full text-blue-500 px-4 py-2 text-2xl md:text-lg font-bold">ожидается</span>
+                    <span
+                        class="bg-white rounded-full text-blue-500 px-4 py-2 text-2xl md:text-lg font-bold">ожидается</span>
                 </div>
                 <p class="text-5xl md:text-3xl font-semibold text-white mb-4">7 – 13 ноября 2025 г.</p>
                 <p class="text-3xl md:text-xl font-medium text-white mb-4">Россия, г. Москва,<br> Раменский бул., 1</p>
                 <p class="text-gray-400 text-xl md:text-lg">Кластер «Ломоносов»</p>
             </div>
             <div class="col-span-3 md:col-span-1 shadow rounded-3xl overflow-hidden">
-                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afc88c9e50066371cf9b2c87b521cf541e60c4f78ca9623b284fb7d26742e5167&amp;lang=ru_RU&amp;scroll=true"></script>
+                <script type="text/javascript" charset="utf-8" async
+                        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afc88c9e50066371cf9b2c87b521cf541e60c4f78ca9623b284fb7d26742e5167&amp;lang=ru_RU&amp;scroll=true"></script>
             </div>
         </div>
     </section>

@@ -3,7 +3,7 @@
         @foreach($teams as $key=>$team)
             <div
                 x-on:click="$dispatch('open-modal', 'team-modal'); Livewire.dispatch('updateTeam', { id: {{$team['id']}} })"
-                class="@if($key == 0) col-span-2 md:col-span-1 @endif flex flex-col relative min-h-[350px] md:min-h-auto md:h-fit md:px-2 md:py-2 px-8 py-4 group rounded-3xl overflow-hidden cursor-pointer">
+                class="@if($key == 0) col-span-2 md:col-span-1 min-h-[550px] @else min-h-[350px] @endif flex flex-col relative  md:min-h-auto md:h-fit md:px-2 md:py-2 px-8 py-4 group rounded-3xl overflow-hidden cursor-pointer">
                 <img src="{{$team->getFirstMediaUrl('cover')}}"
                      class="absolute top-0 left-0 w-full h-full object-cover group-hover:scale-110 transition" alt="">
                 <div

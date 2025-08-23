@@ -1,7 +1,7 @@
 <x-modal name="team-modal" :show="$errors->isNotEmpty()" maxWidth="xl">
     @if($team ?? null)
         <div wire:loading.remove class="flex flex-col">
-            <img src="{{$team->getFirstMediaUrl('cover')}}" class="w-full max-h-96 object-cover object-top mb-8" alt="">
+            <img src="{{$team->getFirstMediaUrl('cover')}}" class="w-full max-h-[500px] object-cover mb-8" alt="">
             <div class="flex md:flex-col gap-4 md">
                 <div class="flex flex-col gap-4 w-1/2 md:w-full">
                     <p class="underline font-bold">{{$team['university']}}</p>
