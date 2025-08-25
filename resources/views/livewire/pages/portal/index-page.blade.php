@@ -64,7 +64,8 @@
                     $events = [
                             [
                                 'title' => 'Первый этап',
-                                'place' => 'г. Архангельск,<br> 22-29 июня 2025 г',
+                                'place' => 'из Архангельска...',
+                                'time' => '22-29 июня 2025 г.',
                                 'numbers' => [
                                     'стран-участниц' => '20',
                                     'участников форума' => '300+',
@@ -74,10 +75,9 @@
                             ],
                             [
                                 'title' => 'Второй этап',
-                                'place' => 'г. Москва<br> 7-13 ноября 2025 г',
+                                'place' => 'в Москву',
+                                'time' => '7-13 ноября 2025 г.',
                                 'numbers' => [
-                                    'стран-участниц' => '20',
-                                    'участников форума' => '300+',
                                     'наставников' => '30',
                                     'команд из ведущих ВУЗов' => '10',
                                 ]
@@ -86,25 +86,25 @@
                 @endphp
                 <div class="flex gap-4 w-full md:flex-col">
                     @foreach($events as $key => $event)
-                        <div class="flex flex-1 flex-col justify-between bg-blue-500 rounded-3xl p-6">
+                        <div class="flex flex-1 flex-col bg-blue-500 rounded-3xl p-6">
                             <span
-                                class="text-5xl md:text-2xl font-medium mb-2 py-4 px-10 bg-white text-blue-500 rounded-full w-fit">
+                                class="text-5xl mb-16 md:text-xl font-medium py-4 px-10 md:py-1 bg-white text-blue-500 rounded-full w-fit">
                                 {{$event['title']}}
                             </span>
                             <div class="flex flex-col">
-                                <span class="text-white text-2xl md:text-base">место проведения</span>
-                                <h2 class="font-medium text-white text-6xl mb-4 md:!text-3xl">{!! $event['place'] !!}</h2>
-                                <div class="grid grid-cols-2 md:grid-cols-1 gap-4 md:hidden">
+                                <h2 class="font-medium text-white text-6xl mb-4 md:!text-2xl">{!! $event['place'] !!}</h2>
+                                <h2 class="font-normal text-white text-4xl mb-4 md:!text-xl mb-8">{!! $event['time'] !!}</h2>
+                                <div class="grid grid-cols-2 md:grid-cols-1 gap-4 mb-4">
                                     @foreach($event['numbers'] as $value => $number)
                                         <div
-                                            class="bg-white p-8 md:p-4 text-blue-600 flex flex-col items-center justify-center text-center gap-2 rounded-3xl">
+                                            class="bg-white p-8 md:p-2 text-blue-600 flex flex-col md:flex-row items-center justify-center md:justify-start text-center gap-2 rounded-3xl">
                                             <span class="text-6xl md:text-3xl font-extrabold">{{$number}}</span>
                                             <span class="text-2xl md:text-base">{{$value}}</span>
                                         </div>
                                     @endforeach
                                 </div>
                                 @if($key == 1)
-                                    <p class="text-white my-2 font-medium text-center mx-auto">создают будущее через инновации</p>
+                                    <p class="text-white my-2 font-normal text-4xl text-center mx-auto">создают будущее через<br> инновации</p>
                                 @endif
 
                             </div>
@@ -131,7 +131,7 @@
                          alt="">
                     <div class="flex flex-col bg-blue-500 p-2 text-center text-white rounded-2xl border border-white">
                         <h2 class="text-3xl md:!text-xl">Александр Витальевич Цыбульский</h2>
-                        <p class="font-light text-base ">губернатор Архангельской облатси, руководитель госсовета по
+                        <p class="font-light text-base ">губернатор Архангельской области, руководитель госсовета по
                             экспорту комиссии Государственного Совета «Международная кооперация и экспорт»</p>
                     </div>
                 </div>
