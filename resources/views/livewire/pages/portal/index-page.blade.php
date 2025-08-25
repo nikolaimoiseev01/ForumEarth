@@ -21,8 +21,8 @@
                         class="flex flex-col gap-5 absolute  md:relative md:top-auto md:left-auto left-16 top-1/2 -translate-y-1/2 md:translate-y-0">
                         <h1 class="leading-none font-medium text-[84px] tracking-wide md:!text-4xl">Форум<br>«Земляне»
                         </h1>
-                        <h2 class="text-3xl tracking-wide leading-snug md:!text-xl">Второй этап международного<br>
-                            научно-практического эко-форума</h2>
+                        <h2 class="text-3xl tracking-wide leading-snug md:!text-xl">Международный научно-<br>
+                            практический эко-форум</h2>
                     </div>
                 </div>
 
