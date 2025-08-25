@@ -86,9 +86,20 @@
                 @endphp
                 <div class="flex gap-4 w-full md:flex-col">
                     @foreach($events as $key => $event)
-                        <div class="flex flex-1 flex-col bg-blue-500 rounded-3xl p-6">
+                        <div class="flex flex-1 flex-col bg-blue-500 rounded-3xl p-6 relative">
+                            @if ($key == 0)
+                                <div
+                                    class="flex bg-blue-500 rounded-2xl py-3 px-8 border-2 border-white items-center justify-center absolute -right-[70px] md:hidden top-28 z-10">
+                                    <svg width="65" height="28" viewBox="0 0 65 28" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M1.83984 12.2029C0.847354 12.2029 0.0427825 13.0075 0.0427825 14C0.0427825 14.9925 0.847354 15.7971 1.83984 15.7971V14V12.2029ZM64.1106 15.2707C64.8124 14.5689 64.8124 13.4311 64.1106 12.7293L52.6741 1.29286C51.9723 0.591063 50.8345 0.591063 50.1327 1.29286C49.4309 1.99465 49.4309 3.13249 50.1327 3.83429L60.2984 14L50.1327 24.1657C49.4309 24.8675 49.4309 26.0053 50.1327 26.7071C50.8345 27.4089 51.9723 27.4089 52.6741 26.7071L64.1106 15.2707ZM1.83984 14V15.7971H62.8398V14V12.2029H1.83984V14Z"
+                                            fill="white"/>
+                                    </svg>
+                                </div>
+                            @endif
                             <span
-                                class="text-5xl mb-16 md:text-xl font-medium py-4 px-10 md:py-1 bg-white text-blue-500 rounded-full w-fit">
+                                class="text-5xl mb-20 md:text-xl font-medium py-4 px-10 md:py-1 bg-white text-blue-500 rounded-full w-fit">
                                 {{$event['title']}}
                             </span>
                             <div class="flex flex-col">
@@ -104,7 +115,8 @@
                                     @endforeach
                                 </div>
                                 @if($key == 1)
-                                    <p class="text-white my-2 font-normal text-4xl text-center mx-auto">создают будущее через<br> инновации</p>
+                                    <p class="text-white my-2 font-normal text-4xl text-center mx-auto">создают будущее
+                                        через<br> инновации</p>
                                 @endif
 
                             </div>
@@ -271,7 +283,8 @@
                     <div class="flex border border-blue-500 rounded-xl flex-1 items-stretch overflow-hidden">
                         <!-- квадрат фиксируется обёрткой -->
                         <div class="flex h-full">
-                            <div class="flex bg-blue-400 px-8 min-w-16 min-h-16 rounded-r-xl items-center justify-center">
+                            <div
+                                class="flex bg-blue-400 px-8 min-w-16 min-h-16 rounded-r-xl items-center justify-center">
                                 <span class="text-3xl font-bold text-white">{{$key + 1}}</span>
                             </div>
                         </div>
