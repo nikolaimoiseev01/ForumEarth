@@ -1,7 +1,7 @@
 <main class="flex-1">
     <section
         x-data="{ page: 0 }"
-        class="relative h-screen overflow-hidden content mb-32"
+        class="relative h-screen overflow-hidden content mb-32 md:h-auto"
     >
         <!-- Лента из двух экранов -->
         <div
@@ -43,7 +43,7 @@
             </div>
 
             <!-- === ЭКРАН 2 (зеркально): узкий левый, большой правый === -->
-            <div class="w-1/2 md:flex-col h-full flex gap-4 md:px-4 relative pt-28 pb-4 overflow-auto">
+            <div class="w-1/2 md:flex-col h-full flex gap-4 md:px-4 relative pt-28 pb-4">
                 <!-- Узкая левая колонка (кнопка назад) -->
                 <button
                     @click="page = 0"
