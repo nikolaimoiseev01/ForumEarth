@@ -43,7 +43,7 @@
             </div>
 
             <!-- === ЭКРАН 2 (зеркально): узкий левый, большой правый === -->
-            <div class="w-1/2 md:flex-col h-full flex gap-4 md:px-4 relative pt-28 pb-4">
+            <div class="w-1/2 md:flex-col h-full flex gap-4 md:px-4 relative pt-28 pb-4 overflow-auto">
                 <!-- Узкая левая колонка (кнопка назад) -->
                 <button
                     @click="page = 0"
