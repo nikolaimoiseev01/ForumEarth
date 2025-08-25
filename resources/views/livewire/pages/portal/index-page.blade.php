@@ -94,10 +94,10 @@
                             <div class="flex flex-col">
                                 <h2 class="font-medium text-white text-6xl mb-4 md:!text-2xl">{!! $event['place'] !!}</h2>
                                 <h2 class="font-normal text-white text-4xl mb-4 md:!text-xl mb-8">{!! $event['time'] !!}</h2>
-                                <div class="grid grid-cols-2 md:grid-cols-1 gap-4 mb-4">
+                                <div class="grid grid-cols-2 gap-4 mb-4">
                                     @foreach($event['numbers'] as $value => $number)
                                         <div
-                                            class="bg-white p-8 md:p-2 text-blue-600 flex flex-col md:flex-row items-center justify-center md:justify-start text-center gap-2 rounded-3xl">
+                                            class="bg-white p-8 md:p-2 text-blue-600 flex flex-col items-center justify-center text-center gap-2 rounded-3xl">
                                             <span class="text-6xl md:text-3xl font-extrabold">{{$number}}</span>
                                             <span class="text-2xl md:text-base">{{$value}}</span>
                                         </div>
