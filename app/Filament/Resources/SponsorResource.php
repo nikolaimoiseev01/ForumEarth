@@ -29,6 +29,8 @@ class SponsorResource extends Resource
                         ->label('Название')
                         ->required()
                         ->maxLength(255),
+                    Forms\Components\TextInput::make('link')
+                        ->label('Ссылка'),
                     SpatieMediaLibraryFileUpload::make('image')
                         ->collection('image')
                         ->label('Фото')

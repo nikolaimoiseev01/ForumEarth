@@ -1,7 +1,7 @@
 <main class="flex-1">
     <section
         x-data="{ page: 0 }"
-        class="relative h-screen overflow-hidden content mb-32 md:h-auto"
+        class="relative h-screen overflow-hidden content mb-20 md:h-auto"
     >
         <!-- Лента из двух экранов -->
         <div
@@ -12,7 +12,7 @@
             <div class="w-1/2 h-full flex md:flex-col gap-4 md:px-4 relative pt-28 pb-4">
                 <div
                     class="flex flex-col bg-blue-500 text-white z-10 md:min-h-[70vh] relative h-full w-full rounded-3xl overflow-hidden md:flex md:justify-center md:items-center md:gap-8 md:text-center">
-                    <img src="/fixed/welcome-background.png" class="absolute -right-64 bottom-0" alt="">
+                    <img src="/fixed/welcome-background.png" class="absolute -right-64 bottom-0 md:hidden" alt="">
                     <img src="/fixed/welcome-attr-1.png" class="absolute top-8 left-56 w-40" alt="">
                     <img src="/fixed/welcome-attr-2.png" class="absolute left-16 bottom-16 w-28" alt="">
                     <span
@@ -64,18 +64,18 @@
                     $events = [
                             [
                                 'title' => 'Первый этап',
-                                'place' => 'из Архангельска...',
+                                'place' => 'Архангельск, земля<br>Ломоносова',
                                 'time' => '22-29 июня 2025 г.',
                                 'numbers' => [
+                                    'команд из ведущих ВУЗов' => '27',
                                     'стран-участниц' => '20',
                                     'участников форума' => '300+',
                                     'дней работы форума' => '7',
-                                    'лучших команд из ведущих ВУЗов' => '27',
                                 ]
                             ],
                             [
                                 'title' => 'Второй этап',
-                                'place' => 'в Москву',
+                                'place' => 'Москва, инновационный<br> кластер Ломоносов',
                                 'time' => '7-13 ноября 2025 г.',
                                 'numbers' => [
                                     'наставников' => '30',
@@ -102,21 +102,20 @@
                                 class="text-5xl mb-20 md:text-xl font-medium py-4 px-10 md:py-1 bg-white text-blue-500 rounded-full w-fit">
                                 {{$event['title']}}
                             </span>
-                            <div class="flex flex-col">
-                                <h2 class="font-medium text-white text-6xl mb-4 md:!text-2xl">{!! $event['place'] !!}</h2>
-                                <h2 class="font-normal text-white text-4xl mb-4 md:!text-xl mb-8">{!! $event['time'] !!}</h2>
-                                <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div class="flex flex-col flex-1">
+                                <h2 class="font-medium text-white text-5xl mb-4 md:!text-2xl">{!! $event['place'] !!}</h2>
+                                <h2 class="font-normal text-white text-3xl mb-4 md:!text-xl mb-8">{!! $event['time'] !!}</h2>
+                                <div class="grid grid-cols-2 gap-4 mb-4 @if($key == 0) flex-1 @endif">
                                     @foreach($event['numbers'] as $value => $number)
                                         <div
-                                            class="bg-white p-8 md:p-2 text-blue-600 flex flex-col items-center justify-center text-center gap-2 rounded-3xl">
+                                            class="@if($key == 1) min-h-52 @endif bg-white text-blue-600 p-2 flex flex-col items-center justify-center text-center gap-2 rounded-3xl">
                                             <span class="text-6xl md:text-3xl font-extrabold">{{$number}}</span>
-                                            <span class="text-2xl md:text-base">{{$value}}</span>
+                                            <span class="text-xl md:text-base">{{$value}}</span>
                                         </div>
                                     @endforeach
                                 </div>
                                 @if($key == 1)
-                                    <p class="text-white my-2 font-normal text-4xl text-center mx-auto">создают будущее
-                                        через<br> инновации</p>
+                                    <p class="text-white my-2 font-normal text-4xl text-center mx-auto">Превращают идеи в бизнес</p>
                                 @endif
 
                             </div>
@@ -301,7 +300,7 @@
         </div>
     </section>
 
-    <section class="mb-32">
+    <section class="mb-20">
         <x-video-player/>
     </section>
 
@@ -473,15 +472,15 @@
         <h2 class="text-blue-600 mb-10 relative tracking-wide content">Партнеры</h2>
         <div x-ref="item" class="flex items-center flex-wrap justify-center gap-4 w-full py-2 text-white">
             @foreach($sponsors as $sponsor)
-                <div
+                <a href="{{$sponsor['link']}}" target="_blank"
                     class="px-16 py-8 h-32 min-h-32 max-h-32 bg-blue-300 flex items-center justify-center
 rounded-3xl">
                     <img src="{{$sponsor->getFirstMediaUrl('image')}}" class="max-w-56 max-h-[inherit]" alt="">
-                </div>
+                </a>
             @endforeach
         </div>
         <div class="content mt-8">
-            <a href="/#footer" class="bg-blue-500 px-8 py-4 text-white rounded hover:bg-blue-400 transition">Как стать
+            <a href="/#footer" class="bg-blue-500 px-8 py-4 text-white rounded hover:bg-blue-400 transition">Стать
                 партнером Форума</a>
         </div>
 
@@ -499,7 +498,7 @@ rounded-3xl">
             @endforeach
         </div>
         <div class="content mt-8">
-            <a href="/#footer" class="bg-blue-500 px-8 py-4 text-white rounded hover:bg-blue-400 transition">Как стать
+            <a href="/#footer" class="bg-blue-500 px-8 py-4 text-white rounded hover:bg-blue-400 transition">Стать
                 партнером Форума</a>
         </div>
     </section>
