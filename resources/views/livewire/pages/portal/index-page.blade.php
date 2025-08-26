@@ -37,7 +37,7 @@
                     </h2>
                     <div class="bg-white rounded-full flex items-center justify-center p-3">
                         <x-maki-arrow
-                            class="w-10 md:w-6 fill-blue-500 transition-transform duration-300 -rotate-45 group-hover:scale-110 group-hover:fill-blue-400"/>
+                            class="w-10 md:w-4 fill-blue-500 transition-transform duration-300 -rotate-45 group-hover:scale-110 group-hover:fill-blue-400"/>
                     </div>
                 </button>
             </div>
@@ -47,7 +47,7 @@
                 <!-- Узкая левая колонка (кнопка назад) -->
                 <button
                     @click="page = 0"
-                    class="flex cursor-pointer flex-col bg-blue-500 rounded-3xl py-4 px-6 h-full md:h-auto md:flex-row md:gap-4 items-center justify-center gap-8 md:w-full w-[96px] shrink-0 group hover:bg-blue-400 transition"
+                    class="flex cursor-pointer flex-col bg-blue-500 rounded-3xl py-4 md:py-1 px-6 h-full md:h-auto md:flex-row md:gap-4 items-center justify-center gap-8 md:w-full w-[96px] shrink-0 group hover:bg-blue-400 transition"
                     aria-label="Вернуться к описанию форума"
                 >
                     <h2 class="[writing-mode:sideways-lr] [text-orientation:mixed] md:[writing-mode:horizontal-tb] md:[text-orientation:initial]  mr-3 text-5xl md:!text-2xl text-white font-extrabold">
@@ -55,7 +55,7 @@
                     </h2>
                     <div class="bg-white rounded-full flex items-center justify-center p-3">
                         <x-maki-arrow
-                            class="w-10 md:w-6 fill-blue-500 transition-transform duration-300 rotate-[225deg]  group-hover:scale-110 group-hover:fill-blue-400"/>
+                            class="w-10 md:w-4 fill-blue-500 transition-transform duration-300 rotate-[225deg]  group-hover:scale-110 group-hover:fill-blue-400"/>
                     </div>
                 </button>
 
@@ -98,31 +98,35 @@
                                     </svg>
                                 </div>
                             @endif
+                            <div class="flex justify-between">
                             <span
-                                class="text-5xl mb-20 md:text-xl font-medium py-4 px-10 md:py-1 bg-white text-blue-500 rounded-full w-fit">
+                                class="text-5xl mb-20 md:mb-4 md:text-xl font-medium py-4 px-10 md:py-1 bg-white text-blue-500 rounded-full w-fit">
                                 {{$event['title']}}
                             </span>
+                                <h2 class="hidden md:block font-normal text-white text-3xl mb-4 md:!text-xl mb-8">{!! $event['time'] !!}</h2>
+                            </div>
+
                             <div class="flex flex-col flex-1">
                                 <h2 class="font-medium text-white text-5xl mb-4 md:!text-2xl">{!! $event['place'] !!}</h2>
-                                <h2 class="font-normal text-white text-3xl mb-4 md:!text-xl mb-8">{!! $event['time'] !!}</h2>
+                                <h2 class="font-normal text-white text-3xl mb-4 md:!text-xl mb-8 md:hidden">{!! $event['time'] !!}</h2>
                                 <div class="grid grid-cols-2 gap-4 mb-4 @if($key == 0) flex-1 @endif">
                                     @foreach($event['numbers'] as $value => $number)
                                         <div
-                                            class="@if($key == 1) min-h-52 @endif bg-white text-blue-600 p-2 flex flex-col items-center justify-center text-center gap-2 rounded-3xl">
+                                            class="@if($key == 1) min-h-52 md:min-h-fit @endif bg-white text-blue-600 p-2 flex flex-col items-center justify-center text-center gap-2 md:gap-0 rounded-3xl">
                                             <span class="text-6xl md:text-3xl font-extrabold">{{$number}}</span>
                                             <span class="text-xl md:text-base">{{$value}}</span>
                                         </div>
                                     @endforeach
                                 </div>
                                 @if($key == 1)
-                                    <p class="text-white my-2 font-normal text-4xl text-center mx-auto">Превращают идеи в бизнес</p>
+                                    <p class="text-white my-2 font-normal text-4xl md:text-xl text-center mx-auto">
+                                        Превращают идеи в бизнес</p>
                                 @endif
 
                             </div>
 
                         </div>
                     @endforeach
-
                 </div>
             </div>
         </div>
@@ -473,7 +477,7 @@
         <div x-ref="item" class="flex items-center flex-wrap justify-center gap-4 w-full py-2 text-white">
             @foreach($sponsors as $sponsor)
                 <a href="{{$sponsor['link']}}" target="_blank"
-                    class="px-16 py-8 h-32 min-h-32 max-h-32 bg-blue-300 flex items-center justify-center
+                   class="px-16 py-8 h-32 min-h-32 max-h-32 bg-blue-300 flex items-center justify-center
 rounded-3xl">
                     <img src="{{$sponsor->getFirstMediaUrl('image')}}" class="max-w-56 max-h-[inherit]" alt="">
                 </a>
