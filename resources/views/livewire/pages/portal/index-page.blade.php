@@ -1,7 +1,7 @@
 <main class="flex-1">
     <section
         x-data="{ page: 0 }"
-        class="first-section relative h-screen overflow-hidden content mb-20 md:h-auto md:mb-12"
+        class="first-section relative h-dvh md:h-auto overflow-hidden content mb-20 md:h-auto md:mb-12"
     >
         <!-- Лента из двух экранов -->
         <div
