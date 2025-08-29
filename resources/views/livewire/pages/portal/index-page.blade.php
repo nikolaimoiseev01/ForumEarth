@@ -1,7 +1,7 @@
 <main class="flex-1">
     <section
         x-data="{ page: 0 }"
-        class="first-section relative h-dvh md:h-max overflow-hidden content mb-20 md:mb-12"
+        class="first-section relative h-dvh md:h-max overflow-hidden content"
     >
         <!-- Лента из двух экранов -->
         <div
@@ -147,7 +147,7 @@
         </script>
     @endpush
 
-        <section class="pt-20 mb-32 rounded-t-[30px] -mt-10 relative" id="about">
+        <section class="mt-24 mb-24 md:mt-14 md:mb-14 md:mb-8 rounded-t-[30px] -mt-10 relative" id="about">
             <div class="w-full mb-20 content ">
                 <h2 class="text-blue-600 flex justify-center relative">О Форуме</h2>
             </div>
@@ -319,11 +319,11 @@
             </div>
         </section>
 
-        <section class="mb-20">
+        <section class="mb-24 md:mb-14">
             <x-video-player/>
         </section>
 
-        <section class="content py-20 relative flex flex-col mb-20">
+        <section class="content relative flex flex-col mb-24 md:mb-14">
             @php
                 $parts = [
                 ['title' => 'Доработка проектов с экспертами:', 'description' => 'кросс-работа со всеми экспертами кластера', 'img' => '/fixed/icon-settings.svg'],
@@ -332,7 +332,7 @@
                 ]
             @endphp
 
-            <h2 class="text-center text-blue-600 mb-20 relative tracking-wide">Второй этап</h2>
+            <h2 class="text-center text-blue-600 mb-20 md:mb-12 relative tracking-wide">Второй этап</h2>
 
             <!-- Две колонки одинаковой высоты -->
             <div class="grid grid-cols-2 md:grid-cols-1 gap-5 items-stretch">
@@ -382,7 +382,7 @@
             </div>
         </section>
 
-        <section class="w-full rounded-[60px] p-8 bg-blue-500 flex flex-col mb-32 pt-16">
+        <section class="w-full rounded-[60px] p-8 bg-blue-500 flex flex-col mb-24 md:mb-14 pt-16">
             <livewire:components.team-modal/>
             <h2 class="text-white mb-20 relative tracking-wide content">Команды финалисты</h2>
             <livewire:components.team-cards/>
