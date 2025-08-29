@@ -280,7 +280,7 @@
                 @php
                     $items = [
                         [
-                        'text' => 'Наука + экология = <span class="text-blue-400">Будущее</span>'
+                        'text' => 'Наука + экология = <span class="text-blue-400">БУДУЩЕЕ</span>'
                         ],
                         [
                             'title' => 'ломоносов',
