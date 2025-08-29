@@ -1,7 +1,7 @@
 <main class="flex-1">
     <section
         x-data="{ page: 0 }"
-        class="first-section relative h-dvh md:h-auto overflow-hidden content mb-20 md:h-auto md:mb-12"
+        class="first-section relative h-dvh overflow-hidden content mb-20 md:h-auto md:mb-12"
     >
         <!-- Лента из двух экранов -->
         <div
@@ -9,7 +9,7 @@
             :style="`transform: translateX(-${page * 50}%);`"
         >
             <!-- === ЭКРАН 1 (оригинал): большой левый, узкий правый === -->
-            <div id="screen-0" class="h-full md:h-fit w-1/2 flex md:flex-col gap-4 md:px-4 relative pt-28 pb-4">
+            <div id="screen-0" class="h-full w-1/2 flex md:flex-col gap-4 md:px-4 relative pt-28 pb-4">
                 <div
                     class="flex flex-col bg-blue-500 text-white z-10 md:min-h-[70vh] relative h-full w-full rounded-3xl overflow-hidden md:flex md:justify-center md:items-center md:gap-8 md:text-center">
                     <img src="/fixed/welcome-background.png" class="absolute -right-64 bottom-0 md:hidden" alt="">
