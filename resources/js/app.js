@@ -24,6 +24,7 @@ Swiper.use([Navigation, Pagination]);
 window.gsap = gsap;
 window.ScrollTrigger = ScrollTrigger;
 window.Swiper = Swiper;
+window.$ = $;
 
 //region -- Плавная прокрутка
 // Select all links with hashes
