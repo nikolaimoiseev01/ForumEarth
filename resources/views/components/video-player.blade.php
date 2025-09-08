@@ -1,7 +1,7 @@
 <section x-data="videoPlayer()" id="manufacture" class="relative">
     <img src="/fixed/cells-bg.svg" class="absolute left-0 top-40" alt="">
     <img src="/fixed/cells-bg-2.svg" class="absolute right-0 bottom-0" alt="">
-    <h2 class="text-center text-blue-600 mb-20 relative  tracking-wide">«Земляне» в Архангельске<br>за 4 минуты</h2>
+    <h2 class="text-center text-blue-600 mb-20 relative  tracking-wide">«Земляне» в Архангельске<br>за 3 минуты</h2>
     <div class="content relative !max-w-6xl  rounded-[20px] relative flex items-center justify-center">
 {{--        <div id="video-desc" class="absolute -bottom-12 -left-12 flex flex-col gap-2 py-2 px-4 rounded-xl z-50 bg-blue-500 text-bright-500 text-center w-auto border-t-4 border-r-4 border-bright-500 md:hidden">--}}
 {{--            <h2 class="text-2xl">«Земляне» на открытии медиаклуба ВСЕРОССИЙСКОГО<br>ЭКОЛОГИЧЕСКОГО ДВИЖЕНИЯ «ЭКОСИСТЕМА»</h2>--}}
