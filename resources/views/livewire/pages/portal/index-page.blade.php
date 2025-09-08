@@ -161,8 +161,7 @@
                              alt="">
                         <div class="flex flex-col bg-blue-500 p-2 text-center text-white rounded-2xl border border-white">
                             <h2 class="text-3xl md:!text-xl">Александр Витальевич Цыбульский</h2>
-                            <p class="font-light text-base ">губернатор Архангельской области, руководитель госсовета по
-                                экспорту комиссии Государственного Совета «Международная кооперация и экспорт»</p>
+                            <p class="font-light text-base ">Губернатор Архангельской области, председатель комиссии Государственного Совета РФ по направлению «Международная кооперация и экспорт»</p>
                         </div>
                     </div>
                     <div class="p-6 pt-12 border-2 border-blue-500 rounded-2xl relative w-1/2 md:w-full">
