@@ -437,7 +437,7 @@
 
         <section class="mb-20">
             <h2 class="text-blue-600 mb-10 relative tracking-wide content">Страны участницы</h2>
-                    <x-marquee :eles="$countries" countries="1"/>
+{{--                    <x-marquee :eles="$countries" countries="1"/>--}}
             <div class="sm:hidden">
                 <x-marquee :eles="$countries" countries="1"/>
             </div>
