@@ -373,7 +373,7 @@
 
                     <div class="flex flex-col text-center p-4 border border-blue-500 rounded-3xl">
                         <h2 class="text-4xl md:!text-3xl  font-semibold">
-                            19-25 января — ФИНАЛ<br>
+                            25 января — ФИНАЛ<br>
                             <span class="text-blue-500">ЗАЩИТА ПРОЕКТОВ ПЕРЕД ИНВЕСТОРАМИ</span>
                         </h2>
                     </div>
