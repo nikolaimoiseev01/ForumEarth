@@ -18,12 +18,12 @@
 {{--        </svg>--}}
     </div>
     <div class="content flex justify-between md:flex-col gap-8 md:text-center">
-        <div class="flex flex-col md:items-center">
-            <p class="text-2xl">Время и место проведения</p>
-            <h4>22 - 29 июня 2025</h4>
-            <h4 class="text-3xl mb-16">Россия, Архангельская область, г. Архангельск, ул. пос. Беломорье, 11 (Санаторий Беломорье)</h4>
-            <a href="/fixed/personal-policy.docx" class="text-white hover:!text-white">Политика конфиденциальности</a>
-        </div>
+       {{--  <div class="flex flex-col md:items-center">--}}
+          {{--   <p class="text-2xl">Время и место проведения</p>--}}
+          {{--   <h4>22 - 29 июня 2025</h4>--}}
+          {{--   <h4 class="text-3xl mb-16">Россия, Архангельская область, г. Архангельск, ул. пос. Беломорье, 11 (Санаторий Беломорье)</h4>--}}
+           {{--  <a href="/fixed/personal-policy.docx" class="text-white hover:!text-white">Политика конфиденциальности</a>--}}
+        {{-- </div>--}}
 {{--        <div class="flex flex-col md:items-center">--}}
 {{--            <p class="text-2xl">Контакты</p>--}}
 {{--            <h4>8 (800) 200-20-20</h4>--}}
