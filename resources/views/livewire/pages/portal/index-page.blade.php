@@ -66,7 +66,7 @@
                             [
                                 'title' => 'Первый этап',
                                 'place' => 'Архангельск, земля<br>Ломоносова',
-                                'time' => '22-29 июня 2025 г.',
+                                'time' => '20-24 января 2026 г.',
                                 'numbers' => [
                                     'команд из ведущих ВУЗов' => '27',
                                     'стран-участниц' => '20',
@@ -77,7 +77,7 @@
                             [
                                 'title' => 'Второй этап',
                                 'place' => 'Москва, инновационный<br> кластер Ломоносов',
-                                'time' => '7-13 ноября 2025 г.',
+                                'time' => '19-25 января 2026 г.',
                                 'numbers' => [
                                     'наставников' => '30',
                                     'команд из ведущих ВУЗов' => '10',
@@ -340,12 +340,12 @@
                 <div class="flex flex-col gap-5 min-h-0">
                     <div class="flex flex-col text-center p-4 border border-blue-500 rounded-3xl">
                         <h2 class="text-4xl md:!text-3xl font-semibold">
-                            7 ноября —<br><span class="text-blue-500">ОТКРЫТИЕ ФОРУМА</span>
+                            19 января —<br><span class="text-blue-500">ОТКРЫТИЕ ФОРУМА</span>
                         </h2>
                     </div>
                     <div class="flex flex-col p-8 text-white bg-blue-500 rounded-3xl">
                         <h2 class="mb-4 text-4xl  md:!text-3xl  font-normal">
-                            <span class="font-semibold">8 – 12 НОЯБРЯ<br></span>
+                            <span class="font-semibold">19-25 ЯНВАРЯ<br></span>
                             Работа по программе форума:
                         </h2>
                         <div class="flex flex-col gap-4">
@@ -374,7 +374,7 @@
 
                     <div class="flex flex-col text-center p-4 border border-blue-500 rounded-3xl">
                         <h2 class="text-4xl md:!text-3xl  font-semibold">
-                            13 НОЯБРЯ — ФИНАЛ<br>
+                            19-25 января — ФИНАЛ<br>
                             <span class="text-blue-500">ЗАЩИТА ПРОЕКТОВ ПЕРЕД ИНВЕСТОРАМИ</span>
                         </h2>
                     </div>
@@ -500,7 +500,7 @@
                         <span
                             class="bg-white rounded-full text-blue-500 px-4 py-2 text-2xl md:text-lg font-bold">ожидается</span>
                     </div>
-                    <p class="text-5xl md:text-3xl font-semibold text-white mb-4">7 – 13 ноября 2025 г.</p>
+                    <p class="text-5xl md:text-3xl font-semibold text-white mb-4">19 - 25 января 2026 г.</p>
                     <p class="text-3xl md:text-xl font-medium text-white mb-4">Россия, г. Москва,<br> Раменский бул., 1</p>
                     <p class="text-gray-400 text-xl md:text-lg">Кластер «Ломоносов»</p>
                 </div>
