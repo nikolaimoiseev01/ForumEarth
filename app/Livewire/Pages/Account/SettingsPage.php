@@ -14,7 +14,7 @@ class SettingsPage extends Component
 {
     public function render()
     {
-        return view('livewire.pages.account.settings-page');
+        return view('livewire.pages.account.settings-page')->layout('layouts.account');
     }
 
 

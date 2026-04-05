@@ -23,6 +23,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        \Illuminate\Support\Carbon::setLocale(config('app.locale')); // Установим локаль из конфигурации
         Model::unguard();
         Carbon::setLocale('ru');
         RedirectIfAuthenticated::redirectUsing(function () {

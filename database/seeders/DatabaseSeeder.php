@@ -15,12 +15,14 @@ use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
+
     /**
      * Seed the application's database.
      */
     public function run(): void
     {
-        $password = ENV('APP_ENV') == ('local') ? '12345678' : ENV('ADMIN_PASSWORD');
+        $password = (config('app.env') == 'local') ? '12345678' : ENV('ADMIN_PASSWORD');
+
         User::create([
             'name' => 'admin',
             'email' => 'admin@mail.ru',
@@ -45,7 +47,7 @@ class DatabaseSeeder extends Seeder
                 'desc' => 'This is the content of post ' . ($i + 1),
                 'content' => $text,
             ]);
-            $post->addMediaFromUrl(ENV('APP_URL') . '/fixed/test/temp-image.png')
+            $post->addMediaFromUrl(config('app.url') . '/fixed/test/temp-image.png')
                 ->toMediaCollection('cover');
         }
 
@@ -55,6 +57,7 @@ class DatabaseSeeder extends Seeder
         (new InfoPartnerSeeder())->run();
         (new CountrySeeder())->run();
         (new TeamSeeder())->run();
+        (new WebinarSeeder())->run();
 
     }
 }

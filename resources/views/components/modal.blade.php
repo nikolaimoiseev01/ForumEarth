@@ -1,16 +1,16 @@
 @props([
     'name',
     'show' => false,
-    'maxWidth' => 'xl'
+    'maxWidth' => 'lg'
 ])
 
 @php
 $maxWidth = [
-    'sm' => 'sm:max-w-sm',
-    'md' => 'sm:max-w-md',
-    'lg' => 'sm:max-w-lg',
-    'xl' => 'sm:max-w-xl',
-    '2xl' => 'sm:max-w-2xl',
+    'sm' => 'max-w-sm',
+    'md' => 'max-w-md',
+    'lg' => 'max-w-lg',
+    'xl' => 'max-w-xl',
+    '2xl' => 'max-w-2xl',
 ][$maxWidth];
 @endphp
 
@@ -65,7 +65,7 @@ $maxWidth = [
 
     <div
         x-show="show"
-        class="mb-6 bg-white  rounded-lg shadow-xl transform transition-all w-[90%] max-w-5xl p-8 max-h-[95vh] overflow-auto"
+        class="mb-6 bg-white  rounded-lg shadow-xl transform transition-all w-[90%] max-w-4xl p-8 max-h-[95vh] overflow-auto"
         x-transition:enter="ease-out duration-300"
         x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
         x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"

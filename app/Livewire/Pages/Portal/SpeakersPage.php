@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Pages\Portal;
 
+use App\Models\Speaker;
 use Livewire\Component;
 
 class SpeakersPage extends Component
@@ -10,8 +11,8 @@ class SpeakersPage extends Component
     public $experts;
     public function render()
     {
-        $this->speakers = \App\Models\Speaker::with('media')->orderBy('position')->where('type', 'спикер')->get();
-        $this->experts = \App\Models\Speaker::with('media')->orderBy('position')->where('type', 'эксперт')->get();
+        $this->speakers = Speaker::with('media')->orderBy('position')->where('type', 'спикер')->get();
+        $this->experts = Speaker::with('media')->orderBy('position')->where('type', 'эксперт')->get();
         return view('livewire.pages.portal.speakers-page');
     }
 }

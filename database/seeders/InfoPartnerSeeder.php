@@ -18,7 +18,7 @@ class InfoPartnerSeeder extends Seeder
             $sponsor = InfoPartner::create([
                 'name' => 'УФУ',
             ]);
-            $sponsor->addMediaFromUrl(ENV('APP_URL') . '/fixed/test/temp-sponsor.png')
+            $sponsor->addMediaFromUrl(config('app.url'). '/fixed/test/temp-sponsor.png')
                 ->toMediaCollection('image');
         }
     }

@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Components;
 
+use App\Mail\ContactForm;
 use Illuminate\Support\Facades\Mail;
 use Livewire\Component;
 
@@ -21,7 +22,7 @@ class ContactFormt extends Component
     public function send() {
 
         $email = 'a.klimov@imars.ru';
-        Mail::to($email)->send(new \App\Mail\ContactForm($this->name, $this->email, $this->message));
+        Mail::to($email)->send(new ContactForm($this->name, $this->email, $this->message));
         $this->sent = True;
     }
 }

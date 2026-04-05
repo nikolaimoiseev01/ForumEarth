@@ -16,7 +16,7 @@
                     <img src="/fixed/welcome-attr-1.png" class="absolute top-8 left-56 w-40" alt="">
                     <img src="/fixed/welcome-attr-2.png" class="absolute left-16 bottom-16 w-28" alt="">
                     <span
-                        class="text-6xl font-bold py-4 px-12 bg-white rounded-full absolute top-16 left-16 md:relative text-blue-500 w-fit md:text-2xl md:top-auto md:left-auto">Битва вузов</span>
+                        class="text-6xl font-bold py-4 px-12 bg-white rounded-full absolute top-16 left-16 md:relative text-blue-500 w-fit md:text-2xl md:top-auto md:left-auto">От идеи — к работающему бизнесу!</span>
                     <div
                         class="flex flex-col gap-5 absolute  md:relative md:top-auto md:left-auto left-16 top-1/2 -translate-y-1/2 md:translate-y-0">
                         <h1 class="leading-none font-medium text-[84px] tracking-wide md:!text-4xl">Форум<br>«Земляне»

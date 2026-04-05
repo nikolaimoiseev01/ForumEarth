@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -12,7 +13,7 @@ body {
 }
 
 h1 {
-    @apply font-medium text-[80px] leading-[60px] md:text-6xl font-['Inter'];
+    @apply font-medium text-[80px] leading-[60px] md:text-6xl;
 }
 
 h2 {

@@ -18,7 +18,7 @@ class CountrySeeder extends Seeder
             $sponsor = Country::create([
                 'name' => 'Страна ' . ($i + 1),
             ]);
-            $sponsor->addMediaFromUrl(ENV('APP_URL') . '/fixed/test/temp-flag.png')
+            $sponsor->addMediaFromUrl(config('app.url'). '/fixed/test/temp-flag.png')
                 ->toMediaCollection('image');
         }
     }

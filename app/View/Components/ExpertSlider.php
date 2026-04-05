@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\Speaker;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -22,7 +23,7 @@ class ExpertSlider extends Component
      */
     public function render(): View|Closure|string
     {
-        $this->experts = \App\Models\Speaker::with('media')
+        $this->experts = Speaker::with('media')
             ->where('type', 'эксперт')
             ->orderBy('position')
             ->get();
