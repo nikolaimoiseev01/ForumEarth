@@ -68,10 +68,10 @@
                                 'place' => 'Архангельск, земля<br>Ломоносова',
                                 'time' => '22-29 июня 2026 г.',
                                 'numbers' => [
+                                     'стран-участниц' => '20',
+                                     'участников форума' => '300+',
+                                     'дней работы форума' => '7',
                                     'команд из ведущих ВУЗов' => '27',
-                                    'стран-участниц' => '20',
-                                    'участников форума' => '300+',
-                                    'дней работы форума' => '7',
                                 ]
                             ],
                             [
@@ -80,7 +80,7 @@
                                 'time' => '22 апреля - 15 мая 2026 г.',
                                 'numbers' => [
                                     'экспертов' => '20',
-                                    'команд из ведущих ВУЗов' => '9',
+                                    'команд' => '9',
                                 ]
                             ]
                         ];
@@ -90,7 +90,7 @@
                         <div class="flex flex-1 flex-col bg-blue-500 rounded-3xl p-6 relative">
                             @if ($key == 0)
                                 <div
-                                    class="flex bg-blue-500 rounded-2xl py-3 px-8 border-2 border-white items-center justify-center absolute -right-[70px] md:hidden top-28 z-10">
+                                    class="flex bg-blue-500 rounded-2xl py-3 px-8 border-2 border-white items-center justify-center absolute -right-[70px] xl:hidden top-28 z-10">
                                     <svg width="65" height="28" viewBox="0 0 65 28" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -101,28 +101,28 @@
                             @endif
                             <div class="flex justify-between">
                             <span
-                                class="text-5xl mb-20 md:mb-4 md:text-xl font-medium py-4 px-10 md:py-1 bg-white text-blue-500 rounded-full w-fit">
+                                class="text-5xl mb-20 md:mb-4 2xl:text-2xl xl:text-3xl lg:text-2xl 2xl:mb-8 md:text-xl font-medium py-4 px-10 md:py-1 bg-white text-blue-500 rounded-full w-fit">
                                 {{$event['title']}}
                             </span>
                                 <h2 class="hidden md:block font-normal text-white text-3xl mb-4 md:!text-xl mb-8">{!! $event['time'] !!}</h2>
                             </div>
 
                             <div class="flex flex-col flex-1">
-                                <h2 class="font-medium text-white text-5xl mb-4 md:!text-2xl">{!! $event['place'] !!}</h2>
-                                <h2 class="font-normal text-white text-3xl mb-4 md:!text-xl mb-8 md:hidden">{!! $event['time'] !!}</h2>
+                                <h2 class="font-medium text-white text-5xl xl:text-3xl lg:text-2xl mb-4 md:!text-2xl">{!! $event['place'] !!}</h2>
+                                <h2 class="font-normal text-white text-3xl mb-4 md:!text-xl md:hidden">{!! $event['time'] !!}</h2>
+                                @if($key == 1)
+                                    <p class="text-white my-2 mb-8 font-normal text-2xl md:text-xl">
+                                        Медиа персоны вместе с учеными и экспертами-практиками</p>
+                                @endif
                                 <div class="grid grid-cols-2 gap-4 mb-4 @if($key == 0) flex-1 @endif">
                                     @foreach($event['numbers'] as $value => $number)
                                         <div
-                                            class="@if($key == 1) min-h-52 md:min-h-fit @endif bg-white text-blue-600 p-2 flex flex-col items-center justify-center text-center gap-2 md:gap-0 rounded-3xl">
+                                            class="@if($key == 1) min-h-52 xl:!h-fit xl:!min-h-fit @endif bg-white text-blue-600 p-2 flex flex-col items-center justify-center text-center gap-2 md:gap-0 rounded-3xl">
                                             <span class="text-6xl md:text-3xl font-extrabold">{{$number}}</span>
                                             <span class="text-xl md:text-base">{{$value}}</span>
                                         </div>
                                     @endforeach
                                 </div>
-                                @if($key == 1)
-                                    <p class="text-white my-2 font-normal text-4xl md:text-xl text-center mx-auto">
-                                        Превращают идеи в бизнес</p>
-                                @endif
 
                             </div>
 
@@ -327,7 +327,7 @@
                 $parts = [
                 ['title' => 'Доработка проектов с экспертами:', 'description' => 'кросс-работа со всеми экспертами кластера', 'img' => '/fixed/icon-settings.svg'],
                 ['title' => 'Тренинговая часть:', 'description' => 'прокачиваем навыки публичных выступлений и матчасти своих проектов', 'img' => '/fixed/icon-training.svg'],
-                ['title' => 'Трек-сопровождение. Проектная работа 24/7:', 'description' => 'Непрерывное сопровождение проектов профессиональными кураторами и трекерами. Ежедневная диагностика и проработка бизнес-модели', 'img' => '/fixed/icon-bus.svg'],
+                ['title' => 'Трек-сопровождение. Проектная работа 24/7:', 'description' => 'Непрерывное сопровождение проектов профессиональными кураторами и трекерами. Ежедневная диагностика и проработка бизнес-модели', 'img' => '/fixed/working_man.svg'],
                 ]
             @endphp
 
@@ -350,7 +350,7 @@
                         <div class="flex flex-col gap-4">
                             @foreach($parts as $part)
                                 <div class="flex gap-2">
-                                    <img src="{{ $part['img'] }}" alt="">
+                                    <img class="max-w-[55px]" src="{{ $part['img'] }}" alt="">
                                     <div class="flex flex-col">
                                         <p><b>{{ $part['title'] }}</b></p>
                                         <p class="leading-tight">{{ $part['description'] }}</p>
@@ -479,8 +479,7 @@
             <h2 class="mb-20 text-blue-600">Место проведения</h2>
             <div class="grid grid-cols-5 md:grid-cols-1 gap-8 rounded-3xl">
                 <div class="col-span-3 md:col-span-1 rounded-3xl overflow-hidden shadow">
-                    <script type="text/javascript" charset="utf-8" async
-                            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A23dab58c50df066f74d3a0d40fbf99da292c0c2acce5050f35a377794132b8a2&amp;lang=ru_RU&amp;scroll=true"></script>
+                    <img src="/fixed/city_1.png" class="max-h-96 w-full object-cover" alt="">
                 </div>
                 <div class="col-span-2 md:col-span-1 bg-blue-500 p-8 flex flex-col rounded-3xl shadow">
                     <div class="flex justify-between text-white mb-4">
@@ -504,9 +503,8 @@
                     <p class="text-gray-400 text-xl md:text-lg">Кластер «Ломоносов»</p>
                 </div>
                 <div class="col-span-3 md:col-span-1 shadow rounded-3xl overflow-hidden">
-                    <script type="text/javascript" charset="utf-8" async
-                            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afc88c9e50066371cf9b2c87b521cf541e60c4f78ca9623b284fb7d26742e5167&amp;lang=ru_RU&amp;scroll=true"></script>
-                </div>
+                    <img src="/fixed/city_2.png" class="max-h-96 w-full object-cover"  alt="">
+                 </div>
             </div>
         </section>
 
