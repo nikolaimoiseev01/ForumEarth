@@ -70,7 +70,7 @@
                                     wire:click="openWebinarModal({{ $webinar->id }})"
                                     x-data
                                     @click="$dispatch('open-modal', 'webinar-modal')"
-                                    class="bg-gradient-to-r from-[#006699] to-[#005588] text-white p-2 rounded-lg cursor-pointer hover:from-[#005588] hover:to-[#004477] transition-colors flex flex-col justify-center">
+                                    class="z-50 relative bg-gradient-to-r from-[#006699] to-[#005588] text-white p-2 rounded-lg cursor-pointer hover:from-[#005588] hover:to-[#004477] transition-colors flex flex-col justify-center">
                                     <div
                                         class="text-xs font-semibold mb-1">{{ $webinar->title }}</div>
                                     <div class="text-xs opacity-90">
