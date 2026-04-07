@@ -70,7 +70,7 @@ class WebinarSchedulePage extends Component
 
     public function previousWeek()
     {
-        $this->currentStartDate =  Carbon::parse($this->minDate);
+        $this->currentStartDate = Carbon::parse($this->currentStartDate)->copy()->addDays(-7);
         $this->generateCalendarDays();
     }
 
