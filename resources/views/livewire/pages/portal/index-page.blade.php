@@ -19,10 +19,10 @@
                         class="text-6xl font-bold py-4 px-12 bg-white rounded-full absolute top-16 left-16 md:relative text-blue-500 w-fit md:text-2xl md:top-auto md:left-auto">От идеи — к работающему бизнесу!</span>
                     <div
                         class="flex flex-col gap-5 absolute  md:relative md:top-auto md:left-auto left-16 top-1/2 -translate-y-1/2 md:translate-y-0">
-                        <h1 class="leading-none font-medium text-[84px] tracking-wide md:!text-4xl">Форум<br>«Земляне»
+                        <h1 class="leading-none font-medium text-[84px] tracking-wide md:!text-4xl">Битва вузов<br>«Земляне»
                         </h1>
                         <h2 class="text-3xl tracking-wide leading-snug md:!text-xl">Международный научно-<br>
-                            практический эко-форум</h2>
+                            практический форум</h2>
                     </div>
                 </div>
 
@@ -77,10 +77,10 @@
                             [
                                 'title' => 'Второй этап',
                                 'place' => 'Москва, инновационный<br> кластер Ломоносов',
-                                'time' => '10-14 апреля 2026 г.',
+                                'time' => '22 апреля - 15 мая 2026 г.',
                                 'numbers' => [
-                                    'наставников' => '30',
-                                    'команд из ведущих ВУЗов' => '10',
+                                    'экспертов' => '20',
+                                    'команд из ведущих ВУЗов' => '9',
                                 ]
                             ]
                         ];
@@ -327,11 +327,11 @@
                 $parts = [
                 ['title' => 'Доработка проектов с экспертами:', 'description' => 'кросс-работа со всеми экспертами кластера', 'img' => '/fixed/icon-settings.svg'],
                 ['title' => 'Тренинговая часть:', 'description' => 'прокачиваем навыки публичных выступлений и матчасти своих проектов', 'img' => '/fixed/icon-training.svg'],
-                ['title' => 'Экскурсионная программа:', 'description' => 'общая и индивидуальная для команд (разрабатывается с учетом интересов партнеров)', 'img' => '/fixed/icon-bus.svg'],
+                ['title' => 'Трек-сопровождение. Проектная работа 24/7:', 'description' => 'Непрерывное сопровождение проектов профессиональными кураторами и трекерами. Ежедневная диагностика и проработка бизнес-модели', 'img' => '/fixed/icon-bus.svg'],
                 ]
             @endphp
 
-            <h2 class="text-center text-blue-600 mb-20 md:mb-12 relative tracking-wide">Второй этап</h2>
+            <h2 class="text-center text-blue-600 mb-20 md:mb-12 relative tracking-wide">Второй этап. Инвестиционный акселератор</h2>
 
             <!-- Две колонки одинаковой высоты -->
             <div class="grid grid-cols-2 md:grid-cols-1 gap-5 items-stretch">
@@ -339,13 +339,13 @@
                 <div class="flex flex-col gap-5 min-h-0">
                     <div class="flex flex-col text-center p-4 border border-blue-500 rounded-3xl">
                         <h2 class="text-4xl md:!text-3xl font-semibold">
-                            10 апреля —<br><span class="text-blue-500">ОТКРЫТИЕ ФОРУМА</span>
+                            22 апреля —<br><span class="text-blue-500">ОТКРЫТИЕ ФОРУМА</span>
                         </h2>
                     </div>
                     <div class="flex flex-col p-8 text-white bg-blue-500 rounded-3xl">
                         <h2 class="mb-4 text-4xl  md:!text-3xl  font-normal">
-                            <span class="font-semibold">10-13 АПРЕЛЯ<br></span>
-                            Работа по программе форума:
+                            <span class="font-semibold">23 АПРЕЛЯ - 14 МАЯ<br></span>
+                            Работа по программе акселератора:
                         </h2>
                         <div class="flex flex-col gap-4">
                             @foreach($parts as $part)
@@ -373,7 +373,7 @@
 
                     <div class="flex flex-col text-center p-4 border border-blue-500 rounded-3xl">
                         <h2 class="text-4xl md:!text-3xl  font-semibold">
-                            14 апреля — ФИНАЛ<br>
+                            15 мая — ФИНАЛ<br>
                             <span class="text-blue-500">ЗАЩИТА ПРОЕКТОВ ПЕРЕД ИНВЕСТОРАМИ</span>
                         </h2>
                     </div>
@@ -499,7 +499,7 @@
                         <span
                             class="bg-white rounded-full text-blue-500 px-4 py-2 text-2xl md:text-lg font-bold">ожидается</span>
                     </div>
-                    <p class="text-5xl md:text-3xl font-semibold text-white mb-4">10 — 14 апреля 2026 г.</p>
+                    <p class="text-5xl md:text-3xl font-semibold text-white mb-4">22 апреля — 15 мая 2026 г.</p>
                     <p class="text-3xl md:text-xl font-medium text-white mb-4">Россия, г. Москва,<br> Раменский бул., 1</p>
                     <p class="text-gray-400 text-xl md:text-lg">Кластер «Ломоносов»</p>
                 </div>
