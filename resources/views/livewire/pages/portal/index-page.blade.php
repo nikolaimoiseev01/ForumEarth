@@ -77,7 +77,7 @@
                             [
                                 'title' => 'Второй этап',
                                 'place' => 'Москва, инновационный<br> кластер Ломоносов',
-                                'time' => '12 мая - 28 мая 2026 г.',
+                                'time' => '12 мая - 17 июня 2026 г.',
                                 'numbers' => [
                                     'экспертов' => '20',
                                     'команд' => '9',
@@ -313,7 +313,7 @@
                     </div>
                     <div class="flex flex-col p-8 text-white bg-blue-500 rounded-3xl">
                         <h2 class="mb-4 text-4xl  md:!text-3xl  font-normal">
-                            <span class="font-semibold">13 МАЯ - 27 МАЯ<br></span>
+                            <span class="font-semibold">13 МАЯ - 28 МАЯ<br></span>
                             Работа по программе акселератора:
                         </h2>
                         <div class="flex flex-col gap-4">
@@ -342,7 +342,7 @@
 
                     <div class="flex flex-col text-center p-4 border border-blue-500 rounded-3xl">
                         <h2 class="text-4xl md:!text-3xl  font-semibold">
-                            28 мая — ФИНАЛ<br>
+                            17 июня — ФИНАЛ<br>
                             <span class="text-blue-500">ЗАЩИТА ПРОЕКТОВ ПЕРЕД ИНВЕСТОРАМИ</span>
                         </h2>
                     </div>
