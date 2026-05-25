@@ -342,11 +342,11 @@
                     </div>
 
                     <div class="flex flex-col text-center p-4 border border-blue-500 rounded-3xl">
-                        <h2 class="text-4xl md:!text-3xl  font-semibold">
-                            17 июня — ФИНАЛ<br>
-                            <span class="text-blue-500">ЗАЩИТА ПРОЕКТОВ ПЕРЕД ИНВЕСТОРАМИ</span>
-                        </h2>
-                    </div>
+    <h2 class="text-4xl md:!text-3xl font-semibold">
+        <span class="text-blue-500">ЗАЩИТА ПРОЕКТОВ ПЕРЕД ИНВЕСТОРАМИ</span><br>
+        ФИНАЛ, ДАТА — TBD
+    </h2>
+</div>
                 </div>
             </div>
         </section>
@@ -468,7 +468,7 @@
                         <span
                             class="bg-white rounded-full text-blue-500 px-4 py-2 text-2xl md:text-lg font-bold">ожидается</span>
                     </div>
-                    <p class="text-5xl md:text-3xl font-semibold text-white mb-4">26 мая — 16 июня 2026 г.</p>
+                    <p class="text-5xl md:text-3xl font-semibold text-white mb-4">26 мая — TBD</p>
                     <p class="text-3xl md:text-xl font-medium text-white mb-4">Россия, г. Москва,<br> Раменский бул., 1</p>
                     <p class="text-gray-400 text-xl md:text-lg">Кластер «Ломоносов»</p>
                 </div>
