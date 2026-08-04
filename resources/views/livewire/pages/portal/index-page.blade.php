@@ -466,7 +466,7 @@
                     <div class="flex justify-between text-white mb-4">
                         <p class="text-3xl md:text-xl">2-ой этап</p>
                         <span
-                            class="bg-white rounded-full text-blue-500 px-4 py-2 text-2xl md:text-lg font-bold">ожидается</span>
+                            class="bg-white rounded-full text-blue-500 px-4 py-2 text-2xl md:text-lg font-bold">уже прошел</span>
                     </div>
                     <p class="text-5xl md:text-3xl font-semibold text-white mb-4">26 мая — 22 июля 2026 г.</p>
                     <p class="text-3xl md:text-xl font-medium text-white mb-4">Россия, г. Москва,<br> Раменский бул., 1</p>
