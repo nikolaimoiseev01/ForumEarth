@@ -10,10 +10,4 @@ class Sponsor extends Model implements HasMedia
 {
     use InteractsWithMedia;
 
-    protected static function booted()
-    {
-        static::addGlobalScope('order', function (\Illuminate\Database\Eloquent\Builder $builder) {
-            $builder->orderBy('sort_order', 'asc');
-        });
-    }
 }

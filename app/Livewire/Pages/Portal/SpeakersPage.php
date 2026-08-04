@@ -11,8 +11,8 @@ class SpeakersPage extends Component
     public $experts;
     public function render()
     {
-        $this->speakers = Speaker::with('media')->orderBy('position')->where('type', 'спикер')->get();
-        $this->experts = Speaker::with('media')->orderBy('position')->where('type', 'эксперт')->get();
+        $this->speakers = Speaker::with('media')->orderBy('sort_order')->where('type', 'спикер')->get();
+        $this->experts = Speaker::with('media')->orderBy('sort_order')->where('type', 'эксперт')->get();
         return view('livewire.pages.portal.speakers-page');
     }
 }

@@ -65,10 +65,10 @@ class IndexPage extends Component
 
     public function mount()
     {
-        $this->speakers = Speaker::with('media')->where('type', 'спикер')->take(5)->orderBy('position')->get();
-        $this->sponsors = Sponsor::all();
-        $this->universities = University::all();
-        $this->info_partners = InfoPartner::all();
+        $this->speakers = Speaker::with('media')->where('type', 'спикер')->orderBy('sort_order')->take(5)->get();
+        $this->sponsors = Sponsor::orderBy('sort_order')->get();
+        $this->universities = University::orderBy('sort_order')->get();
+        $this->info_partners = InfoPartner::orderBy('sort_order')->get();
         $this->countries = Country::all();
     }
 }
