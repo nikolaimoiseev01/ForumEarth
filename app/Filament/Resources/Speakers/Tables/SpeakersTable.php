@@ -25,8 +25,8 @@ class SpeakersTable
                     ->label('Описание')
                     ->limit(50),
             ])
-            ->reorderable('sort_order')
-            ->defaultSort('sort_order')
+            ->reorderable('position')
+            ->defaultSort('position')
             ->filters([
                 SelectFilter::make('type')
                     ->label('Тип')

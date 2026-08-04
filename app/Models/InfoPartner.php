@@ -9,11 +9,4 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 class InfoPartner extends Model implements HasMedia
 {
     use InteractsWithMedia;
-
-    protected static function booted()
-    {
-        static::addGlobalScope('order', function (\Illuminate\Database\Eloquent\Builder $builder) {
-            $builder->orderBy('sort_order', 'asc');
-        });
-    }
 }
